@@ -163,6 +163,27 @@
     #marcas .logo-marca:hover {
       transform: scale(1.1);
     }
+
+    .logos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.logo-marca {
+  width: 150px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  filter: grayscale(0%);
+}
+
+.logo-marca:hover {
+  transform: scale(1.1);
+}
   </style>
 </head>
 <body>
