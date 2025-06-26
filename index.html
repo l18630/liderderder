@@ -180,24 +180,26 @@
       margin-top: 10px;
     }
 
-    #marcas .logo-marca {
-      height: 60px;
-      object-fit: contain;
-      transition: transform 0.2s ease;
-      filter: grayscale(0%);
-    }
+   #marcas .logo-marca {
+  height: 60px;
+  width: auto;
+  max-width: 120px; /* evita que se pase de ancho */
+  object-fit: contain;
+  display: inline-block;
+  margin: 0 15px;
+  transition: transform 0.2s ease;
+  filter: grayscale(0%);
+}
 
     #marcas .logo-marca:hover {
       transform: scale(1.1);
     }
-
-    .logos-container {
+.logos-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin: 30px auto;
-  max-width: 1000px;
+  gap: 20px;
 }
 
 .logo-marca {
