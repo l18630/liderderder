@@ -184,6 +184,28 @@
 .logo-marca:hover {
   transform: scale(1.1);
 }
+
+    /* BLOQUE MARCAS */
+.logos-marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.logo-marca {
+  height: 60px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease;
+}
+
+.logo-marca:hover {
+  transform: scale(1.08);
+}
   </style>
 </head>
 <body>
@@ -258,7 +280,7 @@
 <!-- MARCAS -->
 <section class="section" id="marcas">
   <h2>Trabajamos con las mejores marcas</h2>
-  <div class="logos-container">
+  <div class="logos-marcas">
     <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
     <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
     <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
