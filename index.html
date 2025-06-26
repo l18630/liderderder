@@ -2,7 +2,32 @@
 <html lang="es">
 <head>
 
+#marcas h2 {
+  text-align: center;
+}
+#seguros h2 {
+  text-align: center;
+}
 
+#seguros .logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.logo-seguro {
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  filter: grayscale(0%);
+}
+
+.logo-seguro:hover {
+  transform: scale(1.1);
+}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parabrisas Líder</title>
@@ -209,22 +234,16 @@
 
 /* COMPAÑÍAS DE SEGURO */
 .logo-seguro {
-  width: 120px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-sizing: border-box;
+  height: 50px;
+  max-width: 120px;
   object-fit: contain;
-  object-position: center;
+  margin: 10px;
+  filter: grayscale(0%);
   transition: transform 0.2s ease;
 }
+
 .logo-seguro:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 .logo-marca:hover {
   transform: scale(1.08);
@@ -242,10 +261,7 @@
   <header style="background-color: #003366; color: white; padding: 10px 20px;">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
     <div style="display: flex; align-items: center;">
-      <div class="logos-marcas">
-      <img class="logo-marca" src="img/img/logo lider.png" alt="Logo Lider" />
-    
-       
+      <img src="https://i.imgur.com/tTuCmri.png" alt="Logo Parabrisas Líder" style="height: 60px; margin-right: 20px;">
       <span style="font-size: 1.1em;">📞 (0341) 424-4187 / WhatsApp 3413629545</span>
     </div>
     <nav style="margin-top: 10px;">
@@ -328,7 +344,7 @@
   <div class="logos-marcas">
     <img class="logo-seguro" src="img/img/img/seguros/lasegunda.png" alt="La Segunda" />
     <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
-    <img class="logo-seguro sancristobal" src="img/img/img/seguros/san-cristobal.png" alt="San Cristóbal" />
+    <img class="logo-seguro" src="img/img/img/seguros/san-cristobal.png" alt="San Cristóbal" />
     <img class="logo-seguro" src="img/img/img/seguros/zurich.png" alt="Zurich" />
     <img class="logo-seguro" src="img/img/img/seguros/federacion-patronal.png" alt="Federación Patronal" />
     <img class="logo-seguro" src="img/img/img/seguros/triunfo.png" alt="Triunfo" />
@@ -352,4 +368,3 @@
 
 </body>
 </html>
-
