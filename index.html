@@ -19,16 +19,17 @@
 }
 
 .logo-seguro {
-  width: 120px;
+  width: 100px;              /* tamaño uniforme */
   height: 60px;
-  object-fit: contain;
-  object-position: center;
-  background-color: white; /* opcional */
-  padding: 5px;             /* opcional, mejora visual */
+  object-fit: contain;       /* mantiene proporción */
+  object-position: center;   /* centra el contenido real del logo */
   margin: 10px;
   filter: grayscale(0%);
   transition: transform 0.2s ease;
-  border-radius: 6px;       /* opcional, para que no se vean tan "duros" */
+  background-color: white;   /* opcional, mejora contraste */
+  padding: 6px;              /* evita que el logo toque los bordes */
+  border-radius: 4px;        /* opcional, estética suave */
+  box-sizing: border-box;    /* para que padding no rompa layout */
 }
 
 .logo-seguro:hover {
