@@ -1,25 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parabrisas Líder</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; }
-    header { background-color: #0066cc; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
-    header a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
 
+    /* HEADER ESTILOS */
+    header {
+      background-color: #000000;
+      color: white;
+    }
+
+    .topbar {
+      background-color: #ff6600;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .mainbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo-text span {
+      color: #ff6600;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 16px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    /* RESTO DEL SITIO */
     .hero {
       background-image: url('https://images.unsplash.com/photo-1601913052356-b2f3f08b5681?auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
-      background-position: center;
       color: white;
       padding: 80px 20px;
       text-align: center;
     }
 
-    .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
-    .hero p { font-size: 1.2em; margin-bottom: 20px; }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
     .button {
       background-color: #00bcd4;
       color: white;
@@ -29,14 +88,22 @@
       font-size: 1.1em;
     }
 
-    .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .section h2 { color: #003366; }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #003366;
+    }
 
     .services {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
+
     .service {
       flex: 1 1 45%;
       background: #e0f0ff;
@@ -44,34 +111,23 @@
       border-radius: 8px;
     }
 
-    .map { text-align: center; margin-top: 20px; }
-
-    #marcas {
+    .map {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
-    #marcas .logo-marca {
-      height: 60px;
-      width: auto;
-      max-width: 200px;
-      padding: 10px;
-      object-fit: contain;
-      background-color: white;
-      transition: transform 0.2s ease;
-    }
-
-    #marcas .logo-marca:hover {
-      transform: scale(1.1);
-    }
-
-    #marcas .logos-container {
+    .brands {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 40px;
-      margin: 30px auto;
-      max-width: 1000px;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .brands img {
+      max-height: 60px;
+      object-fit: contain;
     }
 
     footer {
@@ -81,7 +137,11 @@
       padding: 30px 20px;
     }
 
-    .footer-contact { font-size: 1.1em; margin-bottom: 10px; }
+    .footer-contact {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
     .footer-button {
       display: inline-block;
       background-color: #00bcd4;
@@ -93,26 +153,46 @@
       margin-top: 10px;
     }
 
+    #marcas .logo-marca {
+      height: 60px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+      filter: grayscale(0%);
+    }
+
+    #marcas .logo-marca:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
 
+  <!-- HEADER NUEVO -->
   <header>
-    <div>📞 (0341) 424-4187 / WhatsApp 3413629545</div>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#mapa">Ubicación</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="topbar">
+      <div>📞 (0341) 424-4187 / WhatsApp 3413629545</div>
+      <div>🔧 Reparación | 🛡️ Polarizado | 🚗 Cerrajería | 🛞 Neumáticos</div>
+    </div>
+    <div class="mainbar">
+      <div class="logo-text"><span>▰</span> PARABRISAS <span>LÍDER</span></div>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#mapa">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <h1>Venta y colocación de parabrisas</h1>
     <p>Ov. Lagos 1533, Rosario, Santa Fe</p>
     <a class="button" href="https://wa.me/543413629545" target="_blank">📲 Llamar / WhatsApp</a>
   </section>
 
+  <!-- QUIÉNES SOMOS -->
   <section class="section" id="quienes-somos">
     <h2>Quiénes somos</h2>
     <p>Parabrisas Líder SRL es una empresa ubicada en Rosario, Santa Fe, Argentina, dedicada desde 2012 a la venta, colocación y reparación de parabrisas y cristales para automóviles.</p>
@@ -127,6 +207,7 @@
     <p>Estamos certificados por CESVI Argentina en instalación de vidrios para vehículos con airbag.</p>
   </section>
 
+  <!-- SERVICIOS -->
   <section class="section" id="servicios">
     <h2>Servicios</h2>
     <div class="services">
@@ -139,6 +220,7 @@
     </div>
   </section>
 
+  <!-- UBICACIÓN -->
   <section class="section" id="mapa">
     <h2>¿Dónde estamos?</h2>
     <p>Ov. Lagos 1533, Rosario, a metros de Av. Pellegrini.</p>
@@ -147,9 +229,10 @@
     </div>
   </section>
 
+  <!-- MARCAS -->
   <section class="section" id="marcas">
-    <h2>Trabajamos con las mejores marcas</h2>
-    <div class="logos-container">
+    <h2 style="text-align: center;">Trabajamos con las mejores marcas</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 30px auto; max-width: 1000px;">
       <img class="logo-marca" src="img/pilkington.png" alt="Pilkington" />
       <img class="logo-marca" src="img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
       <img class="logo-marca" src="img/fuyao.png" alt="Fuyao" />
@@ -157,7 +240,8 @@
     </div>
   </section>
 
-  <footer>
+  <!-- FOOTER -->
+  <footer id="contacto">
     <div class="footer-contact">
       <p>📍 Ov. Lagos 1533, Rosario, Santa Fe</p>
       <p>📞 (0341) 424-4187</p>
@@ -169,3 +253,4 @@
 
 </body>
 </html>
+
