@@ -450,18 +450,64 @@
     <p>Estamos certificados por CESVI Argentina en instalación de vidrios para vehículos con airbag.</p>
   </section>
 
-  <!-- SERVICIOS -->
-  <section class="section" id="servicios">
-    <h2>Servicios</h2>
-    <div class="services">
-      <div class="service">🔹 Venta y colocación de parabrisas</div>
-      <div class="service">🔹 Lunetas, laterales, techos panorámicos</div>
-      <div class="service">🔹 Colocación con o sin sensores</div>
-      <div class="service">🔹 Trabajos con seguros y particulares</div>
-      <div class="service">🔹 Grabado de cristales</div>
-      <div class="service">🔹 Obleas de polarizados</div>
-    </div>
-  </section>
+ <style>
+  .servicio-box {
+    background-color: #e6f0fc;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+
+  .servicio-box:hover {
+    background-color: #d0e4ff;
+  }
+
+  .servicio-explicacion {
+    display: none;
+    padding: 10px 15px;
+    margin-top: 5px;
+    background-color: #f9fbff;
+    border-left: 4px solid #007bff;
+    font-weight: normal;
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<h2>Servicios</h2>
+<div class="servicio-box" onclick="toggleExplicacion('exp1')">◆ Venta y colocación de parabrisas</div>
+<div id="exp1" class="servicio-explicacion">Contamos con stock permanente y colocación profesional de parabrisas para todo tipo de vehículos. Trabajamos con cristales homologados y herramientas específicas para garantizar una instalación segura y rápida.</div>
+
+<div class="servicio-box" onclick="toggleExplicacion('exp2')">◆ Lunetas, laterales, techos panorámicos</div>
+<div id="exp2" class="servicio-explicacion">Reemplazamos todo tipo de vidrios: lunetas térmicas, laterales móviles o fijos, y techos panorámicos. También realizamos instalaciones sobre vehículos siniestrados o personalizados.</div>
+
+<div class="servicio-box" onclick="toggleExplicacion('exp3')">◆ Colocación con o sin sensores</div>
+<div id="exp3" class="servicio-explicacion">Instalamos parabrisas con sensores de lluvia, luz o cámara. También ofrecemos soluciones sin sensores para vehículos más antiguos o conversiones.</div>
+
+<div class="servicio-box" onclick="toggleExplicacion('exp4')">◆ Trabajos con seguros y particulares</div>
+<div id="exp4" class="servicio-explicacion">Gestionamos órdenes de colocación con todas las compañías aseguradoras. También atendemos a clientes particulares con presupuesto y solución inmediata.</div>
+
+<div class="servicio-box" onclick="toggleExplicacion('exp5')">◆ Grabado de cristales</div>
+<div id="exp5" class="servicio-explicacion">Ofrecemos grabado antivandalismo y de seguridad con número de patente o código en vidrios laterales y lunetas. Ideal para reforzar la seguridad del vehículo.</div>
+
+<div class="servicio-box" onclick="toggleExplicacion('exp6')">◆ Obleas de polarizados</div>
+<div id="exp6" class="servicio-explicacion">Colocamos y renovamos obleas reglamentarias para vidrios polarizados, exigidas por controles viales. Emitimos comprobantes válidos en todo el país.</div>
+
+<script>
+  function toggleExplicacion(id) {
+    var el = document.getElementById(id);
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+  }
+</script>
+
 
 <section id="reseñas" style="padding: 40px 0; background-color: #f9f9f9;">
   <h2 style="text-align: center; color: #003366; margin-bottom: 20px;">
