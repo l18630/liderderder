@@ -357,20 +357,25 @@
 </head>
 <body>
 
-  <!-- HEADER NUEVO -->
-  <header style="background-color: #003366; color: white; padding: 20px 0; text-align: center;">
-  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 100px; max-width: 300px; object-fit: contain; margin-bottom: 10px;">
-  <div style="margin-top: 10px; font-size: 1.1em;">
-    📞 (0341) 424-4187 / WhatsApp 3413629545
-  </div>
-  <nav style="margin-top: 10px;">
-    <a href="#inicio" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Inicio</a>
-    <a href="#servicios" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Servicios</a>
-    <a href="#mapa" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Ubicación</a>
-    <a href="#contacto" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Contacto</a>
-  </nav>
-</header>
+  <header style="background-color: #003366; padding: 15px 30px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <!-- Logo + nombre -->
+    <div style="display: flex; align-items: center;">
+      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 70px; object-fit: contain; margin-right: 15px;">
+      <span style="color: white; font-size: 1.8em; font-weight: bold;">Parabrisas <span style="color: #ff6600;">Líder</span></span>
+    </div>
 
+    <!-- Menú de navegación -->
+    <nav style="display: flex; gap: 25px; font-size: 1.1em; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#quienes-somos" class="nav-link">Quiénes somos</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#reseñas" class="nav-link">Reseñas</a>
+      <a href="#mapa" class="nav-link">Ubicación</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+  </div>
+</header>
   <style>
   header nav a:hover {
     text-decoration: underline;
