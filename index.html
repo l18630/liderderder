@@ -455,26 +455,87 @@
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+.accordion-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #e0f0ff;
+  border: none;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #003366;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-content {
+  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
 </style>
 
-<h2>Servicios</h2>
-<div class="servicio-box" onclick="toggleExplicacion('exp1')">◆ Venta y colocación de parabrisas</div>
-<div id="exp1" class="servicio-explicacion">Contamos con stock permanente y colocación profesional de parabrisas para todo tipo de vehículos. Trabajamos con cristales homologados y herramientas específicas para garantizar una instalación segura y rápida.</div>
+<section class="section" id="servicios">
+  <h2 style="color: #003366; text-align: center;">Servicios</h2>
 
-<div class="servicio-box" onclick="toggleExplicacion('exp2')">◆ Lunetas, laterales, techos panorámicos</div>
-<div id="exp2" class="servicio-explicacion">Reemplazamos todo tipo de vidrios: lunetas térmicas, laterales móviles o fijos, y techos panorámicos. También realizamos instalaciones sobre vehículos siniestrados o personalizados.</div>
+  <div class="accordion-container">
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Venta y colocación de parabrisas</button>
+      <div class="accordion-content">
+        Instalamos parabrisas originales y alternativos con garantía, respetando los estándares de seguridad y estética del vehículo.
+      </div>
+    </div>
 
-<div class="servicio-box" onclick="toggleExplicacion('exp3')">◆ Colocación con o sin sensores</div>
-<div id="exp3" class="servicio-explicacion">Instalamos parabrisas con sensores de lluvia, luz o cámara. También ofrecemos soluciones sin sensores para vehículos más antiguos o conversiones.</div>
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Lunetas, laterales y techos panorámicos</button>
+      <div class="accordion-content">
+        Colocamos todo tipo de cristales, incluidos los vidrios traseros, puertas laterales, techos fijos o corredizos.
+      </div>
+    </div>
 
-<div class="servicio-box" onclick="toggleExplicacion('exp4')">◆ Trabajos con seguros y particulares</div>
-<div id="exp4" class="servicio-explicacion">Gestionamos órdenes de colocación con todas las compañías aseguradoras. También atendemos a clientes particulares con presupuesto y solución inmediata.</div>
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Colocación con o sin sensores</button>
+      <div class="accordion-content">
+        Instalaciones precisas en vehículos con sensores de lluvia, luz, cámaras o asistencias al conductor.
+      </div>
+    </div>
 
-<div class="servicio-box" onclick="toggleExplicacion('exp5')">◆ Grabado de cristales</div>
-<div id="exp5" class="servicio-explicacion">Ofrecemos grabado antivandalismo y de seguridad con número de patente o código en vidrios laterales y lunetas. Ideal para reforzar la seguridad del vehículo.</div>
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Trabajos con seguros y particulares</button>
+      <div class="accordion-content">
+        Gestionamos la reposición de vidrios a través de tu aseguradora o de forma particular, de manera ágil y sin vueltas.
+      </div>
+    </div>
 
-<div class="servicio-box" onclick="toggleExplicacion('exp6')">◆ Obleas de polarizados</div>
-<div id="exp6" class="servicio-explicacion">Colocamos y renovamos obleas reglamentarias para vidrios polarizados, exigidas por controles viales. Emitimos comprobantes válidos en todo el país.</div>
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Grabado de cristales</button>
+      <div class="accordion-content">
+        Grabamos número de patente o identificación en los vidrios del vehículo como medida de seguridad adicional.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">🔹 Obleas de polarizados</button>
+      <div class="accordion-content">
+        Colocamos obleas reglamentarias según normativa vigente para vehículos polarizados.
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
   function toggleExplicacion(id) {
@@ -594,6 +655,17 @@
     index = (index + 1) % reseñas.length;
     reseñas[index].style.display = "block";
   }, 5000); // cambia cada 5 segundos
+</script>
+
+<script>
+  const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach(item => {
+    const title = item.querySelector(".accordion-title");
+    title.addEventListener("click", () => {
+      item.classList.toggle("open");
+    });
+  });
 </script>
 
   <script>
