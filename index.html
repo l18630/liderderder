@@ -480,6 +480,40 @@ Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, c
   margin: auto;
 }
 
+   .testimonial-carousel {
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial {
+  display: none;
+  padding: 30px;
+  background: #fff;
+  text-align: center;
+  transition: opacity 0.8s ease-in-out;
+  font-family: sans-serif;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial strong {
+  color: #444;
+  font-size: 0.95em;
+}
+
+
 .accordion-title {
   width: 100%;
   background-color: #e0f0ff;
@@ -585,139 +619,51 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 </script>
 
 
+
 <section id="reseñas" style="padding: 40px 0; background-color: #f9f9f9;">
   <h2 style="text-align: center; color: #003366; margin-bottom: 20px;">
     ¿Qué dicen nuestros clientes? 
   </h2>
   <div id="carrousel-reseñas" style="max-width: 700px; margin: auto; text-align: center; position: relative; min-height: 140px;">
-    
-    <div class="reseña-activa" style="display: block;">
-      <p style="font-style: italic;">“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado. Realmente impecable. Los vuelvo a elegir sin dudas.”</p>
-      <strong>Lucina Perich ⭐⭐⭐⭐⭐</strong>
-    </div>
-    
-    <div style="display: none;">
-      <p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p>
-      <strong>Gilda Morgante ⭐⭐⭐⭐⭐</strong>
-    </div>
-    
-    <div style="display: none;">
-      <p>“Nos rompieron tres cristales del auto y los chicos lo solucionaron en 2 horas. ¡Más rápido imposible!! Cubrió todo el seguro.”</p>
-      <strong>Alfredo Terpay ⭐⭐⭐⭐⭐</strong>
-    </div>
-    
-    <div style="display: none;">
-      <p>“Impecable atención, muy conforme con el servicio. Me atendió Francisco quien me asesoró muy bien y fue muy amable.”</p>
-      <strong>Maximiliano Gruning ⭐⭐⭐⭐⭐</strong>
-    </div>
 
-    <div style="display: none;">
-  <p>“Rápido y muy amables para atender, la ventana quedó perfecta, ¡gracias!”</p>
-  <strong>Virginia García ⭐⭐⭐⭐⭐</strong>
-</div>
+    <div class="reseña" style="display: block;"><p>“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado. Realmente impecable. Los vuelvo a elegir sin dudas.”</p><strong>Lucina Perich ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p><strong>Gilda Morgante ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Nos rompieron tres cristales del auto y los chicos lo solucionaron en 2 horas. ¡Más rápido imposible!! Cubrió todo el seguro.”</p><strong>Alfredo Terpay ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Impecable atención, muy conforme con el servicio. Me atendió Francisco quien me asesoró muy bien y fue muy amable.”</p><strong>Maximiliano Gruning ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Rápido y muy amables para atender, la ventana quedó perfecta, ¡gracias!”</p><strong>Virginia García ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy buen servicio, coordinación de turno y respetan los horarios pactados.”</p><strong>Alejandro Blanco ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente trabajo !!”</p><strong>Mimii Mc ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy buena atención, excelente cómo trabajan.”</p><strong>Diego Casadedio ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente atención y súper rápido 👏”</p><strong>Luciana López ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Tienen mucha experiencia, se nota que saben lo que hacen. Rápidos y prolijos. Volvería sin dudar.”</p><strong>Mauro Forlán ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy buena atención y profesional en su área. Muchas gracias.”</p><strong>José Barrabés ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Servicio eficiente y con puntualidad. El cambio de parabrisas quedó perfecto.”</p><strong>Ariel Elías ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Rápido, amorosa la gente que atiende”</p><strong>Amanda Zapata ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy buena y rápida atención !!!”</p><strong>Macarena Vallejos ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Los volvería a elegir por la rapidez”</p><strong>Esteban T ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente atención, fueron muy amables y rápidos.”</p><strong>Mailen Gonzalez Maguna ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente TODO!!! Atención y rapidez. Muy amables todos.”</p><strong>Sebastián Gallo ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy bien y rápida la atención. En pocas horas lo tienen listo. Quedó muy bien. Hice todo por el seguro, sin problema.”</p><strong>Nicolás Thomas ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Gente muy amable y predispuesta. Fui atendido en seguida y sin turno. Fui por un problema en el techo de un Fiat Uno, me entraba agua por el vidrio, me lo arregló y me tiró unos tips para mantenerlo. Muy buena onda, real que no se encuentra en cualquier lado. Eso destaco: el trato y la rapidez con que lo solucionó. ¡Gracias!”</p><strong>Ramiro Espadas ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente trabajo y asesoramiento.”</p><strong>Rodrigo Soto ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Muy buena atención... muy predispuestos los muchachos...”</p><strong>David Gaibazzi ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Fácil para sacar el turno, trabajo hecho en el acto, gestión automática y rápida con el seguro. Perfecto.”</p><strong>Néstor Gismondi ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Excelente, me cambiaron el parabrisas en 1 hora (con cita previa)”</p><strong>Fernando Vieitez ⭐⭐⭐⭐⭐</strong></div>
+    <div class="reseña" style="display: none;"><p>“Una atención y un trabajo espectacular!!!!!!”</p><strong>Gustavo 1234 ⭐⭐⭐⭐⭐</strong></div>
 
-<div style="display: none;">
-  <p>“Muy buen servicio, coordinación de turno y respetan los horarios pactados.”</p>
-  <strong>Alejandro Blanco ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente trabajo !!”</p>
-  <strong>Mimii Mc ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Muy buena atención, excelente cómo trabajan.”</p>
-  <strong>Diego Casadedio ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente atención y súper rápido 👏”</p>
-  <strong>Luciana López ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Tienen mucha experiencia, se nota que saben lo que hacen. Rápidos y prolijos. Volvería sin dudar.”</p>
-  <strong>Mauro Forlán ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Muy buena atención y profesional en su área. Muchas gracias.”</p>
-  <strong>José Barrabés ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Servicio eficiente y con puntualidad. El cambio de parabrisas quedó perfecto.”</p>
-  <strong>Ariel Elías ⭐⭐⭐⭐⭐</strong>
-</div>
-
-¡Perfecto! Acá tenés la **segunda tanda de comentarios** convertidos al formato que estás usando:
-
-```html
-<div style="display: none;">
-  <p>“Rápido, amorosa la gente que atiende”</p>
-  <strong>Amanda Zapata ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Muy buena y rápida atención !!!”</p>
-  <strong>Macarena Vallejos ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Los volvería a elegir por la rapidez”</p>
-  <strong>Esteban T ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente atención, fueron muy amables y rápidos.”</p>
-  <strong>Mailen Gonzalez Maguna ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente TODO!!! Atención y rapidez. Muy amables todos.”</p>
-  <strong>Sebastián Gallo ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Muy bien y rápida la atención. En pocas horas lo tienen listo. Quedó muy bien. Hice todo por el seguro, sin problema.”</p>
-  <strong>Nicolás Thomas ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Gente muy amable y predispuesta. Fui atendido en seguida y sin turno. Fui por un problema en el techo de un Fiat Uno, me entraba agua por el vidrio, me lo arregló y me tiró unos tips para mantenerlo. Muy buena onda, real que no se encuentra en cualquier lado. Eso destaco: el trato y la rapidez con que lo solucionó. ¡Gracias!”</p>
-  <strong>Ramiro Espadas ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente trabajo y asesoramiento.”</p>
-  <strong>Rodrigo Soto ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Muy buena atención... muy predispuestos los muchachos...”</p>
-  <strong>David Gaibazzi ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Fácil para sacar el turno, trabajo hecho en el acto, gestión automática y rápida con el seguro. Perfecto.”</p>
-  <strong>Néstor Gismondi ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Excelente, me cambiaron el parabrisas en 1 hora (con cita previa)”</p>
-  <strong>Fernando Vieitez ⭐⭐⭐⭐⭐</strong>
-</div>
-
-<div style="display: none;">
-  <p>“Una atención y un trabajo espectacular!!!!!!”</p>
-  <strong>Gustavo 1234 ⭐⭐⭐⭐⭐</strong>
-</div>
-    
-    
   </div>
 </section>
-  
+
+<script>
+  const reseñas = document.querySelectorAll('#carrousel-reseñas .reseña');
+  let index = 0;
+
+  setInterval(() => {
+    reseñas[index].style.display = "none";
+    index = (index + 1) % reseñas.length;
+    reseñas[index].style.display = "block";
+  }, 5000);
+</script>
   <!-- UBICACIÓN -->
   <section class="section" id="mapa">
     <h2>¿Dónde estamos?</h2>
@@ -845,6 +791,20 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 <a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
+
+  <script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  let current = 0;
+
+  function showNextTestimonial() {
+    testimonials[current].classList.remove('active');
+    current = (current + 1) % testimonials.length;
+    testimonials[current].classList.add('active');
+  }
+
+  setInterval(showNextTestimonial, 4000); // cambia cada 4 segundos
+</script>
+
 </body>
 
 
