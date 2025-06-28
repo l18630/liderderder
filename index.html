@@ -95,12 +95,24 @@
   </header>
  
   <!-- QUIÉNES SOMOS -->
-  <section id="quienes-somos" style="padding: 60px 20px;">
-    <h2 style="text-align: center; color: #003366;">¿Quiénes somos?</h2>
-    <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; color: #333; line-height: 1.6;">
-      <p style="margin-bottom: 25px;">
-        Desde 2012, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y más de una década de experiencia en el rubro.
-      </p>
+<section id="quienes-somos" style="padding: 60px 20px;">
+  <h2 style="text-align: center; color: #003366;">¿Quiénes somos?</h2>
+  <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; color: #333; line-height: 1.6;">
+    <p style="margin-bottom: 25px;">
+      Hace más de <strong><span id="anios-experiencia">13</span> años</strong>, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y amplia trayectoria en el rubro.
+    </p>
+    <p style="margin-bottom: 10px;">
+      Para mantener esta calidad de atención y asegurar trabajos ágiles y eficientes, <u><strong>trabajamos exclusivamente con turnos previamente coordinados</strong></u>. Así evitamos demoras, organizamos mejor cada colocación y garantizamos que cada cliente reciba el tiempo y la dedicación que merece.
+    </p>
+  </div>
+</section>
+
+<script>
+  const anioActual = new Date().getFullYear();
+  const anios = anioActual - 2012;
+  document.getElementById("anios-experiencia").textContent = anios;
+</script>
+
 
       <div class="accordion-box">
         <div class="accordion-titulo" onclick="toggleAcordeon(this)">
