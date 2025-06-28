@@ -105,14 +105,86 @@
 
 
 
-<!-- ENCABEZADO FIJO -->
+<!-- HEADER FIJO -->
+<style>
+  .encabezado-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF8DC;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .encabezado-fijo img {
+    height: 44px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  .encabezado-fijo .titulo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3c7d99;
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .barra-navegacion {
+    text-align: center;
+    padding: 65px 0 12px;
+  }
+
+  .barra-navegacion a {
+    margin: 0 14px;
+    font-weight: bold;
+    color: #227799;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .barra-navegacion a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .encabezado-fijo {
+      padding: 6px 8px;
+    }
+
+    .encabezado-fijo img {
+      height: 36px;
+    }
+
+    .encabezado-fijo .titulo {
+      font-size: 1.2rem;
+      padding: 0 5px;
+    }
+
+    .barra-navegacion {
+      padding: 55px 0 10px;
+    }
+
+    .barra-navegacion a {
+      margin: 0 8px;
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<!-- HTML HEADER -->
 <div class="encabezado-fijo">
   <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
   <div class="titulo">PARABRISAS LIDER</div>
   <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
 </div>
 
-<!-- MENÚ DE NAVEGACIÓN (NO FIJO) -->
 <div class="barra-navegacion">
   <a href="#inicio">Inicio</a>
   <a href="#quienes-somos">Nosotros</a>
@@ -121,8 +193,6 @@
   <a href="#ubicacion">Ubicación</a>
   <a href="#contacto">Contacto</a>
 </div>
-
-  </header>
  
   <!-- NOSOTROS -->
 <section id="nosotros" style="padding: 60px 20px; background-color: #FFF8DC;">
