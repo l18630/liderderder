@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+  <style>
+  .encabezado-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF8DC;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .encabezado-fijo .titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3c7d99;
+    text-align: center;
+    flex: 1;
+  }
+
+  .encabezado-fijo img {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .contenedor-navegacion {
+    margin-top: 80px; /* deja espacio para el header fijo */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .contenedor-navegacion a {
+    margin: 0 12px;
+    font-weight: bold;
+    color: #227799;
+    text-decoration: none;
+  }
+
+  .contenedor-navegacion a:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 600px) {
+    .encabezado-fijo img {
+      height: 40px;
+    }
+    .encabezado-fijo .titulo {
+      font-size: 1.4rem;
+    }
+    .contenedor-navegacion a {
+      margin: 0 8px;
+    }
+  }
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parabrisas Lider - Rosario</title>
@@ -107,44 +166,23 @@ body {
   </style>
 </head>
 <body>
-<div class="fixed-banner">
-  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider">
+  <!-- ENCABEZADO FIJO -->
+<div class="encabezado-fijo">
+  <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
   <div class="titulo">PARABRISAS LIDER</div>
-  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider">
+  <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
 </div>
 
- <!-- Encabezado -->
-<div style="background-color: #FFF8DC; padding: 20px 10px;">
-  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1000px; margin: auto; flex-wrap: wrap;">
-
-    <!-- Logo izquierdo -->
-    <a href="#inicio" style="flex: 0 0 auto;">
-      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 60px;">
-    </a>
-
-    <!-- Título central -->
-    <div style="flex: 1 1 auto; text-align: center;">
-      <h1 style="margin: 0; font-size: 2rem; color: #3486a3;">PARABRISAS LIDER</h1>
-    </div>
-
-    <!-- Logo derecho -->
-    <a href="#inicio" style="flex: 0 0 auto;">
-      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 60px;">
-    </a>
-
-  </div>
+<!-- BARRA DE NAVEGACIÓN (NO FIJA) -->
+<div class="barra-navegacion">
+  <a href="#inicio">Inicio</a>
+  <a href="#quienes-somos">Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#resenas">Reseñas</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a href="#contacto">Contacto</a>
 </div>
 
-
-      <nav>
-        <a href="#inicio" class="nav-link">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios" class="nav-link">Servicios</a>
-        <a href="#resenas" class="nav-link">Reseñas</a>
-        <a href="#mapa" class="nav-link">Ubicación</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-      </nav>
-    </div>
   </header>
  
   <!-- NOSOTROS -->
