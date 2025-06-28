@@ -28,77 +28,84 @@
    <!-- CSS EN HEAD -->
 <style>
   /* HEADER FIJO */
+.encabezado-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF8DC;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-izquierdo,
+.logo-derecho {
+  flex: 0 0 auto;
+}
+
+.logo-izquierdo img,
+.logo-derecho img {
+  height: 42px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Título centrado */
+.titulo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3c7d99;
+}
+
+/* MENÚ DE NAVEGACIÓN (NO FIJO) */
+.barra-navegacion {
+  text-align: center;
+  padding: 80px 0 12px; /* deja espacio por el header fijo */
+}
+
+.barra-navegacion a {
+  margin: 0 14px;
+  font-weight: bold;
+  color: #227799;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.barra-navegacion a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 600px) {
   .encabezado-fijo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #FFF8DC;
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 8px 12px;
   }
 
-  .encabezado-fijo img {
-    height: 50px;
-    object-fit: contain;
-    cursor: pointer;
+  .logo-izquierdo img,
+  .logo-derecho img {
+    height: 36px;
   }
 
-  .encabezado-fijo .titulo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #3c7d99;
-    flex: 1;
-    text-align: center;
+  .titulo {
+    font-size: 1.3rem;
+    margin: 0 8px;
   }
 
-  /* MENÚ DE NAVEGACIÓN (NO FIJO) */
   .barra-navegacion {
-    text-align: center;
-    padding: 60px 0 12px; /* compensación por header fijo arriba */
+    padding: 70px 0 10px;
   }
 
   .barra-navegacion a {
-    margin: 0 14px;
-    font-weight: bold;
-    color: #227799;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-
-  .barra-navegacion a:hover {
-    text-decoration: underline;
-  }
-
-  /* MOBILE */
-  @media (max-width: 600px) {
-  .encabezado-fijo {
-    padding: 6px 12px; /* Menor padding pero sigue evitando los bordes */
+    margin: 0 8px;
+    font-size: 1rem;
   }
 }
-
-    .encabezado-fijo img {
-      height: 40px;
-    }
-
-    .encabezado-fijo .titulo {
-      font-size: 1.3rem;
-      margin: 0 8px;
-    }
-
-    .barra-navegacion {
-      padding: 55px 0 10px;
-    }
-
-    .barra-navegacion a {
-      margin: 0 8px;
-      font-size: 1rem;
-    }
-  }
 </style>
 </head>
 <body>
@@ -179,10 +186,15 @@
 </style>
 
 <!-- HTML HEADER -->
+<!-- ENCABEZADO FIJO -->
 <div class="encabezado-fijo">
-  <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
+  <div class="logo-izquierdo">
+    <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Izquierdo"></a>
+  </div>
   <div class="titulo">PARABRISAS LIDER</div>
-  <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
+  <div class="logo-derecho">
+    <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Derecho"></a>
+  </div>
 </div>
 
 <div class="barra-navegacion">
