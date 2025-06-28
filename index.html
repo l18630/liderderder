@@ -77,23 +77,25 @@
 </head>
 <body>
 
- <div style="background-color: #FFF8DC; padding: 20px 10px;">
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; max-width: 1000px; margin: auto; padding: 0 20px;">
+ <!-- Encabezado -->
+<div style="background-color: #FFF8DC; padding: 20px 10px;">
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1000px; margin: auto; flex-wrap: wrap;">
 
     <!-- Logo izquierdo -->
-    <a href="#inicio">
-  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="cursor: pointer;">
-</a>
+    <a href="#inicio" style="flex: 0 0 auto;">
+      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 60px;">
+    </a>
 
-    <!-- Título -->
-    <h1 style="margin: 0; font-size: 1.8rem; color: #2a7b99; white-space: nowrap; font-weight: bold; font-family: sans-serif; text-align: center; flex-grow: 1;">
-      PARABRISAS LIDER
-    </h1>
+    <!-- Título central -->
+    <div style="flex: 1 1 auto; text-align: center;">
+      <h1 style="margin: 0; font-size: 2rem; color: #3486a3;">PARABRISAS LIDER</h1>
+    </div>
 
     <!-- Logo derecho -->
-    <a href="#inicio">
-  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="cursor: pointer;">
-</a>
+    <a href="#inicio" style="flex: 0 0 auto;">
+      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 60px;">
+    </a>
+
   </div>
 </div>
 
@@ -194,6 +196,16 @@
     .accordion-box.abierto .accordion-cuerpo {
       display: block;
     }
+
+    @media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem !important;
+  }
+  img[alt="Logo Parabrisas Líder"] {
+    height: 50px !important;
+  }
+}
+
   </style>
 
   <script>
