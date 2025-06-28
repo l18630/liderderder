@@ -853,11 +853,14 @@
 
 
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="img/img/whatsapp.png" alt="WhatsApp">
 </a>
+
+<!-- TEXTO flotante al lado -->
 <div class="whatsapp-text">Click acá para sacar turno</div>
+
 
 
 
@@ -881,6 +884,23 @@
     transition: transform 0.2s ease-in-out;
   }
 
+  .whatsapp-text {
+  position: fixed;
+  bottom: 34px;
+  right: 95px;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-text {
+    display: none;
+  }
+}
   .whatsapp-float:hover {
     transform: scale(1.1);
   }
