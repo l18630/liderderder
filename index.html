@@ -73,9 +73,45 @@
       color: #007a9c;
       text-decoration: underline;
     }
+
+    .fixed-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF8DC;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Para compensar la altura de la franja */
+body {
+  padding-top: 90px; /* ajustalo si tu banner es más alto */
+}
+
+.fixed-banner img {
+  height: 50px; /* ajustable */
+  object-fit: contain;
+}
+
+.fixed-banner .titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3c7d99;
+}
+
   </style>
 </head>
 <body>
+<div class="fixed-banner">
+  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider">
+  <div class="titulo">PARABRISAS LIDER</div>
+  <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider">
+</div>
 
  <!-- Encabezado -->
 <div style="background-color: #FFF8DC; padding: 20px 10px;">
