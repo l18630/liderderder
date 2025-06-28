@@ -654,16 +654,7 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
   </div>
 </section>
 
-<script>
-  const resenas = document.querySelectorAll('#carrousel-resenas .resena');
-  let index = 0;
 
-  setInterval(() => {
-    resenas[index].style.display = "none";
-    index = (index + 1) % resenas.length;
-    resenas[index].style.display = "block";
-  }, 5000);
-</script>
   <!-- UBICACIÓN -->
   <section class="section" id="mapa">
     <h2>¿Dónde estamos?</h2>
@@ -755,15 +746,7 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 </footer>
 
 
-<script>
-  let index = 0;
-  const resenas = document.querySelectorAll("#carrousel-resenas > div");
-  setInterval(() => {
-    resenas[index].style.display = "none";
-    index = (index + 1) % resenas.length;
-    resenas[index].style.display = "block";
-  }, 5000); // cambia cada 5 segundos
-</script>
+
 
 <script>
   const items = document.querySelectorAll(".accordion-item");
@@ -776,18 +759,25 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
   });
 </script>
 
-  <script>
-  const resenas = document.querySelectorAll(".resena");
+<script>
+  const resenas = document.querySelectorAll("#carrousel-resenas .resena");
   let index = 0;
 
-  function mostrarSiguienteresena() {
-    resenas[index].classList.remove("active");
+  function mostrarSiguienteResena() {
+    resenas.forEach((resena, i) => {
+      resena.style.display = i === index ? "block" : "none";
+    });
+
     index = (index + 1) % resenas.length;
-    resenas[index].classList.add("active");
   }
 
-  setInterval(mostrarSiguienteresena, 5000);
+  // Mostramos la primera al inicio
+  mostrarSiguienteResena();
+
+  // Cambiamos cada 5 segundos
+  setInterval(mostrarSiguienteResena, 5000);
 </script>
+
 <a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
