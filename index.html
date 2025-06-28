@@ -76,10 +76,10 @@
 
   /* MOBILE */
   @media (max-width: 600px) {
-    .encabezado-fijo {
-      flex-direction: row;
-      padding: 8px 10px;
-    }
+  .encabezado-fijo {
+    padding: 6px 12px; /* Menor padding pero sigue evitando los bordes */
+  }
+}
 
     .encabezado-fijo img {
       height: 40px;
@@ -107,19 +107,19 @@
 
 <!-- HEADER FIJO -->
 <style>
-  .encabezado-fijo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #FFF8DC;
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
+ .encabezado-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF8DC;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px; /* Aumentamos padding para que no estén al borde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
   .encabezado-fijo img {
     height: 44px;
