@@ -705,18 +705,16 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 
   function mostrarSiguienteResena() {
     resenas.forEach((resena, i) => {
-      resena.style.display = i === index ? "block" : "none";
+      resena.classList.remove("active");
     });
-
+    resenas[index].classList.add("active");
     index = (index + 1) % resenas.length;
   }
 
-  // Mostramos la primera al inicio
   mostrarSiguienteResena();
-
-  // Cambiamos cada 5 segundos
   setInterval(mostrarSiguienteResena, 5000);
 </script>
+
 
 <a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
