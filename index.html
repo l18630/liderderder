@@ -687,42 +687,29 @@
 }
 </style>
 
-<!-- COMPAÑÍAS DE SEGURO -->
-<!-- ASEGURADORAS -->
-<section id="aseguradoras" style="padding: 40px 0; background-color: #ffffff;">
+<!-- SEGUROS -->
+<section class="section" id="seguros" style="padding: 60px 20px; background-color: #ffffff;">
   <h2 style="text-align: center; color: #003366;">Trabajamos con todas las compañías de seguros</h2>
-  <div class="carrusel-seguros">
-    <div class="slide active">
+  <div class="seguros-carousel-container" style="margin-top: 30px;">
+    <div class="seguros-carousel" id="seguros-carousel">
       <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
       <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
       <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/coopp.jpg" alt="Cooperación Patronal" />
       <img class="logo-seguro" src="img/img/img/seguros/nor.png" alt="El Norte" />
       <img class="logo-seguro" src="img/img/img/seguros/equi2.jpg" alt="Equitativa del Plata" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/fedfed.jpg" alt="Federación Patronal" />
       <img class="logo-seguro" src="img/img/img/seguros/galiciaa.jpg" alt="Galicia" />
       <img class="logo-seguro" src="img/img/img/seguros/holando.jpg" alt="La Holando" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/la2.png" alt="La Segunda" />
       <img class="logo-seguro" src="img/img/img/seguros/liderar.png" alt="Liderar" />
       <img class="logo-seguro" src="img/img/img/seguros/mercantilandina.png" alt="Mercantil Andina" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/pna.png" alt="Paraná Seguros" />
       <img class="logo-seguro" src="img/img/img/seguros/rus.png" alt="Rio Uruguay Seguros" />
       <img class="logo-seguro" src="img/img/img/seguros/sancor.png" alt="Sancor" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/sancri11.jpg" alt="San Cristóbal" />
       <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
       <img class="logo-seguro" src="img/img/img/seguros/sm.jpg" alt="Segurometal" />
-    </div>
-    <div class="slide">
       <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
       <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
       <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
@@ -731,41 +718,41 @@
 </section>
 
 <style>
-  .carrusel-seguros {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    max-width: 100%;
-    margin-top: 30px;
-    position: relative;
-    min-height: 90px;
-  }
+.seguros-carousel-container {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+.seguros-carousel {
+  display: flex;
+  gap: 40px;
+  animation: scrollSeguros 30s linear infinite;
+}
+.logo-seguro {
+  height: 50px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: grayscale(0%);
+  transition: transform 0.2s ease;
+}
+.logo-seguro:hover {
+  transform: scale(1.08);
+}
 
-  .carrusel-seguros .slide {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-  }
+@keyframes scrollSeguros {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-  .carrusel-seguros .slide.active {
-    display: flex;
+@media (max-width: 768px) {
+  .seguros-carousel {
+    gap: 25px;
   }
-
   .logo-seguro {
-    height: 55px;
-    max-width: 30%;
-    object-fit: contain;
+    height: 40px;
   }
-
-  @media (max-width: 768px) {
-    .logo-seguro {
-      height: 40px;
-      max-width: 30%;
-    }
-  }
+}
 </style>
 
 <script>
