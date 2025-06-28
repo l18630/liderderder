@@ -285,6 +285,76 @@
       background-color: #cfe7ff;
     }
 
+    .footer {
+  background-color: #FFF8DC;
+  color: #000;
+  padding: 40px 20px 20px;
+  border-top: 1px solid #ddd;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.footer-column img {
+  height: 100px;
+  object-fit: contain;
+}
+
+.footer-contact {
+  flex: 2;
+  min-width: 280px;
+  max-width: 500px;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.footer-contact p {
+  margin: 10px 0;
+}
+
+.footer-alert {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  color: #333;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+    
     .accordion-content {
       background-color: #f9f9f9;
       max-height: 0;
@@ -578,37 +648,58 @@
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1100px; margin: auto;">
 
     <!-- Logo redondo a la izquierda -->
-    <div style="flex: 1; min-width: 180px; text-align: center;">
+    <div style="flex: 1; min-width: 180px; text-align: center; margin-bottom: 20px;">
       <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 100px; object-fit: contain;">
     </div>
 
-    <!-- Datos de contacto centrados y comprimidos -->
+    <!-- Datos de contacto centrados -->
     <div style="flex: 2; min-width: 300px; max-width: 500px; text-align: left; font-size: 1rem; padding: 10px 20px;">
-       <!-- Frase de advertencia centrada -->
-      <div style="text-align: center; font-size: 1.1rem; font-weight: bold; margin-top: 20px;">
-          ⚠️ Atendemos con turnos previamente coordinados ⚠️
+
+      <!-- Frase de advertencia centrada -->
+      <div style="text-align: center; font-size: 1.1rem; font-weight: bold; margin-bottom: 20px;">
+        ⚠️ Atendemos con turnos previamente coordinados ⚠️
       </div>
+
       <p><span style="font-size: 1.2em;">⏰</span> <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
       <p><span style="font-size: 1.2em;">📍</span> <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
       <p><span style="font-size: 1.2em;">📞</span> <strong>Teléfono:</strong> (0341) 424-4187</p>
       <p><span style="font-size: 1.2em;">💬</span> <strong>WhatsApp:</strong> 3413629545 - Solo Mensajes</p>
       <p><span style="font-size: 1.2em;">📧</span> <strong>Email:</strong> parabrisaslidersrl@hotmail.com</p>
- 
     </div>
 
     <!-- Tarjeta a la derecha -->
-    <div style="flex: 1; min-width: 180px; text-align: center;">
+    <div style="flex: 1; min-width: 180px; text-align: center; margin-bottom: 20px;">
       <img src="img/img/lider.png" alt="Tarjeta Parabrisas Líder" style="height: 110px; object-fit: contain;">
     </div>
-  </div>
 
- 
+  </div>
 
   <!-- Créditos -->
   <div style="text-align: center; font-size: 0.9rem; margin-top: 30px; color: #333;">
     © 2025 Parabrisas Líder SRL - Todos los derechos reservados
   </div>
 </footer>
+
+<!-- Estilo responsivo -->
+<style>
+  @media (max-width: 768px) {
+    footer div[style*="display: flex"] {
+      flex-direction: column;
+      align-items: center !important;
+    }
+
+    footer div[style*="flex: 1"],
+    footer div[style*="flex: 2"] {
+      text-align: center !important;
+      max-width: 100% !important;
+    }
+
+    footer div[style*="padding: 10px 20px"] p {
+      text-align: left;
+    }
+  }
+</style>
+
 
 
 
