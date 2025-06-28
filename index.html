@@ -1,785 +1,598 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
-
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parabrisas Lider</title>
+  <title>Parabrisas Líder</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: #fefae7;
+      color: #222;
     }
-.section h2,
-#resenas h2,
-#marcas h2,
-#seguros h2 {
-  color: #2e7c9c;
-}
-    /* HEADER ESTILOS */
+
+    h2 {
+      color: #2e7c9c;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header {
-      background-color: #000000;
-      color: white;
-    }
-.nav-link {
-  color: #2e7c9c; /* azul igual que Parabrisas Líder */
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #007a9c; /* un poco más oscuro al pasar el mouse */
-  text-decoration: underline;
-}
-
-    .topbar {
-      background-color: #ff6600;
-      padding: 5px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
+      background-color: #fefae7;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 15px 30px;
     }
 
-    .mainbar {
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
+      flex-wrap: wrap;
     }
-.logos-seguros {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* Espacio entre logos */
-}
 
-.logo-seguro {
-  max-height: 60px; /* Ajustá según tu diseño */
-  height: auto;
-  width: auto;
-  object-fit: contain;
-}
-    .logo-text {
-      font-size: 24px;
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-area img {
+      height: 70px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+
+    .logo-area span {
+      font-size: 1.8em;
       font-weight: bold;
-      color: white;
-    }
-
-    .logo-text span {
-      color: #ff6600;
+      color: #2e7c9c;
     }
 
     nav {
       display: flex;
-      gap: 20px;
-      font-size: 16px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ff6600;
-    }
-
-    /* RESTO DEL SITIO */
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1601913052356-b2f3f08b5681?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .button {
-      background-color: #00bcd4;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 5px;
+      gap: 25px;
       font-size: 1.1em;
-    }
-
-    .resena-button {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.resena-button:hover {
-  background-color: #005599;
-  transform: scale(1.05);
-}
-
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      color: #003366;
-    }
-
-    .services {
-      display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .service {
-      flex: 1 1 45%;
-      background: #e0f0ff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .map {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .carrusel-resenas {
-  max-width: 700px;
-  margin: auto;
-  position: relative;
-  text-align: center;
-  min-height: 140px;
-}
-
-.resena {
-  display: none;
-  opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: auto;
-  padding: 30px 25px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  max-width: 90%;
-  font-family: 'Arial', sans-serif;
-}
-
-.resena.active {
-  display: block !important;
-  opacity: 1;
-  transform: translateY(0px) scale(1);
-  position: relative;
-  z-index: 2;
-}
-
-/* Flechas de navegación */
-.flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #003366;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 8px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 3;
-  transition: background-color 0.3s ease;
-}
-
-.flecha:hover {
-  background-color: #005599;
-}
-
-.flecha.izq {
-  left: -40px;
-}
-
-.flecha.der {
-  right: -40px;
-}
-
-/* Puntos indicadores */
-.puntos {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.punto {
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
-  background-color: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.punto.activo {
-  background-color: #003366;
-}
-
-
-
-
-    .brands {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .brands img {
-      max-height: 60px;
-      object-fit: contain;
-    }
-
-    
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .footer-contact {
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
-
-    .footer-button {
-      display: inline-block;
-      background-color: #00bcd4;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1em;
+      justify-content: center;
       margin-top: 10px;
     }
 
-   #marcas .logo-marca {
-  height: 60px;
-  width: auto;
-  max-width: 120px; /* evita que se pase de ancho */
-  object-fit: contain;
-  display: inline-block;
-  margin: 0 15px;
-  transition: transform 0.2s ease;
-  filter: grayscale(0%);
-}
-
-    #marcas .logo-marca:hover {
-      transform: scale(1.1);
+    .nav-link {
+      color: #2e7c9c;
+      font-weight: bold;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
     }
-.logos-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-.logo-marca {
-  width: 150px;
-  height: 60px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-  filter: grayscale(0%);
-}
-
-.logo-marca:hover {
-  transform: scale(1.1);
-}
-
-    /* BLOQUE MARCAS */
-.logos-marcas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.logo-marca {
-  height: 60px;
-  max-width: 160px;
-  object-fit: contain;
-  filter: grayscale(0%);
-  transition: transform 0.3s ease;
-}
-
-/* COMPAÑÍAS DE SEGURO */
-.logo-seguro {
-  height: 50px;
-  max-width: 120px;
-  object-fit: contain;
-  margin: 10px;
-  filter: grayscale(0%);
-  transition: transform 0.2s ease;
-}
-
-.logo-seguro:hover {
-  transform: scale(1.1);
-}
-.logo-marca:hover {
-  transform: scale(1.08);
-}
-
-/* Ajuste especial para Pilkington */
-.logo-marca.pilkington {
-  transform: scale(1.3);
-}
-
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-section:first-of-type {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
+    .nav-link:hover {
+      color: #007a9c;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <header style="background-color: #fefae7; padding: 15px 30px;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-    <!-- Logo + nombre -->
-    <div style="display: flex; align-items: center;">
-      <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder" style="height: 70px; object-fit: contain; margin-right: 15px;">
-      <span style="color: #2e7c9c; font-size: 1.8em; font-weight: bold;">Parabrisas Lider</span>
-
-
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="img/img/logolider.jpeg" alt="Logo Parabrisas Líder">
+        <span>Parabrisas Líder</span>
+      </div>
+      <nav>
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#quienes-somos" class="nav-link">Quienes somos</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#resenas" class="nav-link">Reseñas</a>
+        <a href="#mapa" class="nav-link">Ubicación</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
     </div>
-
-    <!-- Menú de navegación -->
-    <nav style="display: flex; gap: 25px; font-size: 1.1em; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
-      <a href="#inicio" class="nav-link">Inicio</a>
-      <a href="#quienes-somos" class="nav-link">Quienes somos</a>
-      <a href="#servicios" class="nav-link">Servicios</a>
-      <a href="#resenas" class="nav-link">Reseñas</a>
-      <a href="#mapa" class="nav-link">Ubicación</a>
-      <a href="#contacto" class="nav-link">Contacto</a>
-    </nav>
-  </div>
-</header>
-  <style>
-  header nav a:hover {
-    text-decoration: underline;
-    color: #00bcd4;
-  }
-</style>
-  
+  </header>
   <!-- HERO -->
-  <section class="hero">
-    <h1>Venta y colocación de cristales para todo tipo de vehiculos</h1>
-    <p>Ov. Lagos 1533, Rosario, Santa Fe</p>
+  <section class="hero" id="inicio" style="background-image: url('https://images.unsplash.com/photo-1601913052356-b2f3f08b5681?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
+    <h1 style="font-size: 2.8em; margin-bottom: 10px;">Venta y colocación de cristales para todo tipo de vehículos</h1>
+    <p style="font-size: 1.3em;">Ov. Lagos 1533, Rosario, Santa Fe</p>
   </section>
 
   <!-- QUIÉNES SOMOS -->
-  <section id="quienes-somos" style="margin-top: 0; padding-top: 0;">
-  <h2 style="text-align: center; color: #003366;">¿Quiénes somos?</h2>
-  
-  <div style="max-width: 800px; margin: auto; font-size: 1rem; color: #222;">
-    <p style="margin-bottom: 20px;">
-      Desde 2012, en <strong>Parabrisas Líder</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y más de una década de experiencia en el rubro.
-    </p>
+  <section id="quienes-somos" style="padding: 60px 20px;">
+    <h2 style="text-align: center; color: #003366;">¿Quiénes somos?</h2>
+    <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; color: #333; line-height: 1.6;">
+      <p style="margin-bottom: 25px;">
+        Desde 2012, en <strong>Parabrisas Líder</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y más de una década de experiencia en el rubro.
+      </p>
 
-    <div class="accordion-box">
-      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
-        <span style="color: green;">✔️</span> Trabajos garantizados
+      <div class="accordion-box">
+        <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+          <span style="color: green;">✔️</span> Trabajos garantizados
+        </div>
+        <div class="accordion-cuerpo">
+          Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.
+        </div>
       </div>
-      <div class="accordion-cuerpo">
-        Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.
+
+      <div class="accordion-box">
+        <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+          <span style="color: green;">✔️</span> Entrega ágil y sin demoras
+        </div>
+        <div class="accordion-cuerpo">
+          Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.
+        </div>
+      </div>
+
+      <div class="accordion-box">
+        <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+          <span style="color: green;">✔️</span> Atención a particulares y compañías de seguros
+        </div>
+        <div class="accordion-cuerpo">
+          Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="accordion-box">
-      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
-        <span style="color: green;">✔️</span> Entrega ágil y sin demoras
+  <style>
+    .accordion-box {
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .accordion-titulo {
+      background-color: #e6f0fb;
+      font-weight: bold;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-titulo:hover {
+      background-color: #d0e5ff;
+    }
+
+    .accordion-cuerpo {
+      padding: 14px 18px;
+      background-color: #fefefe;
+      display: none;
+    }
+
+    .accordion-box.abierto .accordion-cuerpo {
+      display: block;
+    }
+  </style>
+
+  <script>
+    function toggleAcordeon(elemento) {
+      const box = elemento.parentElement;
+      box.classList.toggle("abierto");
+    }
+  </script>
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios" style="padding: 60px 20px; background-color: #fefae7;">
+    <h2 style="text-align: center; color: #003366;">Servicios</h2>
+
+    <div class="accordion-container" style="max-width: 900px; margin: 40px auto;">
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Venta e instalación de parabrisas (con o sin colocación)</button>
+        <div class="accordion-content">
+          Vendemos e instalamos parabrisas originales y alternativos con garantía, respetando los estándares de seguridad y estética del vehículo.
+          Contamos con un amplio stock para todo tipo de vehículos, y realizamos colocaciones con materiales de primera calidad y mano de obra especializada, asegurando un sellado perfecto y durabilidad.
+        </div>
       </div>
-      <div class="accordion-cuerpo">
-        Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Reparación de parabrisas</button>
+        <div class="accordion-content">
+          Ofrecemos un servicio rápido, seguro y económico para la reparación de parabrisas con daños menores, como astillas o rajaduras pequeñas.
+          Utilizamos resinas de alta calidad que recuperan la resistencia del cristal y mejoran la visibilidad, evitando reemplazos innecesarios.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Reemplazo de lunetas, cristales laterales y techos</button>
+        <div class="accordion-content">
+          Colocamos todo tipo de cristales: lunetas, vidrios de puertas, aletas, ventiletes y cristales de techos.
+          Garantizamos una instalación segura, prolija y en línea con las especificaciones del fabricante.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Sellado/despegado y colocación de cristales</button>
+        <div class="accordion-content">
+          Sellamos, o despegamos y volvemos a colocar cristales para solucionar filtraciones y asegurar un sellado perfecto.
+          También realizamos el sellado de techos corredizos para evitar que puedan ser removidos o robados.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Grabado de patente y chasis en cristales</button>
+        <div class="accordion-content">
+          Realizamos el grabado obligatorio de número de patente y chasis en los vidrios del vehículo, cumpliendo con la disposición de la DNRPA, vigente en todo el territorio argentino.
+          Este procedimiento es exigido por ley para aumentar la seguridad y prevenir el robo de autopartes. También es requerido al momento de transferir o asegurar un vehículo.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Venta de obleas para vidrios polarizados</button>
+        <div class="accordion-content">
+          Comercializamos obleas reglamentarias según la normativa vigente en la provincia de Santa Fe, exigidas para circular con vidrios polarizados.
+          Estas obleas identifican que el polarizado cumple con los requisitos legales y evitan sanciones en controles viales.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Trabajos con seguros y particulares</button>
+        <div class="accordion-content">
+          Atendemos tanto a clientes particulares como a través de compañías de seguros, gestionando cada caso con rapidez y compromiso.
+          Nos encargamos de verificar órdenes de trabajo, coordinar con aseguradoras y brindar soluciones efectivas, sin complicaciones para el cliente.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">🔹 Servicio a domicilio para talleres y concesionarios</button>
+        <div class="accordion-content">
+          Ofrecemos atención personalizada en el lugar, realizando colocaciones y reparaciones de cristales directamente en talleres mecánicos, concesionarios y centros de servicio.
+          Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada establecimiento.
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="accordion-box">
-      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
-        <span style="color: green;">✔️</span> Atención a particulares y compañías de seguros
+  <style>
+    .accordion-container {
+      margin: auto;
+    }
+
+    .accordion-item {
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .accordion-title {
+      width: 100%;
+      background-color: #e0f0ff;
+      border: none;
+      padding: 18px;
+      text-align: left;
+      font-size: 1.05em;
+      font-weight: bold;
+      color: #003366;
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-title:hover {
+      background-color: #cfe7ff;
+    }
+
+    .accordion-content {
+      background-color: #f9f9f9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 500px;
+      padding: 20px;
+    }
+  </style>
+
+  <script>
+    const items = document.querySelectorAll(".accordion-item");
+    items.forEach(item => {
+      const btn = item.querySelector(".accordion-title");
+      btn.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+  <!-- RESEÑAS -->
+  <section id="resenas" style="padding: 60px 20px; background-color: #ffffff;">
+    <h2 style="text-align: center; color: #003366; font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;">¿Qué dicen nuestros clientes?</h2>
+
+    <div id="carrousel-resenas" style="max-width: 700px; margin: auto; text-align: center; position: relative; min-height: 160px;">
+      <!-- Flechas -->
+      <button class="flecha izq" onclick="cambiarResena(-1)" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">‹</button>
+      <button class="flecha der" onclick="cambiarResena(1)" style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">›</button>
+
+      <!-- Contenedor de Reseñas -->
+      <div id="contenedor-resenas">
+        <!-- 👇👇 Reseñas completas aquí (mismo formato para todas) 👇👇 -->
+        <div class="resena"><p>“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado. Realmente impecable. Los vuelvo a elegir sin dudas.”</p><strong>Lucina Perich ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p><strong>Gilda Morgante ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Nos rompieron tres cristales del auto y los chicos lo solucionaron en 2 horas. ¡Más rápido imposible!! Cubrió todo el seguro.”</p><strong>Alfredo Terpay ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Impecable atención, muy conforme con el servicio. Me atendió Francisco quien me asesoró muy bien y fue muy amable.”</p><strong>Maximiliano Gruning ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Rápido y muy amables para atender, la ventana quedó perfecta, ¡gracias!”</p><strong>Virginia García ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy buen servicio, coordinación de turno y respetan los horarios pactados.”</p><strong>Alejandro Blanco ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente trabajo !!”</p><strong>Mimii Mc ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy buena atención, excelente cómo trabajan.”</p><strong>Diego Casadedio ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente atención y súper rápido 👏”</p><strong>Luciana López ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Tienen mucha experiencia, se nota que saben lo que hacen. Rápidos y prolijos. Volvería sin dudar.”</p><strong>Mauro Forlán ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy buena atención y profesional en su área. Muchas gracias.”</p><strong>José Barrabés ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Servicio eficiente y con puntualidad. El cambio de parabrisas quedó perfecto.”</p><strong>Ariel Elías ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Rápido, amorosa la gente que atiende”</p><strong>Amanda Zapata ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy buena y rápida atención !!!”</p><strong>Macarena Vallejos ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Los volvería a elegir por la rapidez”</p><strong>Esteban T ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente atención, fueron muy amables y rápidos.”</p><strong>Mailen Gonzalez Maguna ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente TODO!!! Atención y rapidez. Muy amables todos.”</p><strong>Sebastián Gallo ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy bien y rápida la atención. En pocas horas lo tienen listo. Quedó muy bien. Hice todo por el seguro, sin problema.”</p><strong>Nicolás Thomas ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Gente muy amable y predispuesta. Fui atendido en seguida y sin turno. Fui por un problema en el techo de un Fiat Uno, me entraba agua por el vidrio, me lo arregló y me tiró unos tips para mantenerlo. Muy buena onda, real que no se encuentra en cualquier lado. Eso destaco: el trato y la rapidez con que lo solucionó. ¡Gracias!”</p><strong>Ramiro Espadas ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente trabajo y asesoramiento.”</p><strong>Rodrigo Soto ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Muy buena atención... muy predispuestos los muchachos...”</p><strong>David Gaibazzi ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Fácil para sacar el turno, trabajo hecho en el acto, gestión automática y rápida con el seguro. Perfecto.”</p><strong>Néstor Gismondi ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Excelente, me cambiaron el parabrisas en 1 hora (con cita previa)”</p><strong>Fernando Vieitez ⭐⭐⭐⭐⭐</strong></div>
+        <div class="resena"><p>“Una atención y un trabajo espectacular!!!!!!”</p><strong>Gustavo 1234 ⭐⭐⭐⭐⭐</strong></div>
       </div>
-      <div class="accordion-cuerpo">
-        Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.
-      </div>
+
+      <div class="puntos" id="puntos-contenedor" style="margin-top: 20px;"></div>
     </div>
+  </section>
+
+  <style>
+    .resena {
+      display: none;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      font-size: 1.1rem;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .resena.activa {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .resena p {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .resena strong {
+      display: block;
+      font-weight: 600;
+      color: #000;
+      margin-top: 8px;
+    }
+
+    .punto {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .punto.activo {
+      background-color: #003366;
+    }
+  </style>
+
+  <script>
+    const resenas = document.querySelectorAll("#carrousel-resenas .resena");
+    const puntosContenedor = document.getElementById("puntos-contenedor");
+    let index = 0;
+    let intervalo;
+
+    resenas.forEach((_, i) => {
+      const punto = document.createElement("span");
+      punto.classList.add("punto");
+      punto.addEventListener("click", () => {
+        mostrarResena(i);
+        reiniciarIntervalo();
+      });
+      puntosContenedor.appendChild(punto);
+    });
+
+    function mostrarResena(nuevaIndex) {
+      resenas.forEach((resena, i) => {
+        resena.classList.remove("activa");
+        resena.style.display = "none";
+      });
+      resenas[nuevaIndex].style.display = "block";
+      setTimeout(() => resenas[nuevaIndex].classList.add("activa"), 10);
+
+      const puntos = document.querySelectorAll(".punto");
+      puntos.forEach((p, i) => {
+        p.classList.toggle("activo", i === nuevaIndex);
+      });
+
+      index = nuevaIndex;
+    }
+
+    function cambiarResena(delta) {
+      let nuevaIndex = (index + delta + resenas.length) % resenas.length;
+      mostrarResena(nuevaIndex);
+      reiniciarIntervalo();
+    }
+
+    function reiniciarIntervalo() {
+      clearInterval(intervalo);
+      intervalo = setInterval(() => cambiarResena(1), 7000);
+    }
+
+    mostrarResena(0);
+    intervalo = setInterval(() => cambiarResena(1), 7000);
+  </script>
+<!-- UBICACIÓN -->
+<section class="section" id="mapa" style="padding: 60px 20px; background-color: #fefae7;">
+  <h2 style="text-align: center; color: #003366;">¿Dónde estamos?</h2>
+  <p style="text-align: center; font-size: 1.1rem; color: #333;">Ov. Lagos 1533, Rosario, a metros de Av. Pellegrini.</p>
+  <div class="map" style="margin-top: 20px;">
+    <iframe src="https://maps.google.com/maps?q=Ov.%20Lagos%201533,%20Rosario&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="320" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<section class="section" id="marcas" style="padding: 60px 20px; background-color: #ffffff;">
+  <h2 style="text-align: center; color: #003366;">Trabajamos con las mejores marcas</h2>
+  <div class="logos-marcas" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
+    <img class="logo-marca pilkington" src="img/img/pilkington.png" alt="Pilkington" />
+    <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
+    <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
+    <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
+    <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
+    <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
+    <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
+    <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
   </div>
 </section>
 
 <style>
-  .accordion-box {
-    border: 1px solid #ddd;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    overflow: hidden;
+  .logo-marca {
+    height: 60px;
+    max-width: 160px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
 
-  .accordion-titulo {
-    background-color: #e6f0fb;
-    font-weight: bold;
-    padding: 12px 15px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    transition: background-color 0.3s ease;
+  .logo-marca:hover {
+    transform: scale(1.1);
   }
 
-  .accordion-titulo:hover {
-    background-color: #d0e5ff;
-  }
-
-  .accordion-cuerpo {
-    padding: 12px 15px;
-    background-color: #fefefe;
-    display: none;
-  }
-
-  .accordion-box.abierto .accordion-cuerpo {
-    display: block;
+  .logo-marca.pilkington {
+    transform: scale(1.2);
   }
 </style>
 
+<!-- COMPAÑÍAS DE SEGURO -->
+<section class="section" id="seguros" style="padding: 60px 20px; background-color: #fefae7;">
+  <h2 style="text-align: center; color: #003366;">Trabajamos con todas las compañías de seguros</h2>
+  <div class="logos-marcas" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 30px;">
+    <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
+    <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
+    <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
+    <img class="logo-seguro" src="img/img/img/seguros/coopp.jpg" alt="Cooperación Patronal" />
+    <img class="logo-seguro" src="img/img/img/seguros/nor.png" alt="El Norte" />
+    <img class="logo-seguro" src="img/img/img/seguros/equi2.jpg" alt="Equitativa del Plata" />
+    <img class="logo-seguro" src="img/img/img/seguros/fedfed.jpg" alt="Federación Patronal" />
+    <img class="logo-seguro" src="img/img/img/seguros/galiciaa.jpg" alt="Galicia" />
+    <img class="logo-seguro" src="img/img/img/seguros/holando.jpg" alt="La Holando" />
+    <img class="logo-seguro" src="img/img/img/seguros/la2.png" alt="La Segunda" />
+    <img class="logo-seguro" src="img/img/img/seguros/liderar.png" alt="Liderar" />
+    <img class="logo-seguro" src="img/img/img/seguros/mercantilandina.png" alt="Mercantil Andina" />
+    <img class="logo-seguro" src="img/img/img/seguros/pna.png" alt="Paraná Seguros" />
+    <img class="logo-seguro" src="img/img/img/seguros/rus.png" alt="Rio Uruguay Seguros" />
+    <img class="logo-seguro" src="img/img/img/seguros/sancor.png" alt="Sancor" />
+    <img class="logo-seguro" src="img/img/img/seguros/sancri11.jpg" alt="San Cristóbal" />
+    <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
+    <img class="logo-seguro" src="img/img/img/seguros/sm.jpg" alt="Segurometal" />
+    <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
+    <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
+    <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
+  </div>
+</section>
+
+<style>
+  .logo-seguro {
+    height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: transform 0.3s ease;
+  }
+
+  .logo-seguro:hover {
+    transform: scale(1.1);
+  }
+</style>
+<!-- FOOTER -->
+<footer style="background-color: #003366; color: white; padding: 60px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+
+    <!-- Logo grande -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <img src="img/img/lider.png" alt="Logo Líder" style="width: 220px; height: auto; margin-bottom: 10px;">
+    </div>
+
+    <!-- Contacto + Horarios -->
+    <div style="flex: 2 1 300px; font-size: 16px;">
+      <p>📍 <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
+      <p>📞 <strong>Teléfono:</strong> (0341) 424-4187</p>
+      <p>📧 <strong>Email:</strong> parabrisaslidersrl@hotmail.com</p>
+      <p>💬 <strong>WhatsApp:</strong> 3413629545</p>
+      <p>🕒 <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
+      <p style="margin-top: 10px;"><strong>⚠️ Atendemos con turnos</strong></p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px; font-size: 14px; border-top: 1px solid #ffffff33; padding-top: 15px;">
+    © 2025 Parabrisas Líder SRL - Todos los derechos reservados
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 32px;
+    height: 32px;
+  }
+</style>
+
+<!-- Scripts finales -->
 <script>
+  // Acordeón de servicios
+  document.querySelectorAll(".accordion-item .accordion-title").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.parentElement.classList.toggle("open");
+    });
+  });
+
+  // Acordeón de "Quiénes somos"
   function toggleAcordeon(elemento) {
     const box = elemento.parentElement;
     box.classList.toggle("abierto");
   }
-</script>
 
-    
-    </section>
-
- <style>
-  .servicio-box {
-    background-color: #e6f0fc;
-    border-radius: 8px;
-    padding: 12px 18px;
-    margin: 10px 0;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-  }
-
-  .servicio-box:hover {
-    background-color: #d0e4ff;
-  }
-
-  .servicio-explicacion {
-    display: none;
-    padding: 10px 15px;
-    margin-top: 5px;
-    background-color: #f9fbff;
-    border-left: 4px solid #007bff;
-    font-weight: normal;
-    border-radius: 4px;
-    animation: fadeIn 0.3s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-.accordion-container {
-  max-width: 800px;
-  margin: auto;
-}
-
-   .testimonial-carousel {
-  max-width: 500px;
-  margin: 40px auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial {
-  display: none;
-  padding: 30px;
-  background: #fff;
-  text-align: center;
-  transition: opacity 0.8s ease-in-out;
-  font-family: sans-serif;
-}
-
-.testimonial.active {
-  display: block;
-}
-
-.testimonial p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.testimonial strong {
-  color: #444;
-  font-size: 0.95em;
-}
-
-
-.accordion-title {
-  width: 100%;
-  background-color: #e0f0ff;
-  border: none;
-  padding: 15px;
-  text-align: left;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #003366;
-  cursor: pointer;
-  border-bottom: 1px solid #ccc;
-}
-
-.accordion-content {
-  background-color: #f9f9f9;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-
-.accordion-item.open .accordion-content {
-  max-height: 200px;
-  padding: 15px;
-}
-
-</style>
-
-<section class="section" id="servicios">
-  <h2 style="color: #003366; text-align: center;">Servicios</h2>
-
-  <div class="accordion-container">
-    <div class="accordion-item">
-      <button class="accordion-title">🔹 Venta e instalación de parabrisas (con o sin colocación)</button>
-      <div class="accordion-content">
-        Vendemos e instalamos parabrisas originales y alternativos con garantía, respetando los estándares de seguridad y estética del vehículo.
-Contamos con un amplio stock para todo tipo de vehículos, y realizamos colocaciones con materiales de primera calidad y mano de obra especializada, asegurando un sellado perfecto y durabilidad.
-      </div>
-    </div>
-    <div class="accordion-container">
-    <div class="accordion-item">
-      <button class="accordion-title">🔹 Reparación de parabrisas </button>
-      <div class="accordion-content">
-        Ofrecemos un servicio rápido, seguro y económico para la reparación de parabrisas con daños menores, como astillas o rajaduras pequeñas.
-Utilizamos resinas de alta calidad que recuperan la resistencia del cristal y mejoran la visibilidad, evitando reemplazos innecesarios.
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-title">🔹 Reemplazo de lunetas, cristales laterales y techos</button>
-      <div class="accordion-content">
-        Colocamos todo tipo de cristales: lunetas, vidrios de puertas, aletas, ventiletes y cristales de techos.
-Garantizamos una instalación segura, prolija y en línea con las especificaciones del fabricante.
-      </div>
-    </div>
-
-      <div class="accordion-item">
-      <button class="accordion-title">🔹  Sellado/despegado y colocación de cristales</button>
-      <div class="accordion-content">
-        Sellamos, o despegamos y volvemos a colocar cristales para solucionar filtraciones y asegurar un sellado perfecto. 
-        También realizamos el sellado de techos corredizos para evitar que puedan ser removidos o robados.
-      </div>
-    </div>
-
-      <div class="accordion-item">
-      <button class="accordion-title">🔹 Grabado de patente y chasis en cristales</button>
-      <div class="accordion-content">
-        Realizamos el grabado obligatorio de número de patente y chasis en los vidrios del vehículo, cumpliendo con la disposición de la DNRPA (Dirección Nacional del Registro de la Propiedad del Automotor), vigente en todo el territorio argentino.
-Este procedimiento es exigido por ley para aumentar la seguridad y prevenir el robo de autopartes. También es requerido al momento de transferir o asegurar un vehículo.
-      </div>
-    </div>
-   <div class="accordion-item">
-      <button class="accordion-title">🔹 Venta de obleas para vidrios polarizados</button>
-      <div class="accordion-content">
-        Comercializamos obleas reglamentarias según la normativa vigente en la provincia de Santa Fe, exigidas para circular con vidrios polarizados.
-Estas obleas identifican que el polarizado cumple con los requisitos legales y evitan sanciones en controles viales.
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-title">🔹 Trabajos con seguros y particulares</button>
-      <div class="accordion-content">
-        Atendemos tanto a clientes particulares como a traves de compañías de seguros, gestionando cada caso con rapidez y compromiso.
-Nos encargamos de verificar órdenes de trabajo, coordinar con aseguradoras y brindar soluciones efectivas, sin complicaciones para el cliente.
-      </div>
-    </div>
-
-      <div class="accordion-item">
-      <button class="accordion-title">🔹 Servicio a domicilio para talleres y concesionarios</button>
-      <div class="accordion-content">
-        Ofrecemos atención personalizada en el lugar, realizando colocaciones y reparaciones de cristales directamente en talleres mecánicos, concesionarios y centros de servicio.
-Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada establecimiento.
-      </div>
-    </div>
-
- 
-  </div>
-</section>
-
-<script>
-  function toggleExplicacion(id) {
-    var el = document.getElementById(id);
-    el.style.display = (el.style.display === "block") ? "none" : "block";
-  }
-</script>
-
-
-
-<section id="resenas" style="padding: 40px 0; background-color: #f9f9f9;">
-  <h2 style="text-align: center; color: #003366; margin-bottom: 20px; font-weight: bold; font-size: 1.6rem;">¿Qué dicen nuestros clientes?</h2>
-
-  <div id="carrousel-resenas" style="max-width: 700px; margin: auto; text-align: center; position: relative; min-height: 160px;">
-    <!-- Flechas -->
-    <button class="flecha izq" onclick="cambiarResena(-1)" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">‹</button>
-    <button class="flecha der" onclick="cambiarResena(1)" style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">›</button>
-
-    <!-- Reseñas -->
-    <div id="contenedor-resenas">
-      <div class="resena"><p>“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado. Realmente impecable. Los vuelvo a elegir sin dudas.”</p><strong>Lucina Perich ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p><strong>Gilda Morgante ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Nos rompieron tres cristales del auto y los chicos lo solucionaron en 2 horas. ¡Más rápido imposible!! Cubrió todo el seguro.”</p><strong>Alfredo Terpay ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Impecable atención, muy conforme con el servicio. Me atendió Francisco quien me asesoró muy bien y fue muy amable.”</p><strong>Maximiliano Gruning ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Rápido y muy amables para atender, la ventana quedó perfecta, ¡gracias!”</p><strong>Virginia García ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy buen servicio, coordinación de turno y respetan los horarios pactados.”</p><strong>Alejandro Blanco ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente trabajo !!”</p><strong>Mimii Mc ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy buena atención, excelente cómo trabajan.”</p><strong>Diego Casadedio ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente atención y súper rápido 👏”</p><strong>Luciana López ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Tienen mucha experiencia, se nota que saben lo que hacen. Rápidos y prolijos. Volvería sin dudar.”</p><strong>Mauro Forlán ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy buena atención y profesional en su área. Muchas gracias.”</p><strong>José Barrabés ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Servicio eficiente y con puntualidad. El cambio de parabrisas quedó perfecto.”</p><strong>Ariel Elías ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Rápido, amorosa la gente que atiende”</p><strong>Amanda Zapata ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy buena y rápida atención !!!”</p><strong>Macarena Vallejos ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Los volvería a elegir por la rapidez”</p><strong>Esteban T ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente atención, fueron muy amables y rápidos.”</p><strong>Mailen Gonzalez Maguna ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente TODO!!! Atención y rapidez. Muy amables todos.”</p><strong>Sebastián Gallo ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy bien y rápida la atención. En pocas horas lo tienen listo. Quedó muy bien. Hice todo por el seguro, sin problema.”</p><strong>Nicolás Thomas ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Gente muy amable y predispuesta. Fui atendido en seguida y sin turno. Fui por un problema en el techo de un Fiat Uno, me entraba agua por el vidrio, me lo arregló y me tiró unos tips para mantenerlo. Muy buena onda, real que no se encuentra en cualquier lado. Eso destaco: el trato y la rapidez con que lo solucionó. ¡Gracias!”</p><strong>Ramiro Espadas ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente trabajo y asesoramiento.”</p><strong>Rodrigo Soto ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Muy buena atención... muy predispuestos los muchachos...”</p><strong>David Gaibazzi ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Fácil para sacar el turno, trabajo hecho en el acto, gestión automática y rápida con el seguro. Perfecto.”</p><strong>Néstor Gismondi ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Excelente, me cambiaron el parabrisas en 1 hora (con cita previa)”</p><strong>Fernando Vieitez ⭐⭐⭐⭐⭐</strong></div>
-      <div class="resena"><p>“Una atención y un trabajo espectacular!!!!!!”</p><strong>Gustavo 1234 ⭐⭐⭐⭐⭐</strong></div>
-    </div>
-
-    <!-- Puntos -->
-    <div class="puntos" id="puntos-contenedor" style="margin-top: 15px;"></div>
-  </div>
-</section>
-
-<style>
-  .resena {
-    display: none;
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    transform-style: preserve-3d;
-    font-size: 1.1rem;
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  .resena.activa {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .resena p {
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .resena strong {
-    display: block;
-    font-weight: 600;
-    color: #000;
-    margin-top: 8px;
-  }
-
-  .punto {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .punto.activo {
-    background-color: #003366;
-  }
-</style>
-
-<script>
+  // Carrusel de reseñas
   const resenas = document.querySelectorAll("#carrousel-resenas .resena");
   const puntosContenedor = document.getElementById("puntos-contenedor");
   let index = 0;
@@ -826,138 +639,5 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
   intervalo = setInterval(() => cambiarResena(1), 7000);
 </script>
 
-
-
-
-  <!-- UBICACIÓN -->
-  <section class="section" id="mapa">
-    <h2>¿Dónde estamos?</h2>
-    <p>Ov. Lagos 1533, Rosario, a metros de Av. Pellegrini.</p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Ov.%20Lagos%201533,%20Rosario&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen=""></iframe>
-    </div>
-  </section>
-
-<!-- MARCAS -->
-<section class="section" id="marcas">
-  <h2 style="text-align: center; color: #003366;">Trabajamos con las mejores marcas</h2>
-  <div class="logos-marcas">
-    <img class="logo-marca pilkington" src="img/img/pilkington.png" alt="Pilkington" />
-    <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
-    <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
-    <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
-    <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
-    <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
-    <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
-    <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
-    
-  </div>
-</section>
-
-
-
-
-<!-- COMPAÑÍAS DE SEGURO -->
-<section class="section" id="seguros">
-  <h2 style="text-align: center; color: #003366;">Trabajamos con todas las compañías de seguros</h2>
-  <div class="logos-marcas">
-    <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
-    <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
-    <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
-    <img class="logo-seguro" src="img/img/img/seguros/coopp.jpg" alt="Cooperacion Patronal" />
-    <img class="logo-seguro" src="img/img/img/seguros/nor.png" alt="El Norte" />
-    <img class="logo-seguro" src="img/img/img/seguros/equi2.jpg" alt="Equitativa del Plata" />
-    <img class="logo-seguro" src="img/img/img/seguros/fedfed.jpg" alt="Federación Patronal" />
-    <img class="logo-seguro" src="img/img/img/seguros/galiciaa.jpg" alt="Galicia" />
-     <img class="logo-seguro" src="img/img/img/seguros/holando.jpg" alt="La Holando" />
-    <img class="logo-seguro" src="img/img/img/seguros/la2.png" alt="La Segunda" />
-    <img class="logo-seguro" src="img/img/img/seguros/liderar.png" alt="Liderar" />
-    <img class="logo-seguro" src="img/img/img/seguros/mercantilandina.png" alt="Mercantil Andina" />
-    <img class="logo-seguro" src="img/img/img/seguros/pna.png" alt="Parana Seguros" />
-    <img class="logo-seguro" src="img/img/img/seguros/rus.png" alt="Rio Uruguay Seguros" />
-    <img class="logo-seguro" src="img/img/img/seguros/sancor.png" alt="Sancor" />
-    <img class="logo-seguro" src="img/img/img/seguros/sancri11.jpg" alt="San Cristóbal" />
-    <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
-    <img class="logo-seguro" src="img/img/img/seguros/sm.jpg" alt="Segurometal" />
-    <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
-    <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
-    <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
-    
-    
-    
-    
-    
-    
-  </div>
-</section>
-
-<footer style="background-color: #003366; color: white; padding: 40px 20px;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
-
-    <!-- Logo grande -->
-    <div style="flex: 1 1 200px; text-align: center; margin-bottom: 20px;">
-     <img src="img/img/lider.png" alt="Logo Líder" style="width: 220px; height: auto;">
-
-    </div>
-
-    <!-- Contacto + Horarios -->
-    <div style="flex: 2 1 300px; font-size: 16px;">
-      <p>📍 Ov. Lagos 1533, Rosario, Santa Fe</p>
-      <p>📞 (0341) 424-4187</p>
-      <p>📧 parabrisaslidersrl@hotmail.com</p>
-      <p>💬 WhatsApp: 3413629545</p>
-      <p>🕒 Lunes a Viernes de 8:15 a 16:00</p>
-      <p><strong>⚠️ Atendemos con turnos</strong></p>
-    </div>
-
-
-
-  </div>
-
-  <div style="text-align: center; margin-top: 30px; font-size: 14px; border-top: 1px solid #ffffff33; padding-top: 15px;">
-    © 2025 Parabrisas Líder SRL - Todos los derechos reservados
-  </div>
-</footer>
-
-
-
-
-<script>
-  const items = document.querySelectorAll(".accordion-item");
-
-  items.forEach(item => {
-    const title = item.querySelector(".accordion-title");
-    title.addEventListener("click", () => {
-      item.classList.toggle("open");
-    });
-  });
-</script>
-
-<script>
-  const resenas = document.querySelectorAll("#carrousel-resenas .resena");
-  let index = 0;
-
-  function mostrarSiguienteResena() {
-    resenas.forEach((resena, i) => {
-      resena.classList.remove("active");
-    });
-    resenas[index].classList.add("active");
-    index = (index + 1) % resenas.length;
-  }
-
-  mostrarSiguienteResena();
-  setInterval(mostrarSiguienteResena, 5000);
-</script>
-
-
-<a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
-
- 
-
 </body>
-
-
-  
 </html>
