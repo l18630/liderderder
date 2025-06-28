@@ -420,14 +420,82 @@
   </section>
 
   <!-- QUIÉNES SOMOS -->
-  <section class="section" id="quienes-somos">
-    <h2>Quiénes somos</h2>
-    <p>Desde 2012, en Parabrisas Líder nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos.
-Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y más de una década de experiencia en el rubro.
+  <section id="quienes-somos" style="margin-top: 40px;">
+  <h2 style="text-align: center; color: #003366;">¿Quiénes somos?</h2>
+  
+  <div style="max-width: 800px; margin: auto; font-size: 1rem; color: #222;">
+    <p style="margin-bottom: 20px;">
+      Desde 2012, en <strong>Parabrisas Líder</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y más de una década de experiencia en el rubro.
+    </p>
 
-✔️ Trabajos garantizados
-✔️ Entrega ágil y sin demoras
-✔️ Atención a particulares y compañías de seguros</p>
+    <div class="accordion-box">
+      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+        <span style="color: green;">✔️</span> Trabajos garantizados
+      </div>
+      <div class="accordion-cuerpo">
+        Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.
+      </div>
+    </div>
+
+    <div class="accordion-box">
+      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+        <span style="color: green;">✔️</span> Entrega ágil y sin demoras
+      </div>
+      <div class="accordion-cuerpo">
+        Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.
+      </div>
+    </div>
+
+    <div class="accordion-box">
+      <div class="accordion-titulo" onclick="toggleAcordeon(this)">
+        <span style="color: green;">✔️</span> Atención a particulares y compañías de seguros
+      </div>
+      <div class="accordion-cuerpo">
+        Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .accordion-box {
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .accordion-titulo {
+    background-color: #e6f0fb;
+    font-weight: bold;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-titulo:hover {
+    background-color: #d0e5ff;
+  }
+
+  .accordion-cuerpo {
+    padding: 12px 15px;
+    background-color: #fefefe;
+    display: none;
+  }
+
+  .accordion-box.abierto .accordion-cuerpo {
+    display: block;
+  }
+</style>
+
+<script>
+  function toggleAcordeon(elemento) {
+    const box = elemento.parentElement;
+    box.classList.toggle("abierto");
+  }
+</script>
+
     <p>🔧 Servicios que brindamos:</p>
     <ul>
       <li>🔹 Venta e instalación de parabrisas (con o sin colocación)</li>
