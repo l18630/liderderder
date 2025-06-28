@@ -799,6 +799,48 @@
   mostrarResena(0);
   intervalo = setInterval(() => cambiarResena(1), 7000);
 </script>
+<!-- Botón fijo de llamada SOLO en celulares -->
+<a href="tel:03414244187" class="call-fixed-mobile" title="Llamar ahora a Parabrisas Líder">
+  <span>📞 Llamar ahora!</span>
+</a>
 
+<style>
+.call-fixed-mobile {
+  display: none; /* Oculto por defecto */
+}
+
+@media (max-width: 768px) {
+  .call-fixed-mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+  }
+
+  .call-fixed-mobile:hover {
+    background-color: #218838;
+  }
+
+  .call-fixed-mobile span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+</style>
+
+
+  
 </body>
 </html>
