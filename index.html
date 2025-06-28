@@ -362,6 +362,42 @@
       color: #333;
     }
 
+
+    .whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  background-color: #1ebe5d;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+    
     .resena strong {
       display: block;
       font-weight: 600;
@@ -541,6 +577,7 @@
 <!-- WhatsApp flotante -->
 <a href="https://wa.me/5493413629545" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  <span class="whatsapp-text">Click acá para sacar turno</span>
 </a>
 
 <style>
