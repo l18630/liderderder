@@ -476,6 +476,41 @@
       transform: scale(1);
     }
 
+    <style>
+.logo-slider-container {
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+}
+
+.logo-slider-track {
+  display: flex;
+  animation: slide 30s linear infinite;
+}
+
+.logo-slider-track img {
+  width: 33.33%;
+  padding: 10px;
+  object-fit: contain;
+  height: auto;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+  .logo-slider-track img {
+    width: 100%;
+  }
+
+  .logo-slider-track {
+    animation-duration: 60s;
+  }
+}
+</style>
+
     .resena p {
       font-style: italic;
       margin-bottom: 10px;
@@ -638,9 +673,11 @@
 </style>
 
 <!-- COMPAÑÍAS DE SEGURO -->
-<section class="section" id="seguros" style="padding: 60px 20px; background-color: #ffffff;">
-  <h2 style="text-align: center; color: #003366;">Trabajamos con todas las compañías de seguros</h2>
-  <div class="logos-marcas" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 30px;">
+<section style="padding: 40px 0; background-color: #fff;">
+  <h2 style="text-align: center; color: #003366; margin-bottom: 25px;">Trabajamos con todas las compañías de seguros</h2>
+
+  <div class="logo-slider-container">
+    <div class="logo-slider-track">
     <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
     <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
     <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
@@ -662,6 +699,7 @@
     <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
     <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
     <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
+   </div>
   </div>
 </section>
 
