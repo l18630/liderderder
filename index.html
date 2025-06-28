@@ -642,34 +642,49 @@
 <!-- MARCAS -->
 <section class="section" id="marcas" style="padding: 60px 20px; background-color: #ffffff;">
   <h2 style="text-align: center; color: #003366;">Trabajamos con las mejores marcas</h2>
-  <div class="logos-marcas" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
-    <img class="logo-marca pilkington" src="img/img/pilkington.png" alt="Pilkington" />
-    <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
-    <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
-    <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
-    <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
-    <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
-    <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
-    <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
+  <div class="marcas-carousel-container" style="margin-top: 30px; position: relative; max-width: 1000px; margin-inline: auto;">
+    <div class="marcas-carousel">
+      <img class="logo-marca" src="img/img/img/marcas/pilkington.png" alt="Pilkington" />
+      <img class="logo-marca" src="img/img/img/marcas/saint-gobain.png" alt="Saint-Gobain Sekurit" />
+      <img class="logo-marca" src="img/img/img/marcas/favicur.png" alt="Favicur" />
+      <img class="logo-marca" src="img/img/img/marcas/fuyao.png" alt="Fuyao" />
+      <img class="logo-marca" src="img/img/img/marcas/xyg.png" alt="Xyg" />
+      <img class="logo-marca" src="img/img/img/marcas/cristem.png" alt="Cristem" />
+      <img class="logo-marca" src="img/img/img/marcas/saftglass.png" alt="Saftglass" />
+      <img class="logo-marca" src="img/img/img/marcas/benson.png" alt="Benson" />
+    </div>
   </div>
 </section>
 
 <style>
+.marcas-carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+.marcas-carousel {
+  display: flex;
+  gap: 40px;
+  animation: scrollMarcas 25s linear infinite;
+}
+.logo-marca {
+  max-height: 60px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+@keyframes scrollMarcas {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marcas-carousel {
+    gap: 20px;
+  }
   .logo-marca {
-    height: 60px;
-    max-width: 160px;
-    object-fit: contain;
-    filter: grayscale(0%);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    max-height: 50px;
   }
-
-  .logo-marca:hover {
-    transform: scale(1.1);
-  }
-
-  .logo-marca.pilkington {
-    transform: scale(1.2);
-  }
+}
 </style>
 
 <!-- COMPAÑÍAS DE SEGURO -->
