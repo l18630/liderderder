@@ -1,76 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-  <style>
-  .encabezado-fijo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #FFF8DC;
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .encabezado-fijo .titulo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #3c7d99;
-    text-align: center;
-    flex: 1;
-  }
-
-  .encabezado-fijo img {
-    height: 50px;
-    object-fit: contain;
-  }
-
-  .contenedor-navegacion {
-    margin-top: 80px; /* deja espacio para el header fijo */
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .contenedor-navegacion a {
-    margin: 0 12px;
-    font-weight: bold;
-    color: #227799;
-    text-decoration: none;
-  }
-
-  .contenedor-navegacion a:hover {
-    text-decoration: underline;
-  }
-
-  @media screen and (max-width: 600px) {
-    .encabezado-fijo img {
-      height: 40px;
-    }
-    .encabezado-fijo .titulo {
-      font-size: 1.4rem;
-    }
-    .contenedor-navegacion a {
-      margin: 0 8px;
-    }
-  }
-</style>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parabrisas Lider - Rosario</title>
+
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fefae7; 
-}
-
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefae7;
+      padding-top: 90px; /* espacio para header fijo */
+    }
 
     h2 {
       color: #2e7c9c;
@@ -81,99 +23,82 @@
       color: inherit;
     }
 
-    header {
-      background-color: #fefae7;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 15px 30px;
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
+    /* HEADER FIJO */
+    .encabezado-fijo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFF8DC;
+      z-index: 9999;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo-area {
-      display: flex;
       align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    .logo-area img {
-      height: 70px;
+    .encabezado-fijo img {
+      height: 50px;
       object-fit: contain;
-      margin-right: 15px;
+      cursor: pointer;
     }
 
-    .logo-area span {
-      font-size: 1.8em;
+    .encabezado-fijo .titulo {
+      font-size: 1.8rem;
       font-weight: bold;
-      color: #2e7c9c;
+      color: #3c7d99;
+      text-align: center;
+      flex: 1;
     }
 
-    nav {
-      display: flex;
-      gap: 25px;
-      font-size: 1.1em;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 10px;
+    /* BARRA DE NAVEGACIÓN (NO FIJA) */
+    .barra-navegacion {
+      text-align: center;
+      padding: 12px 0;
     }
 
-    .nav-link {
-      color: #2e7c9c;
+    .barra-navegacion a {
+      margin: 0 14px;
       font-weight: bold;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
+      color: #227799;
+      text-decoration: none;
+      font-size: 1.1rem;
     }
 
-    .nav-link:hover {
-      color: #007a9c;
+    .barra-navegacion a:hover {
       text-decoration: underline;
     }
 
-    .fixed-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFF8DC;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
+    @media (max-width: 600px) {
+      .encabezado-fijo img {
+        height: 40px;
+      }
 
-/* Para compensar la altura de la franja */
-body {
-  padding-top: 90px; /* ajustalo si tu banner es más alto */
-}
+      .encabezado-fijo .titulo {
+        font-size: 1.4rem;
+      }
 
-.fixed-banner img {
-  height: 50px; /* ajustable */
-  object-fit: contain;
-}
-
-.fixed-banner .titulo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #3c7d99;
-}
-
+      .barra-navegacion a {
+        margin: 0 8px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- ENCABEZADO FIJO -->
+
+<!-- ANCLA INICIO -->
+<a id="inicio"></a>
+
+<!-- ENCABEZADO FIJO -->
 <div class="encabezado-fijo">
   <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
   <div class="titulo">PARABRISAS LIDER</div>
   <a href="#inicio"><img src="img/img/logolider.jpeg" alt="Logo Parabrisas Lider"></a>
 </div>
 
-<!-- BARRA DE NAVEGACIÓN (NO FIJA) -->
+<!-- MENÚ DE NAVEGACIÓN (NO FIJO) -->
 <div class="barra-navegacion">
   <a href="#inicio">Inicio</a>
   <a href="#quienes-somos">Nosotros</a>
