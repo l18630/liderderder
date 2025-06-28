@@ -653,11 +653,9 @@
 
     <!-- Datos de contacto -->
     <div style="flex: 2; min-width: 300px; max-width: 500px; font-size: 1rem; padding: 10px 20px;">
-
-      <p style="font-size: 1.1rem; font-weight: bold; text-align: center; margin-bottom: 25px;">
+      <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 25px;">
         ⚠️ Atendemos con turnos previamente coordinados ⚠️
       </p>
-
       <p><span style="font-size: 1.2em;">⏰</span> <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
       <p><span style="font-size: 1.2em;">📍</span> <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
       <p><span style="font-size: 1.2em;">📞</span> <strong>Teléfono:</strong> (0341) 424-4187</p>
@@ -677,6 +675,32 @@
     © 2025 Parabrisas Líder SRL - Todos los derechos reservados
   </div>
 </footer>
+
+<!-- Estilo responsivo -->
+<style>
+  @media (max-width: 768px) {
+    footer div[style*="display: flex"] {
+      flex-direction: column;
+      align-items: center !important;
+    }
+
+    footer div[style*="flex: 1"],
+    footer div[style*="flex: 2"] {
+      text-align: center !important;
+      max-width: 100% !important;
+    }
+
+    footer div[style*="padding: 10px 20px"] p {
+      text-align: left;
+    }
+
+    footer img {
+      height: auto !important;
+      max-height: 100px;
+    }
+  }
+</style>
+
 
 <!-- Estilo responsivo -->
 <style>
