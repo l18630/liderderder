@@ -622,8 +622,8 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 
   <div id="carrousel-resenas" style="max-width: 700px; margin: auto; text-align: center; position: relative; min-height: 160px;">
     <!-- Flechas -->
-    <button class="flecha izq" onclick="cambiarResena(-1)" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer; color: #003366;">‹</button>
-    <button class="flecha der" onclick="cambiarResena(1)" style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer; color: #003366;">›</button>
+    <button class="flecha izq" onclick="cambiarResena(-1)" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">‹</button>
+    <button class="flecha der" onclick="cambiarResena(1)" style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-size: 2rem; background: #003366; border: none; cursor: pointer; color: white; border-radius: 50%; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">›</button>
 
     <!-- Reseñas -->
     <div id="contenedor-resenas">
@@ -665,9 +665,17 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
     transform-style: preserve-3d;
     font-size: 1.1rem;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  .resena.activa {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
   }
 
   .resena p {
@@ -680,6 +688,7 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
     display: block;
     font-weight: 600;
     color: #000;
+    margin-top: 8px;
   }
 
   .punto {
@@ -703,7 +712,6 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
   let index = 0;
   let intervalo;
 
-  // Crear los puntos
   resenas.forEach((_, i) => {
     const punto = document.createElement("span");
     punto.classList.add("punto");
@@ -716,8 +724,11 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
 
   function mostrarResena(nuevaIndex) {
     resenas.forEach((resena, i) => {
-      resena.style.display = i === nuevaIndex ? "block" : "none";
+      resena.classList.remove("activa");
+      resena.style.display = "none";
     });
+    resenas[nuevaIndex].style.display = "block";
+    setTimeout(() => resenas[nuevaIndex].classList.add("activa"), 10);
 
     const puntos = document.querySelectorAll(".punto");
     puntos.forEach((p, i) => {
@@ -738,10 +749,10 @@ Brindamos soluciones ágiles, seguras y adaptadas a la dinámica de cada estable
     intervalo = setInterval(() => cambiarResena(1), 7000);
   }
 
-  // Iniciar
   mostrarResena(0);
   intervalo = setInterval(() => cambiarResena(1), 7000);
 </script>
+
 
 
 
