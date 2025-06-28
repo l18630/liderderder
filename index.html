@@ -206,9 +206,14 @@
   <a href="#contacto">Contacto</a>
 </div>
  
-  <!-- NOSOTROS -->
+<!-- NOSOTROS -->
 <section id="nosotros" style="padding: 60px 20px; background-color: #FFF8DC;">
   <h2 style="text-align: center; color: #003366;">Nosotros</h2>
+
+  <!-- Imagen de fondo representativa -->
+  <div style="max-width: 1000px; margin: 30px auto;">
+    <img src="img/img/nosotros-bn.jpg" alt="Nosotros" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  </div>
 
   <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; color: #333; line-height: 1.6;">
     <p><strong>Hace más de 13 años</strong>, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y amplia trayectoria en el rubro.</p>
@@ -218,41 +223,25 @@
 
   <!-- Menú desplegable de beneficios -->
   <div style="max-width: 900px; margin: auto;">
+    <div class="beneficios-contenedor">
+      <div class="accordion-item">
+        <button class="accordion-title">✔️ Trabajos garantizados</button>
+        <div class="accordion-content">Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.</div>
+      </div>
 
+      <div class="accordion-item">
+        <button class="accordion-title">✔️ Entrega ágil y sin demoras</button>
+        <div class="accordion-content">Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.</div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-title">✔️ Atención a particulares y compañías de seguros</button>
+        <div class="accordion-content">Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-
-<script>
-  const anioActual = new Date().getFullYear();
-  const anios = anioActual - 2012;
-  document.getElementById("anios-experiencia").textContent = anios;
-</script>
-
-
-<div class="beneficios-contenedor">
-  <div class="accordion-item">
-    <button class="accordion-title">✔️ Trabajos garantizados</button>
-    <div class="accordion-content">Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.
-</div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-title">✔️ Entrega ágil y sin demoras</button>
-    <div class="accordion-content">Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.
-</div>
-
-  </div>
-
-   <div class="accordion-item">
-    <button class="accordion-title">✔️ Atención a particulares y compañías de seguros</button>
-    <div class="accordion-content">Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.
-</div>
-     
-        </div>
-      </div>
-    </div>
-  </section>
 
   <style>
     .accordion-box {
