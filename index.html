@@ -583,8 +583,8 @@
  
   
   <!-- RESEÑAS -->
-<section id="resenas" style="padding: 60px 20px; background-color: #ffffff;">
-  <h2 style="text-align: center; color: #003366; font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;">
+<section id="resenas" style="padding: 60px 20px; background-image: url('img/img/resenas.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;">
     ¿Qué dicen nuestros clientes?
   </h2>
 
@@ -634,12 +634,12 @@
 
 .box-reseña {
   flex: 0 0 300px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.88); /* Blanco translúcido */
   border-radius: 10px;
   padding: 25px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-size: 1rem;
-  color: #333;
+  color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -666,52 +666,53 @@
 }
 </style>
 
-  <script>
-    const resenas = document.querySelectorAll("#carrousel-resenas .resena");
-    const puntosContenedor = document.getElementById("puntos-contenedor");
-    let index = 0;
-    let intervalo;
+<script>
+  const resenas = document.querySelectorAll("#carrousel-resenas .resena");
+  const puntosContenedor = document.getElementById("puntos-contenedor");
+  let index = 0;
+  let intervalo;
 
-    resenas.forEach((_, i) => {
-      const punto = document.createElement("span");
-      punto.classList.add("punto");
-      punto.addEventListener("click", () => {
-        mostrarResena(i);
-        reiniciarIntervalo();
-      });
-      puntosContenedor.appendChild(punto);
+  resenas.forEach((_, i) => {
+    const punto = document.createElement("span");
+    punto.classList.add("punto");
+    punto.addEventListener("click", () => {
+      mostrarResena(i);
+      reiniciarIntervalo();
+    });
+    puntosContenedor.appendChild(punto);
+  });
+
+  function mostrarResena(nuevaIndex) {
+    resenas.forEach((resena, i) => {
+      resena.classList.remove("activa");
+      resena.style.display = "none";
+    });
+    resenas[nuevaIndex].style.display = "block";
+    setTimeout(() => resenas[nuevaIndex].classList.add("activa"), 10);
+
+    const puntos = document.querySelectorAll(".punto");
+    puntos.forEach((p, i) => {
+      p.classList.toggle("activo", i === nuevaIndex);
     });
 
-    function mostrarResena(nuevaIndex) {
-      resenas.forEach((resena, i) => {
-        resena.classList.remove("activa");
-        resena.style.display = "none";
-      });
-      resenas[nuevaIndex].style.display = "block";
-      setTimeout(() => resenas[nuevaIndex].classList.add("activa"), 10);
+    index = nuevaIndex;
+  }
 
-      const puntos = document.querySelectorAll(".punto");
-      puntos.forEach((p, i) => {
-        p.classList.toggle("activo", i === nuevaIndex);
-      });
+  function cambiarResena(delta) {
+    let nuevaIndex = (index + delta + resenas.length) % resenas.length;
+    mostrarResena(nuevaIndex);
+    reiniciarIntervalo();
+  }
 
-      index = nuevaIndex;
-    }
-
-    function cambiarResena(delta) {
-      let nuevaIndex = (index + delta + resenas.length) % resenas.length;
-      mostrarResena(nuevaIndex);
-      reiniciarIntervalo();
-    }
-
-    function reiniciarIntervalo() {
-      clearInterval(intervalo);
-      intervalo = setInterval(() => cambiarResena(1), 7000);
-    }
-
-    mostrarResena(0);
+  function reiniciarIntervalo() {
+    clearInterval(intervalo);
     intervalo = setInterval(() => cambiarResena(1), 7000);
-  </script>
+  }
+
+  mostrarResena(0);
+  intervalo = setInterval(() => cambiarResena(1), 7000);
+</script>
+
 
 <!-- MARCAS -->
 <section class="section" id="marcas" style="padding: 20px 0 10px 0; background-color: #ffffff;">
