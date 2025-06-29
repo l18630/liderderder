@@ -804,66 +804,103 @@
 <style>
   #contacto {
     padding: 60px 20px;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/img/maps-icon2.png') no-repeat center center / cover;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/img/fondo-contacto-nuevo.png') no-repeat center top / cover;
     color: white;
+  }
+
+  #contacto h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    margin-bottom: 40px;
+  }
+
+  #contacto .contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 40px 20px;
+    border-radius: 12px;
+  }
+
+  #contacto .columna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  #contacto button {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
   }
 
   @media (max-width: 768px) {
     #contacto {
       background-position: top center;
-      background-size: contain;
-      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #contacto .contacto-contenedor {
+      flex-direction: column;
+      padding: 30px 15px;
+    }
+
+    #contacto h2 {
+      font-size: 1.6rem;
     }
   }
 </style>
 
+<!-- SECCIÓN CONTACTO -->
+<section id="contacto">
+  <div class="contacto-contenedor">
+    <h2>Contáctanos</h2>
 
-
-     <!-- SECCIÓN CONTACTO -->
-<section id="contacto" style="background: url('img/img/maps-icon2.png') no-repeat center center / cover; padding: 60px 20px; color: white;">
-  <div style="background-color: rgba(0, 0, 0, 0.45); padding: 40px 20px; border-radius: 12px; max-width: 1100px; margin: auto;">
-
-    <!-- TÍTULO -->
-    <h2 style="text-align: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); margin-bottom: 40px;">Contáctanos</h2>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
-
-      <!-- INFORMACIÓN DE CONTACTO -->
-      <div style="flex: 1; min-width: 280px; max-width: 400px;">
-        <p><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
-        <p>⏰ <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
-        <p>📍 <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
-        <p>📞 <strong>Teléfono:</strong> (0341) 424-4187</p>
-        <p>💬 <strong>WhatsApp:</strong> 3413629545 - Solo Mensajes</p>
-        <p>📧 <strong>Email:</strong> parabrisaslidersrl@hotmail.com</p>
-
-        <a href="https://www.google.com/maps/place/Ov.+Lagos+1533,+Rosario,+Santa+Fe" target="_blank"
-           style="display:inline-flex; align-items:center; margin-top: 10px; padding: 8px 14px; background-color: #25D366; color: #fff; font-weight: bold; text-decoration: none; border-radius: 6px;">
-          <img src="img/img/maps-icon.jpg" alt="Maps" style="width: 20px; height: 20px; margin-right: 8px;">
-          Cómo llegar
-        </a>
-      </div>
-
-      <!-- FORMULARIO -->
-      <form style="flex: 1; min-width: 280px; max-width: 400px;">
-        <input type="text" placeholder="Nombre y Apellido"
-               style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-        <input type="email" placeholder="Email"
-               style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-        <input type="text" placeholder="Teléfono"
-               style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-        <textarea placeholder="Escribinos tu consulta..." rows="4"
-                  style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;"></textarea>
-        <button type="submit"
-                style="width: 100%; background-color: #003366; color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold;">
-          Enviar consulta
-        </button>
-      </form>
+    <!-- INFORMACIÓN -->
+    <div class="columna">
+      <p><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
+      <p>⏰ <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
+      <p>📍 <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
+      <p>📞 <strong>Teléfono:</strong> (0341) 424-4187</p>
+      <p>💬 <strong>WhatsApp:</strong> 3413629545 - Solo Mensajes</p>
+      <p>📧 <strong>Email:</strong> parabrisaslidersrl@hotmail.com</p>
+      <a href="https://www.google.com/maps/place/Ov.+Lagos+1533,+Rosario,+Santa+Fe" target="_blank"
+         style="display:inline-flex; align-items:center; margin-top: 10px; padding: 8px 14px; background-color: #25D366; color: #fff; font-weight: bold; text-decoration: none; border-radius: 6px;">
+        <img src="img/img/maps-icon2.png" alt="Maps" style="width: 20px; height: 20px; margin-right: 8px;">
+        Cómo llegar
+      </a>
     </div>
 
+    <!-- FORMULARIO -->
+    <form class="columna">
+      <input type="text" placeholder="Nombre y Apellido" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Teléfono">
+      <textarea placeholder="Escribinos tu consulta..." rows="4" required></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+
     <!-- MAPA -->
-    <div style="margin-top: 40px; text-align: center;">
+    <div style="width: 100%; margin-top: 40px; text-align: center;">
       <h3 style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">¿Dónde estamos?</h3>
       <p>Ov. Lagos 1533, Rosario, a metros de Av. Pellegrini</p>
       <iframe
@@ -871,7 +908,6 @@
         width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
   </div>
 </section>
 
