@@ -131,6 +131,87 @@
       cursor: pointer;
     }
   </style>
+
+  <style>
+  #contacto {
+    padding: 0;
+    color: white;
+  }
+
+  .fondo-contacto-banner {
+    height: 260px;
+    background: url('img/img/maps-icon2.png') no-repeat center top;
+    background-size: cover;
+    background-color: #e5e0d3; /* color arena claro */
+    margin: 0 auto;
+  }
+
+  .contacto-contenedor {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: -30px;
+  }
+
+  .contacto-contenedor h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  .columna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  .fila-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .columna input,
+  .columna textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .columna button {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .fondo-contacto-banner {
+      height: 180px;
+      background-size: contain;
+      background-position: center top;
+    }
+
+    .contacto-contenedor {
+      margin-top: -20px;
+      padding: 30px 15px;
+    }
+
+    .contacto-contenedor h2 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -481,13 +562,7 @@
   font-size: 1rem;
 }
 
-.fondo-contacto-banner {
-  height: 260px;
-  background: url('img/img/maps-icon2.png') no-repeat center top;
-  background-size: cover; /* En PC se ve completa a lo ancho */
-  background-color: #e5e0d3;
-  margin: 0 auto;
-}
+
 
 @media (max-width: 768px) {
   .fondo-contacto-banner {
@@ -823,14 +898,6 @@
     color: white;
   }
 
-  .fondo-contacto-banner {
-    height: 200px;
-    background: url('img/img/maps-icon2.png') no-repeat center top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0,0,0,0.6);
-    text-align: center;
-  }
 
   .contacto-contenedor {
     background-color: rgba(0,0,0,0.5);
@@ -880,14 +947,6 @@
     font-weight: bold;
   }
 
-.fondo-contacto-banner {
-  height: 260px;
-  background: url('img/img/maps-icon2.png') no-repeat center top;
-  background-size: cover; /* En PC se ve completa a lo ancho */
-  background-color: #e5e0d3;
-  margin: 0 auto;
-}
-
 @media (max-width: 768px) {
   .fondo-contacto-banner {
     height: 180px;
@@ -904,11 +963,7 @@
   margin: 0 auto;
 }
 
-  @media (max-width: 768px) {
-    .fondo-contacto-banner {
-      height: 150px;
-      background-size: cover;
-    }
+
 
     .contacto-contenedor {
       margin-top: -20px;
@@ -920,12 +975,8 @@
     }
   }
   <style>
-  @media (max-width: 768px) {
-    .fondo-contacto-banner {
-      height: 160px;
-      background-size: contain;
-    }
-  }
+
+  
 </style>
 
 </style>
