@@ -130,6 +130,24 @@
       border: none;
       cursor: pointer;
     }
+
+    #contacto {
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('img/img/maps-icon2.png') no-repeat center top;
+  background-size: cover;
+  background-color: #e5e0d3;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #contacto {
+    background-size: contain;
+    background-position: center top;
+    padding: 40px 15px;
+  }
+}
+
   </style>
 
   <style>
@@ -983,14 +1001,12 @@
 
 <!-- SECCIÓN CONTACTO -->
 <section id="contacto">
-  <div class="fondo-contacto-banner"></div>
+  <div class="contacto-contenedor" style="max-width: 1100px; margin: auto; background-color: rgba(0,0,0,0.5); padding: 40px 20px; border-radius: 12px;">
+    <h2 style="text-align: center; color: white;">Contáctanos</h2>
 
-  <div class="contacto-contenedor">
-    <h2>Contáctanos</h2>
-
-    <div class="fila-contacto">
+    <div class="fila-contacto" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
       <!-- INFORMACIÓN -->
-      <div class="columna">
+      <div class="columna" style="flex: 1; min-width: 280px; max-width: 400px;">
         <p><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
         <p>⏰ <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
         <p>📍 <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
@@ -1005,12 +1021,12 @@
       </div>
 
       <!-- FORMULARIO -->
-      <form class="columna">
-        <input type="text" placeholder="Nombre y Apellido" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Teléfono">
-        <textarea placeholder="Escribinos tu consulta..." rows="4" required></textarea>
-        <button type="submit">Enviar consulta</button>
+      <form class="columna" style="flex: 1; min-width: 280px; max-width: 400px;">
+        <input type="text" placeholder="Nombre y Apellido" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
+        <input type="email" placeholder="Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
+        <input type="text" placeholder="Teléfono" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
+        <textarea placeholder="Escribinos tu consulta..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;"></textarea>
+        <button type="submit" style="width: 100%; background-color: #003366; color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold;">Enviar consulta</button>
       </form>
     </div>
 
@@ -1025,6 +1041,7 @@
     </div>
   </div>
 </section>
+
 
 
 <footer style="background-color: #FFF8DC; padding: 20px 15px 10px; color: #000; border-top: 1px solid #ddd;">
