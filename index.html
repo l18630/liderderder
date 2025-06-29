@@ -28,85 +28,94 @@
    <!-- CSS EN HEAD -->
 <style>
   /* HEADER FIJO */
-.encabezado-fijo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFF8DC;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.logo-izquierdo,
-.logo-derecho {
-  flex: 0 0 auto;
-}
-
-.logo-izquierdo img,
-.logo-derecho img {
-  height: 42px;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-/* Título centrado */
-.titulo {
-  flex: 1;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #3c7d99;
-}
-
-/* MENÚ DE NAVEGACIÓN (NO FIJO) */
-.barra-navegacion {
-  text-align: center;
-  padding: 80px 0 12px; /* deja espacio por el header fijo */
-}
-
-.barra-navegacion a {
-  margin: 0 14px;
-  font-weight: bold;
-  color: #227799;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.barra-navegacion a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE (MOBILE) */
-@media (max-width: 600px) {
   .encabezado-fijo {
-    padding: 8px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF8DC;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .logo-izquierdo,
+  .logo-derecho {
+    flex: 0 0 auto;
   }
 
   .logo-izquierdo img,
   .logo-derecho img {
-    height: 36px;
+    height: 42px;
+    object-fit: contain;
+    cursor: pointer;
   }
 
+  /* Título centrado */
   .titulo {
-    font-size: 1.3rem;
-    margin: 0 8px;
+    flex: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3c7d99;
   }
 
+  /* MENÚ DE NAVEGACIÓN MINIMALISTA */
   .barra-navegacion {
-    padding: 70px 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 0;
+    background-color: #fefae7;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
   }
 
   .barra-navegacion a {
-    margin: 0 8px;
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #227799;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
   }
-}
+
+  .barra-navegacion a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* RESPONSIVE (MOBILE) */
+  @media (max-width: 600px) {
+    .encabezado-fijo {
+      padding: 8px 12px;
+    }
+
+    .logo-izquierdo img,
+    .logo-derecho img {
+      height: 36px;
+    }
+
+    .titulo {
+      font-size: 1.3rem;
+      margin: 0 8px;
+    }
+
+    .barra-navegacion {
+      gap: 12px;
+      padding: 8px 0;
+    }
+
+    .barra-navegacion a {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
 </style>
+
 
 <head>
   ...
@@ -268,17 +277,28 @@
   }
 
   .barra-navegacion {
-    text-align: center;
-    padding: 65px 0 12px;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 0;
+  background-color: #fefae7;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
 
-  .barra-navegacion a {
-    margin: 0 14px;
-    font-weight: bold;
-    color: #227799;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
+.barra-navegacion a {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #227799;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.barra-navegacion a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 
   .barra-navegacion a:hover {
     text-decoration: underline;
