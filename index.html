@@ -800,21 +800,44 @@
 }
 </style>
   
-<!-- SECCIÓN CONTACTO -->
-<section id="contacto" style="background: url('img/img/fondo-contacto.jpg') no-repeat center center / cover; padding: 60px 20px; color: white;">
-  <div style="background-color: rgba(0, 0, 0, 0.5); padding: 40px 20px; border-radius: 12px; max-width: 1100px; margin: auto;">
-    
-    <!-- TÍTULO -->
-    <h2 style="text-align: center; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); margin-bottom: 40px;">
-      Contáctanos
-    </h2>
+<!-- ESTILOS PARA CONTACTO -->
+<style>
+  #contacto {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/img/contacto.png') no-repeat center center / cover;
+    color: white;
+  }
 
-    <!-- CONTENEDOR PRINCIPAL -->
+  @media (max-width: 768px) {
+    #contacto {
+      background-position: top center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+</style>
+
+<!-- SECCIÓN CONTACTO -->
+<section id="contacto">
+  <div style="max-width: 1100px; margin: auto; background-color: rgba(0,0,0,0.4); padding: 40px 20px; border-radius: 12px;">
+
+    <h2 style="text-align: center; color: white;">Contáctanos</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
+
+     <!-- SECCIÓN CONTACTO -->
+<section id="contacto" style="background: url('img/img/fondo-contacto.jpg') no-repeat center center / cover; padding: 60px 20px; color: white;">
+  <div style="background-color: rgba(0, 0, 0, 0.45); padding: 40px 20px; border-radius: 12px; max-width: 1100px; margin: auto;">
+
+    <!-- TÍTULO -->
+    <h2 style="text-align: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); margin-bottom: 40px;">Contáctanos</h2>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
 
       <!-- INFORMACIÓN DE CONTACTO -->
       <div style="flex: 1; min-width: 280px; max-width: 400px;">
-        <p style="margin-bottom: 10px;"><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
+        <p><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
         <p>⏰ <strong>Horario:</strong> Lunes a Viernes de 8:15 a 16:00</p>
         <p>📍 <strong>Dirección:</strong> Ov. Lagos 1533, Rosario, Santa Fe</p>
         <p>📞 <strong>Teléfono:</strong> (0341) 424-4187</p>
@@ -823,7 +846,7 @@
 
         <a href="https://www.google.com/maps/place/Ov.+Lagos+1533,+Rosario,+Santa+Fe" target="_blank"
            style="display:inline-flex; align-items:center; margin-top: 10px; padding: 8px 14px; background-color: #25D366; color: #fff; font-weight: bold; text-decoration: none; border-radius: 6px;">
-          <img src="img/img/maps-icon.jpg" alt="Maps" style="width: 20px; height: 20px; margin-right: 8px;">
+          <img src="img/img/maps-icon2.png" alt="Maps" style="width: 20px; height: 20px; margin-right: 8px;">
           Cómo llegar
         </a>
       </div>
@@ -855,8 +878,10 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-  </div> <!-- cierre del fondo oscuro -->
-</section> <!-- cierre de sección contacto -->
+  </div>
+</section>
+
+
 
 
 <footer style="background-color: #FFF8DC; padding: 20px 15px 10px; color: #000; border-top: 1px solid #ddd;">
