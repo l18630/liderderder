@@ -231,42 +231,58 @@
   <a href="#contacto">Contacto</a>
 </div>
  
-<!-- NOSOTROS -->
-<section id="nosotros" style="padding: 60px 20px; background: url('img/img/nosotros11.png') no-repeat center center / cover; color: white; position: relative;">
+<!-- ESTILOS PERSONALIZADOS PARA NOSOTROS -->
+<style>
+  #nosotros {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('img/img/nosotros11.png') no-repeat center center / cover;
+    color: white;
+  }
 
-  <!-- Fondo semitransparente para legibilidad -->
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px 20px; border-radius: 10px; max-width: 1000px; margin: auto;">
+  @media (max-width: 768px) {
+    #nosotros {
+      background-position: top center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+</style>
 
-    <h2 style="text-align: center; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">Nosotros</h2>
+<!-- SECCIÓN NOSOTROS -->
+<section id="nosotros">
+  <h2 style="text-align: center; color: white;">Nosotros</h2>
 
-    <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; color: white; line-height: 1.6;">
-      <p><strong>Hace más de 13 años</strong>, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y amplia trayectoria en el rubro.</p>
+  <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; line-height: 1.6;">
+    <p><strong>Hace más de 13 años</strong>, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos. Nos destacamos por ofrecer un servicio rápido, garantizado y al mejor precio, con atención personalizada y amplia trayectoria en el rubro.</p>
 
-      <p>Para mantener esta calidad de atención y asegurar trabajos ágiles y eficientes, <u><strong>trabajamos exclusivamente con turnos previamente coordinados</strong></u>. Así evitamos demoras, organizamos mejor cada colocación y garantizamos que cada cliente reciba el tiempo y la dedicación que merece.</p>
-    </div>
+    <p>Para mantener esta calidad de atención y asegurar trabajos ágiles y eficientes, <u><strong>trabajamos exclusivamente con turnos previamente coordinados</strong></u>. Así evitamos demoras, organizamos mejor cada colocación y garantizamos que cada cliente reciba el tiempo y la dedicación que merece.</p>
+  </div>
 
-    <!-- Beneficios -->
-    <div style="max-width: 900px; margin: auto;">
-      <div class="beneficios-contenedor">
-        <div class="accordion-item">
-          <button class="accordion-title">✔️ Trabajos garantizados</button>
-          <div class="accordion-content">Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.</div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-title">✔️ Entrega ágil y sin demoras</button>
-          <div class="accordion-content">Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.</div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-title">✔️ Atención a particulares y compañías de seguros</button>
-          <div class="accordion-content">Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.</div>
-        </div>
+  <!-- BENEFICIOS EN ACORDEÓN -->
+  <div class="beneficios-contenedor" style="max-width: 900px; margin: auto;">
+    <div class="accordion-item">
+      <button class="accordion-title">✔️ Trabajos garantizados</button>
+      <div class="accordion-content">
+        Todos nuestros trabajos cuentan con garantía real. Utilizamos productos de primera calidad y técnicas que aseguran resultados duraderos.
       </div>
     </div>
 
+    <div class="accordion-item">
+      <button class="accordion-title">✔️ Entrega ágil y sin demoras</button>
+      <div class="accordion-content">
+        Coordinamos turnos rápidos y cumplimos con los tiempos de entrega. Tu vehículo vuelve a estar en condiciones en el menor tiempo posible.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">✔️ Atención a particulares y compañías de seguros</button>
+      <div class="accordion-content">
+        Trabajamos tanto con clientes particulares como con aseguradoras. Gestionamos autorizaciones y trámites para que no tengas que preocuparte por nada.
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 
