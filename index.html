@@ -439,8 +439,9 @@
       box.classList.toggle("abierto");
     }
   </script>
-  <!-- SERVICIOS -->
-  <section class="section" id="servicios" style="padding: 60px 20px; background-color: #fefae7;">
+ <!-- SERVICIOS -->
+<section class="section" id="servicios" style="padding: 60px 20px; background-image: url('img/img/servicios.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div style="background-color: rgba(254, 250, 231, 0.92); padding: 40px 20px; border-radius: 12px; max-width: 1100px; margin: auto;">
     <h2 style="text-align: center; color: #003366;">Servicios</h2>
 
     <div class="accordion-container" style="max-width: 900px; margin: 40px auto;">
@@ -508,148 +509,75 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <style>
-    .accordion-container {
-      margin: auto;
-    }
+<style>
+  .accordion-container {
+    margin: auto;
+  }
 
-    .accordion-item {
-      background: #ffffff;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 14px;
-      overflow: hidden;
-    }
+  .accordion-item {
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
 
+  .accordion-title {
+    width: 100%;
+    background-color: #e0f0ff;
+    border: none;
+    padding: 18px;
+    text-align: left;
+    font-size: 1.05em;
+    font-weight: bold;
+    color: #003366;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-title:hover {
+    background-color: #cfe7ff;
+  }
+
+  .accordion-content {
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+  }
+
+  .accordion-item.open .accordion-content {
+    max-height: 500px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
     .accordion-title {
-      width: 100%;
-      background-color: #e0f0ff;
-      border: none;
-      padding: 18px;
-      text-align: left;
-      font-size: 1.05em;
-      font-weight: bold;
-      color: #003366;
-      cursor: pointer;
-      border-bottom: 1px solid #ccc;
-      transition: background-color 0.3s ease;
+      font-size: 1em;
+      padding: 16px;
     }
 
-    .accordion-title:hover {
-      background-color: #cfe7ff;
-    }
-
-    .footer {
-  background-color: #FFF8DC;
-  color: #000;
-  padding: 40px 20px 20px;
-  border-top: 1px solid #ddd;
-  font-family: sans-serif;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 200px;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.footer-column img {
-  height: 100px;
-  object-fit: contain;
-}
-
-.footer-contact {
-  flex: 2;
-  min-width: 280px;
-  max-width: 500px;
-  padding: 0 20px;
-  text-align: left;
-  font-size: 1rem;
-}
-
-
-
-@media (max-width: 768px) {
-  .fondo-contacto-banner {
-    height: 180px;
-    background-size: contain; /* En celular evita que se recorte */
-    background-position: center top;
-  }
-}
-
-@media (max-width: 768px) {
-  footer {
-    padding: 10px 15px !important;
-  }
-}
-
-.footer-contact p {
-  margin: 10px 0;
-}
-
-.footer-alert {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.footer-credits {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 30px;
-  color: #333;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-contact {
-    text-align: center;
-    padding: 0;
-  }
-}
-
-    
     .accordion-content {
-      background-color: #f9f9f9;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      padding: 0 20px;
+      font-size: 0.95em;
     }
+  }
+</style>
 
-    .accordion-item.open .accordion-content {
-      max-height: 500px;
-      padding: 20px;
-    }
-  </style>
-
-  <script>
-    const items = document.querySelectorAll(".accordion-item");
-    items.forEach(item => {
-      const btn = item.querySelector(".accordion-title");
-      btn.addEventListener("click", () => {
-        item.classList.toggle("open");
-      });
+<script>
+  const items = document.querySelectorAll(".accordion-item");
+  items.forEach(item => {
+    const btn = item.querySelector(".accordion-title");
+    btn.addEventListener("click", () => {
+      item.classList.toggle("open");
     });
-  </script>
+  });
+</script>
+
 
  
   
