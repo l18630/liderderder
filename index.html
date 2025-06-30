@@ -191,6 +191,47 @@
       box.classList.toggle("abierto");
     }
   </script>
+  <!-- MARCAS -->
+<section class="section" id="marcas" style="padding: 20px 0 10px 0; background-color: #ffffff;">
+  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con las mejores marcas</h2>
+  <div class="marcas-carousel-container" style="max-width: 1000px; margin-inline: auto; overflow: hidden;">
+    <div class="marcas-carousel">
+      <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
+      <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
+      <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
+      <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
+      <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
+      <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
+      <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
+      <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
+    </div>
+  </div>
+</section>
+
+<style>
+.marcas-carousel {
+  display: flex;
+  gap: 30px;
+  animation: scrollMarcas 25s linear infinite;
+}
+.logo-marca {
+  max-height: 55px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+@keyframes scrollMarcas {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 768px) {
+  .marcas-carousel {
+    gap: 20px;
+  }
+  .logo-marca {
+    max-height: 45px;
+  }
+}
+</style>
  <!-- SERVICIOS -->
 <section class="section" id="servicios" style="padding: 60px 20px; background-image: url('img/img/servicios.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px 20px; border-radius: 12px; max-width: 1100px; margin: auto;">
@@ -330,10 +371,6 @@
     });
   });
 </script>
-
-
- 
-  
  <!-- RESEÑAS -->
 <section id="resenas" style="padding: 60px 20px; background-image: url('img/img/resenas.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;">
@@ -431,50 +468,6 @@
 }
 
 </style>
-
-
-<!-- MARCAS -->
-<section class="section" id="marcas" style="padding: 20px 0 10px 0; background-color: #ffffff;">
-  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con las mejores marcas</h2>
-  <div class="marcas-carousel-container" style="max-width: 1000px; margin-inline: auto; overflow: hidden;">
-    <div class="marcas-carousel">
-      <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
-      <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
-      <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
-      <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
-      <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
-      <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
-      <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
-      <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
-    </div>
-  </div>
-</section>
-
-<style>
-.marcas-carousel {
-  display: flex;
-  gap: 30px;
-  animation: scrollMarcas 25s linear infinite;
-}
-.logo-marca {
-  max-height: 55px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-@keyframes scrollMarcas {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@media (max-width: 768px) {
-  .marcas-carousel {
-    gap: 20px;
-  }
-  .logo-marca {
-    max-height: 45px;
-  }
-}
-</style>
-
 <!-- SEGUROS -->
 <section class="section" id="seguros" style="padding: 10px 0 20px 0; background-color: #ffffff;">
   <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con todas las compañías de seguros</h2>
@@ -626,11 +619,19 @@
 </style>
 
 <!-- SECCIÓN CONTACTO -->
-<section id="contacto">
+<section id="contacto" style="
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('img/img/maps-icon2.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+">
   <div class="contacto-contenedor" style="max-width: 1100px; margin: auto; background-color: rgba(0,0,0,0.5); padding: 40px 20px; border-radius: 12px;">
     <h2 style="text-align: center; color: white;">Contáctanos</h2>
 
     <div class="fila-contacto" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
+      
       <!-- INFORMACIÓN -->
       <div class="columna" style="flex: 1; min-width: 280px; max-width: 400px;">
         <p><strong>⚠️ Atendemos con turnos previamente coordinados</strong></p>
@@ -667,6 +668,7 @@
     </div>
   </div>
 </section>
+
 
 
 
