@@ -184,21 +184,25 @@
 
   <div style="max-width: 900px; margin: 30px auto; font-size: 1.05rem; line-height: 1.6;">
     <p><strong>Hace más de <span id="anios"></span>13 años</strong>, en <strong>Parabrisas Lider</strong> nos dedicamos a la venta, colocación y reparación de parabrisas y cristales para todo tipo de vehículos.</p>
+    <p>Estamos ubicados en Ovidio Lagos 1533, pleno centro de Rosario, lo que nos permite brindar una atención cómoda y accesible para nuestros clientes.</p>
     <p>Para mantener esta calidad de atención y asegurar trabajos ágiles y eficientes, <u><strong>trabajamos exclusivamente con turnos previamente coordinados</strong></u>.</p>
   </div>
 
   <div class="beneficios-contenedor">
     <div class="accordion-item">
       <button class="accordion-title">✔️ Trabajos garantizados</button>
-      <div class="accordion-content">Todos nuestros trabajos cuentan con garantía real...</div>
+      <div class="accordion-content">Todos nuestros trabajos cuentan con garantía real, respaldada por años de experiencia y el compromiso de brindar un servicio de calidad.
+Utilizamos insumos originales y realizamos cada colocación bajo los más altos estándares técnicos, asegurando la durabilidad y el correcto funcionamiento del cristal instalado.</div>
     </div>
     <div class="accordion-item">
       <button class="accordion-title">✔️ Entrega ágil y sin demoras</button>
-      <div class="accordion-content">Coordinamos turnos rápidos y cumplimos con los tiempos...</div>
+      <div class="accordion-content">Coordinamos turnos rápidos y cumplimos con los tiempos pactados, para que tu vehículo esté listo cuanto antes.
+Gracias a nuestro sistema de trabajo organizado y stock permanente de cristales, garantizamos una atención eficiente sin hacerte perder tiempo.</div>
     </div>
     <div class="accordion-item">
       <button class="accordion-title">✔️ Atención a particulares y compañías de seguros</button>
-      <div class="accordion-content">Trabajamos tanto con clientes particulares como con aseguradoras...</div>
+      <div class="accordion-content">Trabajamos tanto con clientes particulares como con aseguradoras, brindando un servicio ágil, confiable y adaptado a cada necesidad.
+Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos para que el proceso sea lo más simple posible.</div>
     </div>
   </div>
 </section>
@@ -473,10 +477,6 @@
         <div class="accordion-item">
           <button class="accordion-title">🔹 Venta de obleas para vidrios polarizados</button>
           <div class="accordion-content">Comercializamos obleas reglamentarias según la normativa vigente en la provincia de Santa Fe, exigidas para circular con vidrios polarizados. Estas obleas identifican que el polarizado cumple con los requisitos legales y evitan sanciones en controles viales.</div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-title">🔹 Trabajos con seguros y particulares</button>
-          <div class="accordion-content">Atendemos tanto a clientes particulares como a través de compañías de seguros, gestionando cada caso con rapidez y compromiso. Nos encargamos de verificar órdenes de trabajo, coordinar con aseguradoras y brindar soluciones efectivas, sin complicaciones para el cliente.</div>
         </div>
         <div class="accordion-item">
           <button class="accordion-title">🔹 Servicio a domicilio para talleres y concesionarios</button>
@@ -844,6 +844,15 @@
   📞 Llamar ahora
 </a>
 
+<script>
+  // Año de inicio de Parabrisas Líder
+  const anioInicio = 2011;
+  const anioActual = new Date().getFullYear();
+  const antiguedad = anioActual - anioInicio;
+
+  // Insertar la cantidad de años en el span con id="anios"
+  document.getElementById("anios").textContent = antiguedad;
+</script>
 
 
   
