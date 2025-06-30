@@ -17,13 +17,13 @@
       margin-top: 0px !important;
       padding-top: 0px;
     }
-   .encabezado-fijo {
+.encabezado-fijo {
   width: 100%;
-  height: 35vh; /* altura relativa a la pantalla */
-  min-height: 180px;
-  max-height: 400px;
+  height: 30vh;            /* altura proporcional en desktop */
+  min-height: 180px;       /* altura mínima para móvil */
+  max-height: 320px;       /* altura máxima para desktop */
   background-image: url('img/img/plider.png');
-  background-size: contain; /* evitamos recorte */
+  background-size: cover;  /* LLENA el fondo sin dejar bordes */
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0;
@@ -34,8 +34,11 @@
 /* Mobile ajustes */
 @media (max-width: 768px) {
   .encabezado-fijo {
+    height: 28vh;
     min-height: 140px;
   }
+}
+
 }
     .barra-navegacion {
       display: flex;
