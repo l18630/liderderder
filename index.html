@@ -40,46 +40,73 @@
 }
 
 }
-    .barra-navegacion {
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      gap: 22px;
-      padding: 14px 20px;
-      position: relative;
-      margin-top: -30px;
-      background-color: transparent;
-      z-index: 10;
-    }
+    .encabezado-fijo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1; /* buena relación para evitar mucho alto en PC */
+  background-image: url('img/img/plider.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
 
-    .barra-navegacion a {
-      font-weight: bold;
-      font-size: 1.05rem;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
-      white-space: nowrap;
-      background-color: rgba(0, 0, 0, 0.4);
-      text-decoration: none;
-    }
+.barra-navegacion {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 12px 20px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -20px; /* lo coloca justo debajo del banner sin superposición exagerada */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 
-    .barra-navegacion a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
+.barra-navegacion a {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
 
-    @media (max-width: 768px) {
-      .barra-navegacion {
-        overflow-x: auto;
-        gap: 16px;
-        padding: 10px;
-        margin-top: -20px;
-      }
+.barra-navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 
-      .barra-navegacion a {
-        font-size: 1rem;
-      }
-    }
+/* Mobile ajustes */
+@media (max-width: 768px) {
+  .encabezado-fijo {
+    aspect-ratio: unset;
+    height: 28vh;
+    min-height: 140px;
+  }
+
+  .barra-navegacion {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    bottom: -14px;
+    transform: translateX(-50%);
+  }
+
+  .barra-navegacion a {
+    font-size: 1rem;
+  }
+}
+
 /* SOLO VISIBLE EN MOBILE */
 @media (max-width: 768px) {
   .btn-flotante-llamar-con-texto {
