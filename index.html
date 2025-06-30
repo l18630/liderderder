@@ -12,19 +12,20 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #fefae7;
+    background-color: #000; /* Fondo neutral oscuro para evitar fugas de color */
     overflow-x: hidden;
   }
 
-  /* HEADER CON IMAGEN */
+  /* HEADER CON IMAGEN FIJA */
   .encabezado-fijo {
     width: 100%;
-    aspect-ratio: 3 / 1; /* banner adaptable */
+    aspect-ratio: 3 / 1;
     background-image: url('img/img/plider.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-bottom: 60px; /* espacio para que no tape el menú */
+    margin: 0;
+    padding: 0;
   }
 
   /* MENÚ DE NAVEGACIÓN */
@@ -34,11 +35,8 @@
     flex-wrap: nowrap;
     gap: 22px;
     padding: 12px 20px;
-    background-color: #333; /* fondo oscuro */
+    background-color: #333;
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
   }
 
   .barra-navegacion a {
@@ -71,7 +69,7 @@
 <!-- HEADER CON BANNER -->
 <div class="encabezado-fijo"></div>
 
-<!-- MENÚ NAVEGACIÓN -->
+<!-- MENÚ DE NAVEGACIÓN -->
 <div class="barra-navegacion">
   <a href="#inicio">Inicio</a>
   <a href="#quienes-somos">Nosotros</a>
@@ -79,6 +77,7 @@
   <a href="#resenas">Reseñas</a>
   <a href="#contacto">Contacto</a>
 </div>
+
 
  
 <!-- ESTILOS PERSONALIZADOS PARA NOSOTROS -->
@@ -191,46 +190,154 @@
       box.classList.toggle("abierto");
     }
   </script>
-  <!-- MARCAS -->
-<section class="section" id="marcas" style="padding: 20px 0 10px 0; background-color: #ffffff;">
-  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con las mejores marcas</h2>
-  <div class="marcas-carousel-container" style="max-width: 1000px; margin-inline: auto; overflow: hidden;">
-    <div class="marcas-carousel">
-      <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
-      <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
-      <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
-      <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
-      <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
-      <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
-      <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
-      <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
+ <!-- SEGUROS -->
+<section class="section" id="seguros" style="padding: 10px 0 20px 0; background-color: #ffffff;">
+  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con todas las compañías de seguros</h2>
+  <div class="seguros-carousel-container" style="max-width: 1000px; margin: auto; overflow: hidden;">
+    <div class="seguros-carousel">
+      <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
+      <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
+      <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
+      <img class="logo-seguro" src="img/img/img/seguros/coopp.jpg" alt="Cooperación Patronal" />
+      <img class="logo-seguro" src="img/img/img/seguros/nor.png" alt="El Norte" />
+      <img class="logo-seguro" src="img/img/img/seguros/equi2.jpg" alt="Equitativa del Plata" />
+      <img class="logo-seguro" src="img/img/img/seguros/fedfed.jpg" alt="Federación Patronal" />
+      <img class="logo-seguro" src="img/img/img/seguros/galiciaa.jpg" alt="Galicia" />
+      <img class="logo-seguro" src="img/img/img/seguros/holando.jpg" alt="La Holando" />
+      <img class="logo-seguro" src="img/img/img/seguros/la2.png" alt="La Segunda" />
+      <img class="logo-seguro" src="img/img/img/seguros/liderar.png" alt="Liderar" />
+      <img class="logo-seguro" src="img/img/img/seguros/mercantilandina.png" alt="Mercantil Andina" />
+      <img class="logo-seguro" src="img/img/img/seguros/pna.png" alt="Paraná Seguros" />
+      <img class="logo-seguro" src="img/img/img/seguros/rus.png" alt="Rio Uruguay Seguros" />
+      <img class="logo-seguro" src="img/img/img/seguros/sancor.png" alt="Sancor" />
+      <img class="logo-seguro" src="img/img/img/seguros/sancri11.jpg" alt="San Cristóbal" />
+      <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
+      <img class="logo-seguro" src="img/img/img/seguros/sm.jpg" alt="Segurometal" />
+      <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
+      <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
+      <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
     </div>
   </div>
 </section>
 
 <style>
-.marcas-carousel {
+.seguros-carousel {
   display: flex;
   gap: 30px;
-  animation: scrollMarcas 25s linear infinite;
+  animation: scrollSeguros 30s linear infinite;
 }
-.logo-marca {
-  max-height: 55px;
+.logo-seguro {
+  height: 45px;
   object-fit: contain;
   flex: 0 0 auto;
+  filter: grayscale(0%);
+  transition: transform 0.2s ease;
 }
-@keyframes scrollMarcas {
+.logo-seguro:hover {
+  transform: scale(1.08);
+}
+@keyframes scrollSeguros {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 @media (max-width: 768px) {
-  .marcas-carousel {
+  .seguros-carousel {
     gap: 20px;
   }
-  .logo-marca {
-    max-height: 45px;
+  .logo-seguro {
+    height: 40px;
   }
 }
+</style>
+  
+<!-- ESTILOS -->
+<style>
+  #contacto {
+    padding: 0;
+    color: white;
+  }
+
+
+  .contacto-contenedor {
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: -30px;
+  }
+
+  .contacto-contenedor h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  .columna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  .fila-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .columna input,
+  .columna textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .columna button {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+@media (max-width: 768px) {
+  .fondo-contacto-banner {
+    height: 180px;
+    background-size: contain; /* En celular evita que se recorte */
+    background-position: center top;
+  }
+}
+
+.fondo-contacto-banner {
+  height: 200px;
+  background: url('img/img/maps-icon2.png') no-repeat center top;
+  background-size: contain;
+  background-color: #e5e0d3; /* mismo tono arena del sitio */
+  margin: 0 auto;
+}
+
+
+
+    .contacto-contenedor {
+      margin-top: -20px;
+      padding: 30px 15px;
+    }
+
+    .contacto-contenedor h2 {
+      font-size: 1.6rem;
+    }
+  }
+  <style>
+
+  
+</style>
+
 </style>
  <!-- SERVICIOS -->
 <section class="section" id="servicios" style="padding: 60px 20px; background-image: url('img/img/servicios.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -468,155 +575,48 @@
 }
 
 </style>
-<!-- SEGUROS -->
-<section class="section" id="seguros" style="padding: 10px 0 20px 0; background-color: #ffffff;">
-  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con todas las compañías de seguros</h2>
-  <div class="seguros-carousel-container" style="max-width: 1000px; margin: auto; overflow: hidden;">
-    <div class="seguros-carousel">
-      <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
-      <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
-      <img class="logo-seguro" src="img/img/img/seguros/cajja.jpg" alt="Caja De Seguros" />
-      <img class="logo-seguro" src="img/img/img/seguros/coopp.jpg" alt="Cooperación Patronal" />
-      <img class="logo-seguro" src="img/img/img/seguros/nor.png" alt="El Norte" />
-      <img class="logo-seguro" src="img/img/img/seguros/equi2.jpg" alt="Equitativa del Plata" />
-      <img class="logo-seguro" src="img/img/img/seguros/fedfed.jpg" alt="Federación Patronal" />
-      <img class="logo-seguro" src="img/img/img/seguros/galiciaa.jpg" alt="Galicia" />
-      <img class="logo-seguro" src="img/img/img/seguros/holando.jpg" alt="La Holando" />
-      <img class="logo-seguro" src="img/img/img/seguros/la2.png" alt="La Segunda" />
-      <img class="logo-seguro" src="img/img/img/seguros/liderar.png" alt="Liderar" />
-      <img class="logo-seguro" src="img/img/img/seguros/mercantilandina.png" alt="Mercantil Andina" />
-      <img class="logo-seguro" src="img/img/img/seguros/pna.png" alt="Paraná Seguros" />
-      <img class="logo-seguro" src="img/img/img/seguros/rus.png" alt="Rio Uruguay Seguros" />
-      <img class="logo-seguro" src="img/img/img/seguros/sancor.png" alt="Sancor" />
-      <img class="logo-seguro" src="img/img/img/seguros/sancri11.jpg" alt="San Cristóbal" />
-      <img class="logo-seguro" src="img/img/img/seguros/segurcoop.png" alt="Segurcoop" />
-      <img class="logo-seguro" src="img/img/img/seguros/sm.jpg" alt="Segurometal" />
-      <img class="logo-seguro" src="img/img/img/seguros/smg2.jpg" alt="Swiss Medical" />
-      <img class="logo-seguro" src="img/img/img/seguros/tri.png" alt="Triunfo" />
-      <img class="logo-seguro" src="img/img/img/seguros/zur.jpg" alt="Zurich" />
+ <!-- MARCAS -->
+<section class="section" id="marcas" style="padding: 20px 0 10px 0; background-color: #ffffff;">
+  <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">Trabajamos con las mejores marcas</h2>
+  <div class="marcas-carousel-container" style="max-width: 1000px; margin-inline: auto; overflow: hidden;">
+    <div class="marcas-carousel">
+      <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
+      <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
+      <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
+      <img class="logo-marca" src="img/img/fuyao.png" alt="Fuyao" />
+      <img class="logo-marca" src="img/img/xyg.png" alt="Xyg" />
+      <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
+      <img class="logo-marca" src="img/img/saftglass.png" alt="Saftglass" />
+      <img class="logo-marca" src="img/img/benson.png" alt="Benson" />
     </div>
   </div>
 </section>
 
 <style>
-.seguros-carousel {
+.marcas-carousel {
   display: flex;
   gap: 30px;
-  animation: scrollSeguros 30s linear infinite;
+  animation: scrollMarcas 25s linear infinite;
 }
-.logo-seguro {
-  height: 45px;
+.logo-marca {
+  max-height: 55px;
   object-fit: contain;
   flex: 0 0 auto;
-  filter: grayscale(0%);
-  transition: transform 0.2s ease;
 }
-.logo-seguro:hover {
-  transform: scale(1.08);
-}
-@keyframes scrollSeguros {
+@keyframes scrollMarcas {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 @media (max-width: 768px) {
-  .seguros-carousel {
+  .marcas-carousel {
     gap: 20px;
   }
-  .logo-seguro {
-    height: 40px;
+  .logo-marca {
+    max-height: 45px;
   }
 }
 </style>
-  
-<!-- ESTILOS -->
-<style>
-  #contacto {
-    padding: 0;
-    color: white;
-  }
 
-
-  .contacto-contenedor {
-    background-color: rgba(0,0,0,0.5);
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: auto;
-    margin-top: -30px;
-  }
-
-  .contacto-contenedor h2 {
-    text-align: center;
-    color: white;
-    margin-bottom: 30px;
-  }
-
-  .columna {
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-  }
-
-  .fila-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .columna input,
-  .columna textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: none;
-  }
-
-  .columna button {
-    width: 100%;
-    background-color: #003366;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-
-@media (max-width: 768px) {
-  .fondo-contacto-banner {
-    height: 180px;
-    background-size: contain; /* En celular evita que se recorte */
-    background-position: center top;
-  }
-}
-
-.fondo-contacto-banner {
-  height: 200px;
-  background: url('img/img/maps-icon2.png') no-repeat center top;
-  background-size: contain;
-  background-color: #e5e0d3; /* mismo tono arena del sitio */
-  margin: 0 auto;
-}
-
-
-
-    .contacto-contenedor {
-      margin-top: -20px;
-      padding: 30px 15px;
-    }
-
-    .contacto-contenedor h2 {
-      font-size: 1.6rem;
-    }
-  }
-  <style>
-
-  
-</style>
-
-</style>
 
 <!-- SECCIÓN CONTACTO -->
 <section id="contacto" style="
