@@ -1182,6 +1182,71 @@
 }
 </style>
 
+<style>
+  /* Pegá este bloque completo dentro del <head> o antes de </body> */
+  .resenas-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+  }
+
+  .resena {
+    display: none;
+    padding: 20px 24px 26px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .resena-autor {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    color: #003366;
+  }
+
+  .resena.activa {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .resena-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #003366;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+
+  .resena-nav.prev { left: -20px; }
+  .resena-nav.next { right: -20px; }
+
+  @media (max-width: 768px) {
+    .resena {
+      font-size: 0.95rem;
+      padding: 16px;
+    }
+
+    .resena-nav.prev { left: -10px; }
+    .resena-nav.next { right: -10px; }
+  }
+</style>
+
 
   
 </body>
