@@ -18,16 +18,25 @@
       padding-top: 0px;
     }
     .encabezado-fijo {
-      width: 100%;
-      aspect-ratio: 3 / 1;
-      background-image: url('img/img/plider.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin: 0;
-      padding: 0;
-    }
+  width: 100%;
+  min-height: 200px; /* altura mínima razonable para que no sea tan alto */
+  max-height: 350px; /* opcional: para evitar que se estire mucho en desktop */
+  background-image: url('img/img/plider.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end; /* opcional: por si querés superponer el menú */
+}
 
+/* Mobile ajustes */
+@media (max-width: 768px) {
+  .encabezado-fijo {
+    min-height: 140px;
+  }
+}
     .barra-navegacion {
       display: flex;
       justify-content: center;
@@ -35,7 +44,7 @@
       gap: 22px;
       padding: 14px 20px;
       position: relative;
-      margin-top: -50px;
+      margin-top: -30px;
       background-color: transparent;
       z-index: 10;
     }
@@ -61,7 +70,7 @@
         overflow-x: auto;
         gap: 16px;
         padding: 10px;
-        margin-top: -30px;
+        margin-top: -20px;
       }
 
       .barra-navegacion a {
