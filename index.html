@@ -17,97 +17,57 @@
       margin-top: 0px !important;
       padding-top: 0px;
     }
-.encabezado-fijo {
-  width: 100%;
-  height: 30vh;            /* altura proporcional en desktop */
-  min-height: 180px;       /* altura mínima para móvil */
-  max-height: 320px;       /* altura máxima para desktop */
-  background-image: url('img/img/plider.png');
-  background-size: cover;  /* LLENA el fondo sin dejar bordes */
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-}
+    .encabezado-fijo {
+      width: 100%;
+      aspect-ratio: 3 / 1;
+      background-image: url('img/img/plider.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
 
+    .barra-navegacion {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 22px;
+      padding: 14px 20px;
+      position: relative;
+      margin-top: -50px;
+      background-color: transparent;
+      z-index: 10;
+    }
 
-/* Mobile ajustes */
-@media (max-width: 768px) {
-  .encabezado-fijo {
-    height: 28vh;
-    min-height: 140px;
-  }
-}
+    .barra-navegacion a {
+      font-weight: bold;
+      font-size: 1.05rem;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+      background-color: rgba(0, 0, 0, 0.4);
+      text-decoration: none;
+    }
 
-}
-  /* 🧱 BANNER PRINCIPAL */
-.encabezado-fijo {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 1; /* Mantiene proporción elegante en escritorio */
-  background-image: url('img/img/plider.png');
-  background-size: cover; /* LLENA sin dejar bordes */
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
+    .barra-navegacion a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
 
-/* 🧭 MENÚ DE NAVEGACIÓN */
-.barra-navegacion {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  padding: 12px 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(100%);
-  background-color: transparent;
-  z-index: 10;
-}
+    @media (max-width: 768px) {
+      .barra-navegacion {
+        overflow-x: auto;
+        gap: 16px;
+        padding: 10px;
+        margin-top: -30px;
+      }
 
-.barra-navegacion a {
-  font-weight: bold;
-  font-size: 1.05rem;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-  background-color: rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-}
-
-.barra-navegacion a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* 📱 ADAPTACIONES PARA CELULARES */
-@media (max-width: 768px) {
-  .encabezado-fijo {
-    aspect-ratio: unset;
-    height: 28vh;
-    min-height: 140px;
-  }
-
-  .barra-navegacion {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    padding: 10px;
-    bottom: -12px;
-    transform: none;
-    justify-content: center;
-  }
-
-  .barra-navegacion a {
-    font-size: 1rem;
-  }
-}
-
+      .barra-navegacion a {
+        font-size: 1rem;
+      }
+    }
 /* SOLO VISIBLE EN MOBILE */
 @media (max-width: 768px) {
   .btn-flotante-llamar-con-texto {
