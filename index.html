@@ -673,6 +673,32 @@
   </div>
 </section>
 
+<!-- BOTÓN FIJO LLAMAR AHORA (MOBILE) -->
+<a href="tel:03414244187" style="
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+  display: none;
+" class="btn-llamar">
+  📞 Llamar ahora
+</a>
+
+<script>
+  // Mostrar el botón solo en pantallas pequeñas
+  const btnLlamar = document.querySelector('.btn-llamar');
+  if (window.innerWidth < 768) {
+    btnLlamar.style.display = 'inline-block';
+  }
+</script>
+
 <footer style="
   padding: 10px 0;
   color: white;
