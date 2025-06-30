@@ -17,19 +17,19 @@
       margin-top: 0px !important;
       padding-top: 0px;
     }
-    .encabezado-fijo {
+   .encabezado-fijo {
   width: 100%;
-  min-height: 200px; /* altura mínima razonable para que no sea tan alto */
-  max-height: 350px; /* opcional: para evitar que se estire mucho en desktop */
+  height: 35vh; /* altura relativa a la pantalla */
+  min-height: 180px;
+  max-height: 400px;
   background-image: url('img/img/plider.png');
-  background-size: cover;
+  background-size: contain; /* evitamos recorte */
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: flex-end; /* opcional: por si querés superponer el menú */
 }
+
 
 /* Mobile ajustes */
 @media (max-width: 768px) {
