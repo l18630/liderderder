@@ -40,32 +40,32 @@
 }
 
 }
-    .encabezado-fijo {
+  /* 🧱 BANNER PRINCIPAL */
+.encabezado-fijo {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 1; /* buena relación para evitar mucho alto en PC */
+  aspect-ratio: 3 / 1; /* Mantiene proporción elegante en escritorio */
   background-image: url('img/img/plider.png');
-  background-size: cover;
+  background-size: cover; /* LLENA sin dejar bordes */
   background-position: center center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   margin: 0;
   padding: 0;
   position: relative;
 }
 
+/* 🧭 MENÚ DE NAVEGACIÓN */
 .barra-navegacion {
   display: flex;
   justify-content: center;
   gap: 22px;
   padding: 12px 20px;
-  background-color: transparent;
   position: absolute;
-  bottom: -20px; /* lo coloca justo debajo del banner sin superposición exagerada */
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  background-color: transparent;
   z-index: 10;
 }
 
@@ -85,7 +85,7 @@
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Mobile ajustes */
+/* 📱 ADAPTACIONES PARA CELULARES */
 @media (max-width: 768px) {
   .encabezado-fijo {
     aspect-ratio: unset;
@@ -98,8 +98,9 @@
     overflow-x: auto;
     gap: 16px;
     padding: 10px;
-    bottom: -14px;
-    transform: translateX(-50%);
+    bottom: -12px;
+    transform: none;
+    justify-content: center;
   }
 
   .barra-navegacion a {
