@@ -673,7 +673,7 @@
   </div>
 </section>
 
-<!-- BOTÓN FIJO LLAMAR AHORA (MOBILE) -->
+<!-- BOTÓN FIJO LLAMAR AHORA (VISIBLE POR DEFECTO) -->
 <a href="tel:03414244187" class="btn-llamar" style="
   position: fixed;
   bottom: 20px;
@@ -686,16 +686,16 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   z-index: 9999;
   font-size: 0.95rem;
-  display: none;
+  text-decoration: none;
 ">
   📞 Llamar ahora
 </a>
 
-<!-- MEDIA QUERY para mostrar el botón en móvil -->
+<!-- OCULTARLO EN PANTALLAS GRANDES -->
 <style>
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .btn-llamar {
-      display: inline-block !important;
+      display: none !important;
     }
   }
 </style>
