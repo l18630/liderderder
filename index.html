@@ -391,13 +391,13 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   }
 
   .slider-reseñas-track {
-    display: flex;
-    gap: 16px;
-    animation: scrollResenas 30s linear infinite;
-    align-items: stretch;
-  }
+  display: flex;
+  gap: 16px;
+  animation: scrollResenas 30s linear infinite;
+  align-items: stretch; /* <- esta línea asegura mismo alto */
+}
 
- .box-reseña {
+.box-reseña {
   flex: 0 0 240px;
   background-color: rgba(255, 255, 255, 0.92);
   border-radius: 10px;
@@ -408,8 +408,9 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 190px;
   text-align: center;
+  height: auto;          /* <- permitimos altura natural */
+  min-height: unset;     /* <- eliminamos forzado anterior */
 }
 
 
