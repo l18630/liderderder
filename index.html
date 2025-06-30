@@ -673,42 +673,32 @@
   </div>
 </section>
 
-<!-- BOTÓN FIJO LLAMAR AHORA (VISIBLE POR DEFECTO) -->
-<a href="tel:03414244187" class="btn-llamar" style="
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #25D366;
-  color: white;
-  font-weight: bold;
-  padding: 12px 18px;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 9999;
-  font-size: 0.95rem;
-  text-decoration: none;
-">
-  📞 Llamar ahora
-</a>
-
-<!-- OCULTARLO EN PANTALLAS GRANDES -->
+<!-- BOTÓN LLAMAR AHORA FUNCIONAL -->
 <style>
+  .btn-llamar {
+    position: fixed;
+    bottom: 100px;
+    left: 25px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
   @media (min-width: 768px) {
     .btn-llamar {
       display: none !important;
     }
   }
 </style>
-
-<!-- SCRIPT para asegurar visualización -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const btnLlamar = document.querySelector('.btn-llamar');
-    if (window.innerWidth < 768) {
-      btnLlamar.style.display = 'inline-block';
-    }
-  });
-</script>
+<a href="tel:03414244187" class="btn-llamar">📞 Llamar ahora</a>
 
 <!-- FOOTER -->
 <footer style="
@@ -723,7 +713,6 @@
 ">
   © 2025 Parabrisas Líder S.R.L. - Todos los derechos reservados
 </footer>
-
 
 
 
