@@ -666,13 +666,12 @@
   display: flex;
   gap: 16px;
   animation: scrollResenas 35s linear infinite;
-  align-items: flex-start; /* <--- corrige el espacio extra */
+  align-items: stretch; /* Todas del mismo alto */
 }
-
 
 .box-reseña {
   flex: 0 0 260px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.92);
   border-radius: 10px;
   padding: 16px 14px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -681,14 +680,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 12px;
+  min-height: 210px; /* Esto fuerza la altura uniforme, podés ajustar este valor si cambia la más larga */
 }
 
 .box-reseña .autor {
   font-weight: bold;
   color: #003366;
   text-align: center;
-  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.box-reseña p {
+  margin: 0;
+  line-height: 1.45;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .box-reseña:hover {
@@ -708,8 +715,10 @@
 
   .box-reseña {
     flex: 0 0 85%;
+    min-height: auto; /* en mobile dejamos que crezcan naturalmente */
   }
 }
+
 </style>
 
 
