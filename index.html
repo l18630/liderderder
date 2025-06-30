@@ -96,6 +96,31 @@
 }
 
   </style>
+
+  <style>
+  .btn-flotante-llamar {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 15px;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 9999;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .btn-flotante-llamar {
+      display: inline-block;
+    }
+  }
+</style>
+
 </head>
 <body>
   <a id="inicio"></a>
@@ -798,9 +823,10 @@
   }
 </style>
 
-<a href="tel:+543414244187" class="btn-flotante-llamar" title="Llamar ahora">
-  📞
+<a href="tel:+543414244187" class="btn-flotante-llamar">
+  📞 Llamar ahora
 </a>
+
 
 
   
