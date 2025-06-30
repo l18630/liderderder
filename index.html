@@ -65,6 +65,36 @@
         font-size: 1rem;
       }
     }
+/* SOLO VISIBLE EN MOBILE */
+@media (max-width: 768px) {
+  .btn-flotante-llamar-con-texto {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #198754; /* Verde oscuro */
+    color: white;
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: background 0.3s ease;
+  }
+
+  .btn-flotante-llamar-con-texto:hover {
+    background-color: #146c43;
+  }
+}
+
+/* OCULTO EN ESCRITORIO */
+@media (min-width: 769px) {
+  .btn-flotante-llamar-con-texto {
+    display: none;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -566,9 +596,7 @@
     }
   }
 </style>
-<a href="tel:+543414244187" style="display: inline-block; margin-top: 12px; background-color: #198754; color: white; padding: 12px 20px; border-radius: 30px; font-weight: 600; text-decoration: none; font-size: 1rem;">
-  📞 Llamar ahora
-</a>
+
 
 <!-- FOOTER -->
 <footer style="
@@ -769,6 +797,10 @@
     .resena-nav.next { right: -10px; }
   }
 </style>
+
+<a href="tel:+543414244187" class="btn-flotante-llamar" title="Llamar ahora">
+  📞
+</a>
 
 
   
