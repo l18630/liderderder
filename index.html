@@ -674,7 +674,7 @@
 </section>
 
 <!-- BOTÓN FIJO LLAMAR AHORA (MOBILE) -->
-<a href="tel:03414244187" style="
+<a href="tel:03414244187" class="btn-llamar" style="
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -687,18 +687,30 @@
   z-index: 9999;
   font-size: 0.95rem;
   display: none;
-" class="btn-llamar">
+">
   📞 Llamar ahora
 </a>
 
-<script>
-  // Mostrar el botón solo en pantallas pequeñas
-  const btnLlamar = document.querySelector('.btn-llamar');
-  if (window.innerWidth < 768) {
-    btnLlamar.style.display = 'inline-block';
+<!-- MEDIA QUERY para mostrar el botón en móvil -->
+<style>
+  @media (max-width: 768px) {
+    .btn-llamar {
+      display: inline-block !important;
+    }
   }
+</style>
+
+<!-- SCRIPT para asegurar visualización -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnLlamar = document.querySelector('.btn-llamar');
+    if (window.innerWidth < 768) {
+      btnLlamar.style.display = 'inline-block';
+    }
+  });
 </script>
 
+<!-- FOOTER -->
 <footer style="
   padding: 10px 0;
   color: white;
@@ -711,6 +723,7 @@
 ">
   © 2025 Parabrisas Líder S.R.L. - Todos los derechos reservados
 </footer>
+
 
 
 
