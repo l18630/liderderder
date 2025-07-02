@@ -19,16 +19,20 @@
       margin-top: 0px !important;
       padding-top: 0px;
     }
-    .encabezado-fijo {
+  .encabezado-fijo {
   width: 100%;
-  aspect-ratio: 3 / 1;
-  background-image: url('img/img/psas.png');
-  background-size: contain; /* ✅ muestra toda la imagen */
-  background-position: center center;
-  background-repeat: no-repeat;
+  text-align: center;
+  background-color: black; /* O blanco si preferís */
   margin: 0;
   padding: 0;
 }
+
+.encabezado-fijo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
     .barra-navegacion {
@@ -129,8 +133,11 @@
 
 </head>
 <body>
+
   <a id="inicio"></a>
-  <div class="encabezado-fijo"></div>
+  <div class="encabezado-fijo">
+  <img src="img/img/psas.png" alt="Parabrisas Líder"/>
+  </div>
   <div class="barra-navegacion">
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
