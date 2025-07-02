@@ -214,7 +214,7 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
  <!-- SEGUROS -->
 <section class="section" id="seguros" style="padding: 10px 0 20px 0; margin-top: 0; background-color: #ffffff;">
   <h2 style="text-align: center; color: #003366; margin: 0 0 10px 0;">Trabajamos con todas las compañías de seguros</h2>
-  <div class="seguros-carousel-container" style="max-width: 1000px; margin: auto; overflow: hidden;">
+  <div class="seguros-carousel-container">
     <div class="seguros-carousel">
         <img class="logo-seguro" src="img/img/img/seguros/all.png" alt="Allianz" />
       <img class="logo-seguro" src="img/img/img/seguros/berkleyy.jpg" alt="Berkley" />
@@ -275,6 +275,16 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
 
 .seguros-carousel:hover {
   animation-play-state: paused;
+}
+
+.seguros-carousel-container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 15px 10px;
 }
 
 .logo-seguro {
