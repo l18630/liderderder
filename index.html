@@ -568,8 +568,19 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
  <!-- MARCAS -->
 <section class="section" id="marcas" style="padding: 10px 0; margin-top: 0; background-color: #ffffff;">
   <h2 style="text-align: center; color: #003366; margin: 0 0 10px 0;">Trabajamos con todas las mejores marcas</h2>
-  <div class="marcas-carousel-container" style="max-width: 1000px; margin-inline: auto; overflow: hidden;">
+  <div class="marcas-carousel-container">
     <div class="marcas-carousel">
+      <!-- Primer grupo -->
+      <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
+      <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
+      <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
+      <img class="logo-marca" src="img/img/fuyyao.png" alt="Fuyao" />
+      <img class="logo-marca" src="img/img/xygg.png" alt="Xyg" />
+      <img class="logo-marca" src="img/img/cristem.png" alt="Cristem" />
+      <img class="logo-marca" src="img/img/sft.png" alt="Saftglass" />
+      <img class="logo-marca" src="img/img/bensonn.jpg" alt="Benson" />
+
+      <!-- Segundo grupo (duplicado) -->
       <img class="logo-marca" src="img/img/pilkington.png" alt="Pilkington" />
       <img class="logo-marca" src="img/img/saint-gobain.png" alt="Saint-Gobain Sekurit" />
       <img class="logo-marca" src="img/img/favicur.png" alt="Favicur" />
@@ -582,21 +593,45 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   </div>
 </section>
 
+
 <style>
+.marcas-carousel-container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 15px 10px;
+}
+
 .marcas-carousel {
   display: flex;
   gap: 30px;
-  animation: scrollMarcas 25s linear infinite;
+  animation: scrollMarcas 60s linear infinite; /* igual que seguros */
+  width: max-content;
 }
+
+.marcas-carousel:hover {
+  animation-play-state: paused;
+}
+
 .logo-marca {
   max-height: 55px;
   object-fit: contain;
   flex: 0 0 auto;
+  transition: transform 0.2s ease;
 }
+
+.logo-marca:hover {
+  transform: scale(1.08);
+}
+
 @keyframes scrollMarcas {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 @media (max-width: 768px) {
   .marcas-carousel {
     gap: 20px;
@@ -605,6 +640,7 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     max-height: 45px;
   }
 }
+
 </style>
 
 
