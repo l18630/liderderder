@@ -425,72 +425,73 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     margin: 40px auto;
   }
 
-  .slider-reseñas-container {
-    overflow: hidden;
-    max-width: 1000px;
-    margin: auto;
-    padding: 10px;
-    height: 260px;
-  }
-
-  .slider-reseñas-track {
-  display: flex;
-  gap: 16px;
-  animation: scrollResenas 30s linear infinite;
-  align-items: stretch; /* <- esta línea asegura mismo alto */
-}
-
-.box-reseña {
-  flex: 0 0 240px;
-  background-color: rgba(255, 255, 255, 0.92);
+ <style>
+.resenas-carousel-container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  background: #ffffff;
   border-radius: 10px;
-  padding: 12px 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-size: 0.9rem;
-  color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 10px;
+}
+
+.resenas-carousel {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  gap: 30px;
+  animation: scrollResenas 70s linear infinite;
+  width: max-content;
+}
+
+.resenas-carousel:hover {
+  animation-play-state: paused;
+}
+
+.resena-box {
+  flex: 0 0 auto;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  max-width: 300px;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
-  height: auto;          /* <- permitimos altura natural */
-  min-height: unset;     /* <- eliminamos forzado anterior */
+  transition: transform 0.2s ease;
 }
 
+.resena-box:hover {
+  transform: scale(1.03);
+}
 
-  .box-reseña .autor {
-    font-weight: bold;
-    color: #003366;
-    margin-bottom: 10px;
+.autor {
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.estrellas {
+  color: #f1c40f;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+@keyframes scrollResenas {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .resenas-carousel {
+    gap: 20px;
+  }
+  .resena-box {
     font-size: 0.95rem;
+    max-width: 240px;
+    padding: 16px;
   }
-
-  .box-reseña:hover {
-    transform: scale(1.03);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  @keyframes scrollResenas {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  @media (max-width: 768px) {
-    .slider-reseñas-track {
-      animation-duration: 50s;
-    }
-    .box-reseña {
-      flex: 0 0 85%;
-      min-height: auto;
-    }
-    
-  }
-  .box-reseña.larga {
-  max-height: 175px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ccc transparent;
 }
-
 </style>
 
 <section id="bloque-servicios-reseñas">
