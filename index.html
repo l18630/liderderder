@@ -1035,6 +1035,35 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   document.getElementById("anios").textContent = antiguedad;
 </script>
 
+<script>
+  function enableTouchPause(selector) {
+    const container = document.querySelector(selector);
+    const track = container.querySelector('.resenas-carousel') || container.querySelector('.marcas-carousel') || container.querySelector('.seguros-carousel');
+
+    let isPaused = false;
+
+    container.addEventListener('touchstart', () => {
+      if (track) {
+        track.style.animationPlayState = 'paused';
+        isPaused = true;
+      }
+    });
+
+    container.addEventListener('touchend', () => {
+      if (track && isPaused) {
+        setTimeout(() => {
+          track.style.animationPlayState = 'running';
+          isPaused = false;
+        }, 500); // Espera un poco para no reiniciar mientras el usuario sigue leyendo
+      }
+    });
+  }
+
+  // Llamalo para cada carrusel que uses
+  enableTouchPause('.resenas-carousel-container');
+  enableTouchPause('.marcas-carousel-container');
+  enableTouchPause('.seguros-carousel-container');
+</script>
 
   
 </body>
