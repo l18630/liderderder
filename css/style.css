@@ -184,7 +184,7 @@ html, body {
 .seguros-carousel {
   display: flex;
   gap: 30px;
-  animation: scrollSeguros 70s linear infinite; /* más suave y lento */
+  animation: scrollSeguros 50s linear infinite; /* más suave y lento */
   width: max-content; /* ESTA ES LA CLAVE */
 }
 
