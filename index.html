@@ -441,7 +441,7 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   #bloque-servicios-reseñas {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('img/img/servi.png') no-repeat center top / cover;
     color: white;
-    padding: 20px 20px;
+    padding: 0 20px;
   }
 
   .seccion-interna {
@@ -456,12 +456,10 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     margin: auto;
   }
 
-.accordion-container {
-  max-width: 900px;
-  margin: 40px auto 0 auto;
-}
-
-
+  .accordion-container {
+    max-width: 900px;
+    margin: 40px auto 0 auto; /* sin espacio abajo */
+  }
 
   .slider-reseñas-container {
     overflow: hidden;
@@ -483,7 +481,7 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     flex: 0 0 240px;
     background-color: rgba(255, 255, 255, 0.92);
     border-radius: 10px;
-    padding: 12px 12px;
+    padding: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     font-size: 0.9rem;
     color: #000000;
@@ -491,8 +489,6 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
-    height: auto;
-    min-height: unset;
   }
 
   .box-reseña .autor {
@@ -518,7 +514,6 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     }
     .box-reseña {
       flex: 0 0 85%;
-      min-height: auto;
     }
   }
 
@@ -574,12 +569,11 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     </div>
   </div>
 
-  <!-- SECCIÓN RESEÑAS -->
-<div class="seccion-interna">
-<h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin: 0 0 20px;">¿Qué dicen nuestros clientes?</h2>
-
-  <div class="resenas-carousel-container">
-    <div class="resenas-carousel" id="resenas-track">
+ <!-- SECCIÓN RESEÑAS -->
+  <div class="seccion-interna">
+    <h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin: 0 0 20px;">¿Qué dicen nuestros clientes?</h2>
+    <div class="resenas-carousel-container">
+      <div class="resenas-carousel" id="resenas-track">
       <!-- Grupo de reseñas (una sola vez, se duplican por JS) -->
       <div class="resena-box"><strong class="autor">Lucina Perich</strong><div class="estrellas">⭐⭐⭐⭐⭐</div><p>“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado! Realmente impecable. Los vuelvo a elegir sin dudas.”</p></div>
       <div class="resena-box"><strong class="autor">Gilda Morgante</strong><div class="estrellas">⭐⭐⭐⭐⭐</div><p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p></div>
