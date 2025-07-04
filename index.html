@@ -573,10 +573,11 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   </div>
 
   <!-- SECCIÓN RESEÑAS -->
-  <div class="seccion-interna">
-    <h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin: 40px 0 30px;">¿Qué dicen nuestros clientes?</h2>
-    <div class="slider-reseñas-container">
-      <div class="slider-reseñas-track" id="resenas-track">
+<div class="seccion-interna">
+  <h2 style="text-align: center; color: #ffffff; font-size: 1.8rem; font-weight: bold; margin: 40px 0 30px;">¿Qué dicen nuestros clientes?</h2>
+
+  <div class="resenas-carousel-container">
+    <div class="resenas-carousel" id="resenas-track">
       <!-- Grupo de reseñas (una sola vez, se duplican por JS) -->
       <div class="resena-box"><strong class="autor">Lucina Perich</strong><div class="estrellas">⭐⭐⭐⭐⭐</div><p>“En un rubro que a veces puede ser problemático, esta empresa sorprende con la velocidad en cada etapa del proceso: para coordinar el turno, recibir el vehículo y entregar el trabajo finalizado! Realmente impecable. Los vuelvo a elegir sin dudas.”</p></div>
       <div class="resena-box"><strong class="autor">Gilda Morgante</strong><div class="estrellas">⭐⭐⭐⭐⭐</div><p>“El servicio fue puntual y muy rápido. El parabrisas quedó excelente y la atención por parte del personal es destacable. Recomiendo este lugar sin dudas.”</p></div>
@@ -607,18 +608,23 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   track.innerHTML += track.innerHTML;
 </script>
 
-
 <style>
   .resenas-carousel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
   }
+
   .resenas-carousel {
     display: flex;
     animation: scroll 80s linear infinite;
     width: max-content;
   }
+
+  .resenas-carousel-container:hover .resenas-carousel {
+    animation-play-state: paused;
+  }
+
   .resena-box {
     min-width: 300px;
     max-width: 300px;
@@ -631,16 +637,19 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
     font-family: sans-serif;
     flex-shrink: 0;
   }
+
   .resena-box .autor {
     font-weight: bold;
     margin-bottom: 8px;
     color: #003366;
   }
+
   .estrellas {
     color: gold;
     font-size: 1.2rem;
     margin-bottom: 8px;
   }
+
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
