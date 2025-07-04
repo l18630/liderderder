@@ -39,12 +39,12 @@
     }
 .encabezado-fijo {
   width: 100%;
-  aspect-ratio: 3 / 1; /* Ajusta esta proporción si querés más alto o más bajo */
+  aspect-ratio: 3 / 1;
   background-image: url('img/img/psassss.png');
-  background-size: cover;  /* ✅ Ocupa todo el ancho */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: transparent; /* 👈 Cambiado */
 }
 
 
@@ -174,10 +174,11 @@
 <section id="nosotros">
   <style>
     #nosotros {
-      padding: 0px 20px;
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('img/img/nosotros111.png') no-repeat center center / cover;
-      color: white;
-    }
+  padding: 0 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.6)), 
+              url('img/img/nosotros111.png') no-repeat center center / cover;
+  color: white;
+}
     @media (max-width: 768px) {
       #nosotros {
         background-position: top center;
