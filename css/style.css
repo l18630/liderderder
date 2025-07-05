@@ -251,6 +251,31 @@ html, body {
     font-weight: bold;
   }
 
+/* VALIDACIÓN VISUAL DE FORMULARIO */
+input:invalid,
+textarea:invalid {
+  border: 2px solid #e74c3c; /* rojo */
+  background-color: #fff4f4;
+}
+
+input:valid,
+textarea:valid {
+  border: 2px solid #2ecc71; /* verde */
+  background-color: #f6fff6;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  outline: none;
+  box-shadow: 0 0 4px #e74c3c;
+}
+
+input:focus:valid,
+textarea:focus:valid {
+  outline: none;
+  box-shadow: 0 0 4px #2ecc71;
+}
+
 @media (max-width: 768px) {
   .fondo-contacto-banner {
     height: 180px;
