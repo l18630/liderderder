@@ -69,60 +69,30 @@ html, body {
         font-size: 1rem;
       }
     }
-/* SOLO VISIBLE EN MOBILE */
-@media (max-width: 768px) {
-  .btn-flotante-llamar-con-texto {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #198754; /* Verde oscuro */
-    color: white;
-    font-size: 16px;
-    padding: 12px 18px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    transition: background 0.3s ease;
-  }
+/* BOTÓN LLAMAR AHORA */
+.btn-llamar {
+  position: fixed;
+  bottom: 100px;  /* más arriba que WhatsApp */
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
 
-  .btn-flotante-llamar-con-texto:hover {
-    background-color: #146c43;
+@media (min-width: 768px) {
+  .btn-llamar {
+    display: none !important;
   }
 }
 
-/* OCULTO EN ESCRITORIO */
-@media (min-width: 769px) {
-  .btn-flotante-llamar-con-texto {
-    display: none;
-  }
-}
-
-  
-
-
-  .btn-flotante-llamar {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 15px;
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    z-index: 9999;
-    text-decoration: none;
-    font-size: 15px;
-  }
-
-  @media (max-width: 768px) {
-    .btn-flotante-llamar {
-      display: inline-block;
-    }
-  }
 @media (min-width: 769px) {
   .encabezado-fijo img {
     max-height: 380px; /* ajustá este valor a gusto */
@@ -529,8 +499,8 @@ html, body {
   }
 
 
-
-  .whatsapp-fijo {
+/* BOTÓN WHATSAPP */
+.whatsapp-fijo {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -549,6 +519,7 @@ html, body {
   border-radius: 30px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
+  max-width: 90vw; /* evitar que se expanda de más en celular */
 }
 
 .whatsapp-boton:hover {
@@ -562,13 +533,20 @@ html, body {
   margin-right: 10px;
 }
 
-/* Responsive: achica el texto en celular */
 @media (max-width: 600px) {
   .whatsapp-boton span {
     font-size: 12.5px;
   }
-}
 
+  .btn-llamar {
+    bottom: 110px; /* más separación aún si hace falta */
+  }
+
+  .whatsapp-boton {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+}
 
 
   /* Pegá este bloque completo dentro del <head> o antes de </body> */
