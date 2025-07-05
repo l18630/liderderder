@@ -197,34 +197,59 @@ html, body {
 
 
 
-.form-centro {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.form-centro input,
-.form-centro textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-}
-
-.form-centro button {
-  width: 100%;
-  background-color: #003366;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
+  #contacto {
+    padding: 0;
+    color: white;
+  }
 
 
+  .contacto-contenedor {
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: -30px;
+  }
+
+  .contacto-contenedor h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  .columna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  .fila-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .columna input,
+  .columna textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .columna button {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 
 @media (max-width: 768px) {
   .fondo-contacto-banner {
