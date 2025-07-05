@@ -375,14 +375,14 @@ textarea:invalid + .icono-validacion::before {
 
 
 .marcas-carousel-container {
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
   overflow: hidden;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 0; /* sin bordes si querés que sea uniforme */
+  box-shadow: none;
   padding: 15px 10px;
 }
+
 
 .marcas-carousel {
   display: flex;
