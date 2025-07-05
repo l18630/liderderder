@@ -785,19 +785,35 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
         <p>📧 <strong>Email:</strong> parabrisaslidersrl@hotmail.com</p>
       </div>
 
-      <!-- FORMULARIO -->
-    <form action="https://formsubmit.co/parabrisaslidersrl@hotmail.com" method="POST" class="columna" style="flex: 1; min-width: 280px; max-width: 400px; margin: 0 auto;">
+    <!-- FORMULARIO -->
+<form action="https://formsubmit.co/parabrisaslidersrl@hotmail.com" method="POST" class="columna" style="flex: 1; min-width: 280px; max-width: 400px; margin: 0 auto;">
   <!-- NO ponemos _captcha false para que el CAPTCHA esté activo -->
-<input type="hidden" name="_next" value="https://l18630.github.io/liderderder/gracias.html">
+  <input type="hidden" name="_next" value="https://l18630.github.io/liderderder/gracias.html">
 
+  <input 
+    type="text" 
+    name="nombre" 
+    placeholder="Nombre y Apellido" 
+    required 
+    title="Por favor completá tu nombre completo" 
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;"
+  >
 
-  <input type="text" name="nombre" placeholder="Nombre y Apellido" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-  <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-  <input type="text" name="telefono" placeholder="Teléfono" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-  <textarea name="mensaje" placeholder="Escribinos tu consulta..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;"></textarea>
-  <button type="submit" style="display: block; margin: 0 auto; background-color: #003366; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold;">Enviar consulta</button>
-</form>
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Email" 
+    required 
+    title="Ingresá una dirección de correo válida" 
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;"
+  >
 
+  <input 
+    type="tel" 
+    name="telefono" 
+    placeholder="Teléfono" 
+    title="Ingresá un número de contacto (opcional)" 
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none
 
     </div>
 
@@ -1069,6 +1085,33 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
   enableTouchPause('.marcas-carousel-container');
   enableTouchPause('.seguros-carousel-container');
 </script>
+
+<style>
+/* VALIDACIÓN VISUAL DE FORMULARIO */
+input:invalid,
+textarea:invalid {
+  border: 2px solid #e74c3c !important;
+  background-color: #fff4f4 !important;
+}
+
+input:valid,
+textarea:valid {
+  border: 2px solid #2ecc71 !important;
+  background-color: #f6fff6 !important;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  outline: none;
+  box-shadow: 0 0 4px #e74c3c;
+}
+
+input:focus:valid,
+textarea:focus:valid {
+  outline: none;
+  box-shadow: 0 0 4px #2ecc71;
+}
+</style>
 
   
 </body>
