@@ -1,15 +1,17 @@
 html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      overflow-x: hidden;
-    }
-    
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 #resenas {
-      margin-top: 0px !important;
-      padding-top: 0px;
-    }
+  margin-top: 0px !important;
+  padding-top: 0px;
+}
+
 .encabezado-fijo {
   width: 100%;
   aspect-ratio: 3 / 1;
@@ -17,9 +19,8 @@ html, body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: transparent; /* 👈 Cambiado */
+  background-color: transparent;
 }
-
 
 .encabezado-fijo img {
   width: 100%;
@@ -27,52 +28,49 @@ html, body {
   display: block;
 }
 
+.barra-navegacion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 22px;
+  padding: 14px 20px;
+  position: relative;
+  margin-top: -50px;
+  background-color: transparent;
+  z-index: 10;
+}
 
+.barra-navegacion a {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
 
-    .barra-navegacion {
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      gap: 22px;
-      padding: 14px 20px;
-      position: relative;
-      margin-top: -50px;
-      background-color: transparent;
-      z-index: 10;
-    }
+.barra-navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 
-    .barra-navegacion a {
-      font-weight: bold;
-      font-size: 1.05rem;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
-      white-space: nowrap;
-      background-color: rgba(0, 0, 0, 0.4);
-      text-decoration: none;
-    }
+@media (max-width: 768px) {
+  .barra-navegacion {
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    margin-top: -30px;
+  }
+  .barra-navegacion a {
+    font-size: 1rem;
+  }
+}
 
-    .barra-navegacion a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    @media (max-width: 768px) {
-      .barra-navegacion {
-        overflow-x: auto;
-        gap: 16px;
-        padding: 10px;
-        margin-top: -30px;
-      }
-
-      .barra-navegacion a {
-        font-size: 1rem;
-      }
-    }
-/* BOTÓN LLAMAR AHORA */
 .btn-llamar {
   position: fixed;
-  bottom: 100px;  /* más arriba que WhatsApp */
+  bottom: 100px;
   left: 20px;
   background-color: #25D366;
   color: white;
@@ -95,161 +93,87 @@ html, body {
 
 @media (min-width: 769px) {
   .encabezado-fijo img {
-    max-height: 380px; /* ajustá este valor a gusto */
+    max-height: 380px;
     object-fit: contain;
   }
 }
 
-
-
-
-    #nosotros {
+#nosotros {
   padding: 10px 20px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.6)), 
               url('img/img/nosotros111.png') no-repeat center center / cover;
   color: white;
 }
-    @media (max-width: 768px) {
-      #nosotros {
-        background-position: top center;
-        background-size: contain;
-      }
-    }
-    .beneficios-contenedor {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .accordion-item {
-      background-color: white;
-      border-radius: 6px;
-      margin-bottom: 14px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    .accordion-title {
-      background-color: #e6f0fb;
-      font-weight: bold;
-      padding: 14px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
-      border: none;
-      text-align: left;
-    }
-    .accordion-title:hover {
-      background-color: #d0e5ff;
-    }
-    .accordion-content {
-      display: none;
-      padding: 14px 20px;
-      background-color: #ffffff;
-      color: #000;
-    }
-    .accordion-item.open .accordion-content {
-      display: block;
-    }
-  
 
-
-.seguros-carousel {
-  display: flex;
-  gap: 30px;
-  animation: scrollSeguros 50s linear infinite; /* más suave y lento */
-  width: max-content; /* ESTA ES LA CLAVE */
-}
-
-.seguros-carousel:hover {
-  animation-play-state: paused;
-}
-
-.seguros-carousel-container {
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 15px 10px;
-}
-
-.logo-seguro {
-  height: 45px;
-  object-fit: contain;
-  flex: 0 0 auto;
-  filter: grayscale(0%);
-  transition: transform 0.2s ease;
-}
-.logo-seguro:hover {
-  transform: scale(1.08);
-}
-@keyframes scrollSeguros {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 @media (max-width: 768px) {
-  .seguros-carousel {
-    gap: 20px;
-  }
-  .logo-seguro {
-    height: 40px;
+  #nosotros {
+    background-position: top center;
+    background-size: contain;
   }
 }
 
+.beneficios-contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
+.accordion-item {
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
-  #contacto {
-    padding: 0;
-    color: white;
-  }
+.accordion-title {
+  background-color: #e6f0fb;
+  font-weight: bold;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  border: none;
+  text-align: left;
+}
 
+.accordion-title:hover {
+  background-color: #d0e5ff;
+}
 
-  .contacto-contenedor {
-    background-color: rgba(0,0,0,0.5);
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: auto;
-    margin-top: -30px;
-  }
+.accordion-content {
+  display: none;
+  padding: 14px 20px;
+  background-color: #ffffff;
+  color: #000;
+}
 
-  .contacto-contenedor h2 {
-    text-align: center;
-    color: white;
-    margin-bottom: 30px;
-  }
+.accordion-item.open .accordion-content {
+  display: block;
+}
 
-  .columna {
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-  }
+#contacto {
+  padding: 0;
+  color: white;
+}
 
-  .fila-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-  }
+.contacto-contenedor {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: -20px;
+}
 
-  .columna input,
-  .columna textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: none;
-  }
+.contacto-contenedor h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
 
-  .columna button {
-    width: 100%;
-    background-color: #003366;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
 
 /* VALIDACIÓN VISUAL + ÍCONOS ✅❌ */
 .campo-validado {
@@ -300,10 +224,6 @@ textarea:invalid + .icono-validacion::before {
     .contacto-contenedor {
       margin-top: -20px;
       padding: 30px 15px;
-    }
-
-    .contacto-contenedor h2 {
-      font-size: 1.6rem;
     }
   }
   <style>
