@@ -586,6 +586,33 @@ html, body {
     max-width: 85vw;
     min-width: auto;
   }
+  .fila-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.columna input,
+.columna textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.columna button {
+  width: 100%;
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 }
 
 /* VALIDACIÓN VISUAL + ÍCONOS ✅❌ */
