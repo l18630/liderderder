@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://118630.github.io/liderderder/sitemap.xml
