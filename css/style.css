@@ -589,6 +589,52 @@ html, body {
     min-width: auto;
   }
 }
+.seguros-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 15px 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.seguros-carousel {
+  display: flex;
+  gap: 30px;
+  animation: scrollSeguros 70s linear infinite;
+  width: max-content;
+}
+
+.seguros-carousel:hover {
+  animation-play-state: paused;
+}
+
+.logo-seguro {
+  height: 45px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: grayscale(0%);
+  transition: transform 0.2s ease;
+}
+
+.logo-seguro:hover {
+  transform: scale(1.08);
+}
+
+@keyframes scrollSeguros {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .seguros-carousel {
+    gap: 20px;
+  }
+
+  .logo-seguro {
+    height: 40px;
+  }
+}
 
 /* VALIDACIÓN VISUAL + ÍCONOS ✅❌ */
 .campo-validado {
