@@ -375,13 +375,15 @@ textarea:invalid + .icono-validacion::before {
 
 
 .marcas-carousel-container {
-  width: 100%;
+  width: 100vw;              /* ocupar todo el ancho visible */
+  margin-left: calc(-50vw + 50%);  /* corrección para anular el centrado del body */
   overflow: hidden;
   background: #ffffff;
-  border-radius: 0; /* sin bordes si querés que sea uniforme */
+  padding: 15px 0;           /* sin padding lateral */
+  border-radius: 0;
   box-shadow: none;
-  padding: 15px 10px;
 }
+
 
 
 .marcas-carousel {
