@@ -664,3 +664,30 @@ html, body {
     min-width: auto;
   }
 }
+
+/* VALIDACIÓN VISUAL + ÍCONOS ✅❌ */
+.campo-validado {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.icono-validacion {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+input:valid + .icono-validacion::before,
+textarea:valid + .icono-validacion::before {
+  content: "✔";
+  color: #2ecc71;
+}
+
+input:invalid + .icono-validacion::before,
+textarea:invalid + .icono-validacion::before {
+  content: "✖";
+  color: #e74c3c;
+}
