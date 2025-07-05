@@ -251,30 +251,33 @@ html, body {
     font-weight: bold;
   }
 
-/* VALIDACIÓN VISUAL DE FORMULARIO */
-input:invalid,
-textarea:invalid {
-  border: 2px solid #e74c3c; /* rojo */
-  background-color: #fff4f4;
+/* VALIDACIÓN VISUAL + ÍCONOS ✅❌ */
+.campo-validado {
+  position: relative;
+  margin-bottom: 12px;
 }
 
-input:valid,
-textarea:valid {
-  border: 2px solid #2ecc71; /* verde */
-  background-color: #f6fff6;
+.icono-validacion {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
 }
 
-input:focus:invalid,
-textarea:focus:invalid {
-  outline: none;
-  box-shadow: 0 0 4px #e74c3c;
+input:valid + .icono-validacion::before,
+textarea:valid + .icono-validacion::before {
+  content: "✔";
+  color: #2ecc71;
 }
 
-input:focus:valid,
-textarea:focus:valid {
-  outline: none;
-  box-shadow: 0 0 4px #2ecc71;
+input:invalid + .icono-validacion::before,
+textarea:invalid + .icono-validacion::before {
+  content: "✖";
+  color: #e74c3c;
 }
+
 
 @media (max-width: 768px) {
   .fondo-contacto-banner {
