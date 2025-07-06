@@ -452,8 +452,8 @@ textarea:invalid + .icono-validacion::before {
 /* BOTÓN WHATSAPP */
 .whatsapp-fijo {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 70px; /* antes 25px */
+  right: 20px;
   z-index: 9999;
 }
 
@@ -469,7 +469,7 @@ textarea:invalid + .icono-validacion::before {
   border-radius: 30px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
-  max-width: 90vw; /* evitar que se expanda de más en celular */
+  max-width: 90vw;
 }
 
 .whatsapp-boton:hover {
@@ -488,14 +488,16 @@ textarea:invalid + .icono-validacion::before {
     font-size: 12.5px;
   }
 
+  .whatsapp-fijo {
+    bottom: 90px; /* en celular, subilo más si querés */
+  }
+}
+
+
   .btn-llamar {
     bottom: 110px; /* más separación aún si hace falta */
   }
 
-  .whatsapp-boton {
-    padding: 10px 10px;
-    font-size: 13px;
-  }
 }
 
 
