@@ -68,6 +68,28 @@ html, body {
   }
 }
 
+.btn-llamar {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .btn-llamar {
+    display: none !important;
+  }
+}
 
 @media (min-width: 769px) {
   .encabezado-fijo img {
@@ -403,6 +425,28 @@ textarea:invalid + .icono-validacion::before {
 
 
 
+  .btn-llamar {
+    position: fixed;
+    bottom: 100px;
+    left: 25px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .btn-llamar {
+      display: none !important;
+    }
+  }
 
 
 /* BOTÓN WHATSAPP */
@@ -444,14 +488,15 @@ textarea:invalid + .icono-validacion::before {
     font-size: 12.5px;
   }
 
+  .btn-llamar {
+    bottom: 110px; /* más separación aún si hace falta */
+  }
 
   .whatsapp-boton {
     padding: 10px 10px;
     font-size: 13px;
   }
 }
-
-
 
 
   /* Pegá este bloque completo dentro del <head> o antes de </body> */
@@ -588,7 +633,7 @@ html, body {
   .seguros-carousel {
     gap: 20px;
   }
-  
+
   .logo-seguro {
     height: 40px;
   }
@@ -620,36 +665,3 @@ textarea:invalid + .icono-validacion::before {
   content: "✖";
   color: #e74c3c;
 }
-
-
-.btn-llamar {
-  position: fixed;
-  bottom: 90px; /* ✅ Más arriba que WhatsApp */
-  left: 25px;
-  background-color: #25D366;
-  color: white !important;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 30px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  font-size: 14px;
-  text-decoration: none !important;
-  display: inline-flex;
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-llamar:hover {
-  transform: scale(1.05);
-  background-color: #1ebe5d;
-}
-
-@media (min-width: 768px) {
-  .btn-llamar {
-    display: none !important;
-  }
-}
-
-
-
