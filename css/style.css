@@ -69,12 +69,6 @@ html, body {
 }
 
 
-@media (min-width: 768px) {
-  .btn-llamar {
-    display: none !important;
-  }
-}
-
 @media (min-width: 769px) {
   .encabezado-fijo img {
     max-height: 380px;
@@ -409,28 +403,6 @@ textarea:invalid + .icono-validacion::before {
 
 
 
-  .btn-llamar {
-    position: fixed;
-    bottom: 130px;
-    left: 25px;
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 12px 18px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 9999;
-    font-size: 0.95rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  @media (min-width: 768px) {
-    .btn-llamar {
-      display: none !important;
-    }
-  }
 
 
 /* BOTÓN WHATSAPP */
@@ -472,9 +444,6 @@ textarea:invalid + .icono-validacion::before {
     font-size: 12.5px;
   }
 
-  .btn-llamar {
-    bottom: 140px !important;  /* ✅ lo sube más arriba en móvil */
-  }
 
   .whatsapp-boton {
     padding: 10px 10px;
@@ -482,6 +451,35 @@ textarea:invalid + .icono-validacion::before {
   }
 }
 
+.btn-llamar {
+  position: fixed;
+  left: 25px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Ocultar en desktop */
+@media (min-width: 768px) {
+  .btn-llamar {
+    display: none !important;
+  }
+}
+
+/* Mostrar más arriba en móvil */
+@media (max-width: 767px) {
+  .btn-llamar {
+    bottom: 140px !important;
+  }
+}
 
 
   /* Pegá este bloque completo dentro del <head> o antes de </body> */
@@ -650,3 +648,4 @@ textarea:invalid + .icono-validacion::before {
   content: "✖";
   color: #e74c3c;
 }
+
