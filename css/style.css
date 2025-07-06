@@ -451,29 +451,6 @@ textarea:invalid + .icono-validacion::before {
   }
 }
 
-.btn-llamar {
-  position: fixed;
-  bottom: 140px; /* posición vertical más arriba */
-  left: 25px;
-  background-color: #25D366;
-  color: white;
-  font-weight: bold;
-  padding: 12px 18px;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  font-size: 0.95rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Ocultar en escritorio */
-@media (min-width: 768px) {
-  .btn-llamar {
-    display: none !important;
-  }
-}
 
 
 
@@ -644,27 +621,35 @@ textarea:invalid + .icono-validacion::before {
   color: #e74c3c;
 }
 
+
 .btn-llamar {
   position: fixed;
-  bottom: 140px; /* Más arriba que WhatsApp */
+  bottom: 90px; /* ✅ Más arriba que WhatsApp */
   left: 25px;
   background-color: #25D366;
-  color: white;
+  color: white !important;
   font-weight: bold;
-  padding: 12px 18px;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 16px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  font-size: 0.95rem;
-  text-decoration: none;
-  display: inline-flex !important;  /* 👈 Fuerza que se muestre */
+  font-size: 14px;
+  text-decoration: none !important;
+  display: inline-flex;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Ocultar en escritorio */
+.btn-llamar:hover {
+  transform: scale(1.05);
+  background-color: #1ebe5d;
+}
+
 @media (min-width: 768px) {
   .btn-llamar {
     display: none !important;
   }
 }
+
+
 
