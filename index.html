@@ -1084,31 +1084,45 @@ Gestionamos órdenes de trabajo, verificamos coberturas y coordinamos los turnos
 </script>
 
 <style>
-/* VALIDACIÓN VISUAL DE FORMULARIO */
-input:invalid,
-textarea:invalid {
+/* VALIDACIÓN VISUAL DE FORMULARIO SOLO DESPUÉS DE ENVIAR */
+form.intento-enviado input:invalid,
+form.intento-enviado textarea:invalid {
   border: 2px solid #e74c3c !important;
   background-color: #fff4f4 !important;
 }
 
-input:valid,
-textarea:valid {
+form.intento-enviado input:valid,
+form.intento-enviado textarea:valid {
   border: 2px solid #2ecc71 !important;
   background-color: #f6fff6 !important;
 }
 
-input:focus:invalid,
-textarea:focus:invalid {
+form.intento-enviado input:focus:invalid,
+form.intento-enviado textarea:focus:invalid {
   outline: none;
   box-shadow: 0 0 4px #e74c3c;
 }
 
-input:focus:valid,
-textarea:focus:valid {
+form.intento-enviado input:focus:valid,
+form.intento-enviado textarea:focus:valid {
   outline: none;
   box-shadow: 0 0 4px #2ecc71;
 }
-</style>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (e) {
+      form.classList.add("intento-enviado");
+
+      if (!form.checkValidity()) {
+        e.preventDefault(); // Evita el envío si hay errores
+      }
+    });
+  });
+</script>
+
 
   
 </body>
