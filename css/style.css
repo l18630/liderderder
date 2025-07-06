@@ -453,13 +453,14 @@ textarea:invalid + .icono-validacion::before {
 
 .btn-llamar {
   position: fixed;
+  bottom: 140px; /* posición vertical más arriba */
   left: 25px;
   background-color: #25D366;
   color: white;
   font-weight: bold;
   padding: 12px 18px;
   border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
   font-size: 0.95rem;
   text-decoration: none;
@@ -467,19 +468,13 @@ textarea:invalid + .icono-validacion::before {
   align-items: center;
 }
 
-/* Ocultar en desktop */
+/* Ocultar en escritorio */
 @media (min-width: 768px) {
   .btn-llamar {
     display: none !important;
   }
 }
 
-/* Mostrar más arriba en móvil */
-@media (max-width: 767px) {
-  .btn-llamar {
-    bottom: 140px !important;
-  }
-}
 
 
   /* Pegá este bloque completo dentro del <head> o antes de </body> */
