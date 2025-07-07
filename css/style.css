@@ -650,3 +650,33 @@ textarea:invalid + .icono-validacion::before {
     aspect-ratio: 4 / 1; /* o probá con 5 / 1 si querés aún más angosta */
   }
 }
+
+.btn-llamar {
+  position: fixed;
+  bottom: 100px; /* Más arriba que WhatsApp */
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-llamar:hover {
+  background-color: #1ebe5d;
+}
+
+/* Ocultar en pantallas grandes */
+@media (min-width: 768px) {
+  .btn-llamar {
+    display: none !important;
+  }
+}
