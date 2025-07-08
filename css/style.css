@@ -624,12 +624,4 @@ textarea:invalid + .icono-validacion::before {
     aspect-ratio: 4 / 1; /* o probá con 5 / 1 si querés aún más angosta */
   }
 }
-.oculto-seo {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
 
