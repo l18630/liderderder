@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Página principal -->
   <url>
-    <loc>https://118630.github.io/liderderder/</loc>
+    <loc>https://www.parabrisaslider.com.ar/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Anclas internas principales (opcional, útil para navegación directa) -->
+  <!-- Anclas internas principales -->
   <url>
-    <loc>https://118630.github.io/liderderder/#nosotros</loc>
+    <loc>https://www.parabrisaslider.com.ar/#nosotros</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://118630.github.io/liderderder/#servicios</loc>
+    <loc>https://www.parabrisaslider.com.ar/#servicios</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://118630.github.io/liderderder/#contacto</loc>
+    <loc>https://www.parabrisaslider.com.ar/#contacto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Página de agradecimiento del formulario -->
   <url>
-    <loc>https://118630.github.io/liderderder/gracias.html</loc>
+    <loc>https://www.parabrisaslider.com.ar/gracias.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
