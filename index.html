@@ -64,13 +64,16 @@
     }
 .encabezado-fijo {
   width: 100%;
-  aspect-ratio: 3 / 1;
+  height: 280px;
   background-image: url('img/img/psassss.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: transparent; /* 👈 Cambiado */
+  background-color: #000; /* <--- agregado */
+  position: relative;      /* <--- agregado */
+  z-index: 1;              /* <--- agregado */
 }
+
 
 
 .encabezado-fijo img {
