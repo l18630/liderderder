@@ -486,13 +486,15 @@
     background: transparent !important;
   }
 
-  .servicios-contenedor {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: auto;
-  }
+ .servicios-contenedor {
+  padding: 40px 40px; /* más generoso si no usás max-width */
+  border-radius: 0;   /* sin bordes redondeados para evitar la “caja” */
+  width: 100%;        /* ocupa todo el ancho */
+  max-width: none;    /* eliminamos limitación */
+  margin: 0;          /* eliminamos centrado */
+  box-sizing: border-box;
+}
+
 
   .accordion-container {
     max-width: 900px;
