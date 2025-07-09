@@ -180,22 +180,6 @@ textarea:invalid + .icono-validacion::before {
 }
 
 
-@media (max-width: 768px) {
-  .fondo-contacto-banner {
-    height: 180px;
-    background-size: contain; /* En celular evita que se recorte */
-    background-position: center top;
-  }
-}
-
-.fondo-contacto-banner {
-  height: 200px;
-  background: url('img/img/contact.png') no-repeat center top;
-  background-size: contain;
-  background-color: #e5e0d3; /* mismo tono arena del sitio */
-  margin: 0 auto;
-}
-
 
 
     .contacto-contenedor {
