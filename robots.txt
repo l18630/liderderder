@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://118630.github.io/liderderder/sitemap.xml
+Sitemap: https://www.parabrisaslider.com.ar/sitemap.xml
+
