@@ -51,13 +51,19 @@
   <title>Cambio y reparación de parabrisas en Rosario | Parabrisas Lider</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      overflow-x: hidden;
-    }
-    
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  overflow-x: hidden !important; /* 🔒 Forzado */
+  width: 100%;                  /* ✅ mejor que 100vw */
+  max-width: 100%;              /* 🧼 asegura que no se pase */
+}
+
+      /* ⬇️ ACA agregás justo debajo: */
+  * {
+    box-sizing: border-box;
+  }
 #resenas {
       margin-top: 0px !important;
       padding-top: 0px;
@@ -538,6 +544,18 @@
     font-size: 1.2rem;
     margin-bottom: 8px;
   }
+  @media (max-width: 768px) {
+  #bloque-servicios-reseñas,
+  .seguros-carousel-container,
+  .marcas-carousel-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
+
 </style>
 
 <section id="bloque-servicios-reseñas" role="img" aria-label="Fondo visual con herramientas y cristales, representando los servicios y la confianza de nuestros clientes">
