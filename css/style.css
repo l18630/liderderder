@@ -621,3 +621,19 @@ textarea:invalid + .icono-validacion::before {
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 768px) {
+  .seguros-carousel,
+  .resenas-carousel,
+  .marcas-carousel {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .seguros-carousel > *,
+  .resenas-carousel > *,
+  .marcas-carousel > * {
+    max-width: 90vw !important;
+    flex-shrink: 0;
+  }
+}
