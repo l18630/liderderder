@@ -663,3 +663,9 @@ textarea:invalid + .icono-validacion::before {
     flex-shrink: 0 !important;
   }
 }
+.espaciador-servicios {
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+              url('img/img/servi.png') no-repeat center top / cover;
+}
