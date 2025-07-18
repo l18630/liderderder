@@ -1174,6 +1174,14 @@ form.intento-enviado textarea:focus:valid {
   });
 </script>
 
+<script>
+  document.querySelectorAll(".accordion-title").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".accordion-item");
+      item.classList.toggle("open");
+    });
+  });
+</script>
 
 
   
