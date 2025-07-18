@@ -674,3 +674,18 @@ textarea:invalid + .icono-validacion::before {
   background-color: #1f1f1f; /* Color de fondo oscuro igual al de la sección anterior */
   width: 100%;
 }
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title .flecha {
+  margin-left: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .flecha {
+  transform: rotate(180deg);
+}
